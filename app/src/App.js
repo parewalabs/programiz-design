@@ -1,7 +1,10 @@
+import CourseCard from "./components/courseCard/Index";
+
 function App() {
   return (
     <div className="App">
-      <h1>Programiz design</h1>
+      <h1 className="text-3xl">Programiz design</h1>
+      <CourseCard />
     </div>
   );
 }
