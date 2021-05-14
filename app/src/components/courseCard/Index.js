@@ -1,3 +1,4 @@
+import "../../index.css";
 import React from "react";
 import rightarrow from "../../icons/rightarrow.svg";
 import book from "../../icons/book.svg";
