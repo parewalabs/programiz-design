@@ -2,10 +2,56 @@
 @tailwind base;
 @tailwind components;
 
-@font-face {
-  font-family: "Euclid Circular A";
-  src: local("Euclid Circular A"),
-    url(./fonts/EuclidCircularA-Regular.otf) format("otf");
+@layer base {
+  @font-face {
+    font-family: "Euclid Circular A";
+    src: url(./fonts/EuclidCircularA-Bold.otf) format("otf");
+  }
+
+  @font-face {
+    font-family: "Euclid Circular A";
+    src: url(./fonts/EuclidCircularA-BoldItalic.otf) format("otf");
+  }
+
+  @font-face {
+    font-family: "Euclid Circular A";
+    src: url(./fonts/EuclidCircularA-Light.otf) format("otf");
+  }
+
+  @font-face {
+    font-family: "Euclid Circular A";
+    src: url(./fonts/EuclidCircularA-LightItalic.otf) format("otf");
+  }
+
+  @font-face {
+    font-family: "Euclid Circular A";
+    src: url(./fonts/EuclidCircularA-Medium.otf) format("otf");
+  }
+
+  @font-face {
+    font-family: "Euclid Circular A";
+    src: url(./fonts/EuclidCircularA-MediumItalic.otf) format("otf");
+  }
+  @font-face {
+    font-family: "Euclid Circular A";
+    src: url(./fonts/EuclidCircularA-Regular.otf) format("otf");
+  }
+  @font-face {
+    font-family: "Euclid Circular A";
+    src: url(./fonts/EuclidCircularA-RegularItalic.otf) format("otf");
+  }
+  @font-face {
+    font-family: "Euclid Circular A";
+    src: url(./fonts/EuclidCircularA-Semibold.otf) format("otf");
+  }
+  @font-face {
+    font-family: "Euclid Circular A";
+    src: url(./fonts/EuclidCircularA-SemiboldItalic.otf) format("otf");
+  }
+  @font-face {
+    font-family: "Euclid Circular A";
+    src: url(./fonts/EuclidCircularA-MediumItalic.otf) format("otf");
+  }
 }
 @tailwind utilities;
 
