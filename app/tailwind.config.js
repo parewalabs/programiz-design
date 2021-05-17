@@ -10,6 +10,7 @@ module.exports = {
       height: {
         236: "236px",
         200: "200px",
+        35.71: "35.71px",
       },
       textColor: {
         "primary-blue": "#25265E",
