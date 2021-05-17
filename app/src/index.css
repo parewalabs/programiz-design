@@ -3,7 +3,7 @@
 @tailwind components;
 
 @font-face {
-  font-family: "Roboto";
+  font-family: "Euclid Circular A";
   src: local("Euclid Circular A"),
     url(./fonts/EuclidCircularA-Regular.otf) format("otf");
 }
