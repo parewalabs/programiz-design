@@ -28,6 +28,9 @@ module.exports = {
         secondary: "#6501E5",
         tertiary: "#00A3FF",
       },
+      fontFamily: {
+        sans: ["Euclid Circular A", "Helvetica", "Arial", "sans-serif"],
+      },
     },
   },
   variants: {
