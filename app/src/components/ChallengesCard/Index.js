@@ -25,7 +25,10 @@ const ChallengesCard = (props) => {
         <div className="pt-2">
           {props.tags.map((tag, index) => {
             return (
-              <li className="text-sm text-caption text-opacity-60 inline">
+              <li
+                className="text-sm text-caption text-opacity-60 inline"
+                key={index}
+              >
                 <img
                   src={ellipse}
                   alt=""
