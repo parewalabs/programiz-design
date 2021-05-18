@@ -48,6 +48,7 @@ module.exports = {
       fontWeight: ["first"],
       width: ["first"],
       height: ["first"],
+      margin: ["first", "last"],
     },
   },
   plugins: [],

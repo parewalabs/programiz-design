@@ -5,5 +5,6 @@ ChallengesCard example:
   challengeName="String Manipulation"
   challengePoints="10"
   newChallange={true}
+  tags={["Python", "Easy"]}
 />
 ```
