@@ -1,0 +1,5 @@
+Search example:
+
+```js
+<Search />
+```
