@@ -20,6 +20,7 @@ module.exports = {
         50: "50px",
       },
       textColor: {
+        primary: "#333333",
         "primary-blue": "#25265E",
         link: "#0556F3",
         caption: "#25265e",
