@@ -1,4 +1,4 @@
-Avatar example:
+OfferCard example:
 
 ```js
 <OfferCard />
