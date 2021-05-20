@@ -17,6 +17,7 @@ module.exports = {
         37: "37px",
       },
       height: {
+        1145: "1145px",
         730: "730px",
         420: "420px",
         396: "396px",
@@ -49,6 +50,9 @@ module.exports = {
       },
       fontFamily: {
         sans: ["Euclid Circular A", "Helvetica", "Arial", "sans-serif"],
+      },
+      boxShadow: {
+        certificate: "0px 4px 8px rgba(0, 0, 0, 0.12)",
       },
     },
   },
