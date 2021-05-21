@@ -12,7 +12,7 @@ const CourseCompletedPopup = (props) => {
           Completed Course
         </h2>
 
-        <img src={completed} className="" />
+        <img src={completed} alt="Completed Successfully" />
       </div>
 
       <div className="px-24">
@@ -20,7 +20,7 @@ const CourseCompletedPopup = (props) => {
           Your Course Certificate
         </h3>
         <div className="mt-2 border-4 border-compiler-base rounded shadow-certificate">
-          <img src={certificate} />
+          <img src={certificate} alt="certificate" />
         </div>
         <div className="pt-4 flex justify-center ">
           <button className="text-link font-semibold rounded py-2 px-6 border border-main">
@@ -40,9 +40,9 @@ const CourseCompletedPopup = (props) => {
             Browse More Courses
           </button>
         </div>
-        <a className="pt-4 flex justify-center text-link text-xs font-normal">
+        <span className="pt-4 flex justify-center text-link text-xs font-normal">
           Go back to the Course Index
-        </a>
+        </span>
       </div>
     </div>
   );

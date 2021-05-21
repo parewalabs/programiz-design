@@ -23,9 +23,9 @@ const LanguageCategoryCard = (params) => {
         <h5 className="font-normal text-base mt-7 uppercase font-semibold text-primary-blue">
           {params.language} Programming
         </h5>
-        <a href="#" className="text-link mt-6 text-sm pt-4">
+        <span href="#" className="text-link mt-6 text-sm pt-4">
           View <img src={rightarrow} alt="" className="inline" />
-        </a>
+        </span>
       </div>
     </div>
   );

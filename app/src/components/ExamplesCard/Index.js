@@ -7,7 +7,7 @@ const ExamplesCard = (props) => {
       <div className="px-6 pt-6">
         <h4 className="text-lg text-primary-blue">{props.name}</h4>
       </div>
-      <img src={vector} className="absolute -top-0 -right-2" />
+      <img src={vector} className="absolute -top-0 -right-2" alt="examples" />
     </div>
   );
 };

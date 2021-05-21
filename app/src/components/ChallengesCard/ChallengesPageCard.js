@@ -17,7 +17,7 @@ const ChallengesPageCard = (props) => {
           Start
         </button>
       </div>
-      <img src={shape} className="absolute top-8 right-4" />
+      <img src={shape} className="absolute top-8 right-4" alt="design shape" />
     </div>
   );
 };

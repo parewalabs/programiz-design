@@ -12,23 +12,27 @@ const CourseCard = (props) => {
           {props.courseName}
         </h3>
         <div className="pt-2">
-          <span className="text-sm text-caption">
-            <img src={book} alt="" className="inline w-13.33" />{" "}
-            {props.chapters} Chapters
-          </span>
-          {"  "}
+          <img src={book} alt="book" className="inline" />
           {props.tags.map((tag, index) => {
             return (
-              <li className="text-sm text-caption inline list-disc" key={index}>
-                <img src={ellipse} alt="" className="inline" /> {tag}
+              <li
+                className="text-sm text-caption inline text-opacity-60"
+                key={index}
+              >
+                <img
+                  src={ellipse}
+                  alt="tags"
+                  className={index === 0 ? "hidden inline" : "inline"}
+                />{" "}
+                {tag}
                 {"  "}
               </li>
             );
           })}
         </div>
-        <a href="#" className="text-link text-sm pt-4">
+        <span href="#" className="text-link text-sm pt-4">
           Start Learning <img src={rightarrow} alt="" className="inline" />
-        </a>
+        </span>
       </div>
     </div>
   );
