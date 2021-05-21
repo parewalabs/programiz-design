@@ -4,18 +4,29 @@ module.exports = {
   theme: {
     extend: {
       width: {
+        825: "825px",
+        730: "730px",
+        705: "705px",
         350: "350px",
         349: "349px",
         302: "302px",
         308: "308px",
+        273: "273px",
+        255: "255px",
         208: "208px",
         160: "160px",
         37: "37px",
       },
       height: {
+        1145: "1145px",
+        730: "730px",
         420: "420px",
+        396: "396px",
+        288: "288px",
         236: "236px",
+        210: "210px",
         200: "200px",
+        132: "132px",
         35.71: "35.71px",
         50: "50px",
       },
@@ -33,6 +44,7 @@ module.exports = {
       },
       colors: {
         main: "#0556F3",
+        "primary-blue": "#25265E",
         secondary: "#6501E5",
         tertiary: "#00A3FF",
         warning: "#F79522",
@@ -41,6 +53,9 @@ module.exports = {
       },
       fontFamily: {
         sans: ["Euclid Circular A", "Helvetica", "Arial", "sans-serif"],
+      },
+      boxShadow: {
+        certificate: "0px 4px 8px rgba(0, 0, 0, 0.12)",
       },
     },
   },
