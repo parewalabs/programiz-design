@@ -21,6 +21,7 @@ module.exports = {
       height: {
         1145: "1145px",
         730: "730px",
+        705: "705px",
         511: "511px",
         420: "420px",
         396: "396px",
@@ -69,6 +70,7 @@ module.exports = {
       width: ["first"],
       height: ["first"],
       margin: ["first", "last"],
+      opacity: ["disabled"],
     },
   },
   plugins: [],

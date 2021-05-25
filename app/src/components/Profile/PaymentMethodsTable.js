@@ -12,11 +12,11 @@ const PaymentMethodsTable = (props) => {
           </tr>
         </thead>
         <tbody>
-          {props.invoices.map((invoice) => {
+          {props.methods.map((method) => {
             return (
-              <tr className="text-base text-primary-blue">
-                <td className="pl-6 pt-4">{invoice.paymentMethod}</td>
-                <td className="pt-6">{invoice.expirationDate}</td>
+              <tr className="text-base text-primary-blue" key={method.id}>
+                <td className="pl-6 pt-4">{method.paymentMethod}</td>
+                <td className="pt-6">{method.expirationDate}</td>
                 <td className="pt-6">
                   <button className="text-link font-semibold rounded py-2 px-4 border border-main">
                     Remove

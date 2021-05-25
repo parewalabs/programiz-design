@@ -2,7 +2,7 @@ PaymentMethods Table:
 
 ```js
 <PaymentMethodsTable
-  invoices={[
+  methods={[
     {
       id: "1",
       paymentMethod: "•••• •••• •••• 7398 MasterCard (default)",

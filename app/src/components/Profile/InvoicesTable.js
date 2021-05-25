@@ -15,7 +15,7 @@ const InvoicesTable = (props) => {
         <tbody>
           {props.invoices.map((invoice) => {
             return (
-              <tr className="text-base text-primary-blue">
+              <tr className="text-base text-primary-blue" key={invoice.id}>
                 <td className="pl-6 pt-4">{invoice.description}</td>
                 <td className="pt-6">{invoice.amount}</td>
                 <td className="pt-6">{invoice.date}</td>
