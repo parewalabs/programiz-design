@@ -11,7 +11,7 @@ const CompletedPopup = (props) => {
           Completed {props.type === "challenge" ? "Challenge" : "Lesson"}
         </h2>
 
-        <img src={completed} className="" />
+        <img src={completed} className="" alt="completed successfull" />
       </div>
 
       <div className="px-24">
@@ -29,14 +29,14 @@ const CompletedPopup = (props) => {
           {props.next}
         </h2>
         <div className="pt-4 flex justify-center ">
-          <button className="w-350 bg-main text-white font-semibold rounded py-3">
+          <button className="bg-main text-white font-semibold rounded py-3 px-20">
             Start the {props.type === "challenge" ? "Challenge" : "Quiz"}
           </button>
         </div>
-        <a className="pt-4 flex justify-center text-link text-xs font-normal">
+        <span className="pt-4 flex justify-center text-link text-xs font-normal">
           Go back to the{" "}
           {props.type === "challenge" ? "Challenge" : "Course Index"}
-        </a>
+        </span>
       </div>
     </div>
   );

@@ -16,11 +16,15 @@ const MainChallengesCard = (props) => {
         </div>
         <div className="h-14 relative flex">
           {props.newChallange ? (
-            <img src={newTag} alt="" className="absolute left-3 -top-1" />
+            <img
+              src={newTag}
+              alt="new tag"
+              className="absolute left-3 -top-1"
+            />
           ) : (
             ""
           )}
-          <img src={challengesIcon} alt="" className="" />
+          <img src={challengesIcon} alt="challenge icon" className="" />
         </div>
         <h3 className="text-xl pt-7">{props.challengeName}</h3>
         <div className="pt-2">
@@ -32,7 +36,7 @@ const MainChallengesCard = (props) => {
               >
                 <img
                   src={ellipse}
-                  alt=""
+                  alt="separator"
                   className={index === 0 ? "hidden inline" : "inline"}
                 />{" "}
                 {tag}{" "}
@@ -40,9 +44,10 @@ const MainChallengesCard = (props) => {
             );
           })}
         </div>
-        <a href="#" className="text-link text-sm font-normal">
-          Start Challenge <img src={rightarrow} alt="" className="inline" />
-        </a>
+        <span href="#" className="text-link text-sm font-normal">
+          Start Challenge{" "}
+          <img src={rightarrow} alt="right arrow" className="inline" />
+        </span>
       </div>
     </div>
   );
