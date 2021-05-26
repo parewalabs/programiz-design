@@ -61,6 +61,14 @@ module.exports = {
       boxShadow: {
         certificate: "0px 4px 8px rgba(0, 0, 0, 0.12)",
       },
+      lineHeight: {
+        54: "54px",
+        30: "30px",
+      },
+      fontSize: {
+        32: "32px",
+        22: "22px",
+      },
     },
   },
   variants: {
