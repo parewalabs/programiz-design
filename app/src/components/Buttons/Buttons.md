@@ -1,0 +1,5 @@
+Buttons types:
+
+```js
+<Buttons />
+```

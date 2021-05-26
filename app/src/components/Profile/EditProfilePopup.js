@@ -23,13 +23,13 @@ const EdtiProfilePopup = () => {
           <div className="mb-6">
             <label
               className="block text-sm text-caption text-opacity-80 mb-2"
-              htmlFor="name"
+              htmlFor="userName"
             >
               Full Name
             </label>
             <input
               className="border rounded w-full py-3 px-4 text-base text-primary-blue"
-              id="name"
+              id="userName"
               type="text"
               placeholder="Full Name"
               defaultValue="Bishal Mishra"
@@ -39,13 +39,13 @@ const EdtiProfilePopup = () => {
           <div className="mb-6">
             <label
               className="block text-sm text-caption text-opacity-80 mb-2"
-              htmlFor="email"
+              htmlFor="UserEmail"
             >
               Email Address
             </label>
             <input
               className="border rounded w-full py-3 px-4 text-base text-primary-blue"
-              id="email"
+              id="UserEmail"
               type="text"
               placeholder="Email Address"
               defaultValue="bishal@idealaya.com.np"
