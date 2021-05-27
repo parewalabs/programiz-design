@@ -56,7 +56,7 @@ module.exports = {
         "compiler-base": "#F5F5F5",
       },
       fontFamily: {
-        sans: ["Euclid Circular A", "Helvetica", "Arial", "sans-serif"],
+        "Euclid Circular A": ["Euclid Circular A"],
       },
       boxShadow: {
         certificate: "0px 4px 8px rgba(0, 0, 0, 0.12)",
