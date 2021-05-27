@@ -54,6 +54,7 @@ module.exports = {
         warning: "#F79522",
         seperator: "#D3DCE6",
         "compiler-base": "#F5F5F5",
+        shades20: "#CDDDFD",
       },
       fontFamily: {
         "Euclid Circular A": ["Euclid Circular A"],
