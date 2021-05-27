@@ -1,5 +1,6 @@
 import React from "react";
 import path from "../../images/paths.png";
+import Buttons from "../Buttons/Index";
 
 const ExampleSuggestionCard = (props) => {
   return (
@@ -10,9 +11,7 @@ const ExampleSuggestionCard = (props) => {
           {props.name}
         </h3>
         <div className="pt-4 flex ">
-          <button className="bg-main text-white font-semibold rounded py-3 px-12">
-            Start
-          </button>
+          <Buttons otherClass="bg-main text-white py-3 px-12">Start</Buttons>
         </div>
       </div>
       <img src={path} alt="design" className="absolute -top-0.5 -right-0.5" />

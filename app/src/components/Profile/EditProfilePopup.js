@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import avatar from "../../images/avatar1.png";
+import Buttons from "../Buttons/Index";
 
 const EdtiProfilePopup = () => {
   const [disabledButton, setDisabledButton] = useState(true);
@@ -14,9 +15,9 @@ const EdtiProfilePopup = () => {
         />
       </div>
       <div className="flex justify-center mt-2">
-        <button className="text-link font-semibold rounded py-2 px-4 border border-main">
+        <Buttons otherClass="text-link py-1.5 px-4 border border-main">
           Change Photo
-        </button>
+        </Buttons>
       </div>
       <div className="pt-6 px-44">
         <form>
@@ -53,13 +54,13 @@ const EdtiProfilePopup = () => {
             />
           </div>
           <div className="flex items-center justify-center">
-            <button
-              className="saveChange bg-main disabled:opacity-50 text-white text-base font-semibold py-3 px-4 rounded"
+            <Buttons
+              otherClass="saveChange bg-main text-white text-base px-4 py-3"
               disabled={disabledButton}
               type="button"
             >
               Save Changes
-            </button>
+            </Buttons>
           </div>
         </form>
       </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import certificateSmall from "../../images/certificateSmall.png";
 import artwork from "../../images/artwork.png";
+import Buttons from "../Buttons/Index";
 
 const CourseProgressCard = (props) => {
   return (
@@ -32,9 +33,9 @@ const CourseProgressCard = (props) => {
         </div>
         <p className="text-sm text-primary-blue pt-4 pr-80">{props.message}</p>
         <div className="pt-4 flex ">
-          <button className="bg-main text-white font-semibold rounded py-3 px-4">
-            {props.complete === "0%" ? "start" : "Continue"} Learning
-          </button>
+          <Buttons otherClass="bg-main text-white py-3 px-4">
+            {props.complete === "0%" ? "Start" : "Continue"} Learning
+          </Buttons>
         </div>
       </div>
     </div>

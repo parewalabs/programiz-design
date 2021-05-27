@@ -1,4 +1,5 @@
 import React from "react";
+import Buttons from "../Buttons/Index";
 
 const InvoicesTable = (props) => {
   return (
@@ -20,9 +21,9 @@ const InvoicesTable = (props) => {
                 <td className="pt-6">{invoice.amount}</td>
                 <td className="pt-6">{invoice.date}</td>
                 <td className="pt-6">
-                  <button className="text-link font-semibold rounded py-2 px-4 border border-main">
+                  <Buttons otherClass="text-link py-1.5 px-4 border border-main">
                     View Invoice
-                  </button>
+                  </Buttons>
                 </td>
               </tr>
             );

@@ -1,6 +1,7 @@
 import React from "react";
 import completed from "../../images/completed.png";
 import certificate from "../../images/certificate.png";
+import Buttons from "../Buttons/Index";
 
 const CourseCompletedPopup = (props) => {
   return (
@@ -23,9 +24,9 @@ const CourseCompletedPopup = (props) => {
           <img src={certificate} alt="certificate" />
         </div>
         <div className="pt-4 flex justify-center ">
-          <button className="text-link font-semibold rounded py-2 px-6 border border-main">
+          <Buttons otherClass="text-link py-3 px-6 border border-main">
             Download Course Certificate
-          </button>
+          </Buttons>
         </div>
         <hr className="flex justify-center border border-seperator mt-10" />
 
@@ -36,9 +37,9 @@ const CourseCompletedPopup = (props) => {
           {props.next}
         </h2>
         <div className="pt-4 flex justify-center ">
-          <button className="w-350 bg-main text-white font-semibold rounded py-3">
+          <Buttons otherClass="bg-main text-white py-3 px-16">
             Browse More Courses
-          </button>
+          </Buttons>
         </div>
         <span className="pt-4 flex justify-center text-link text-xs font-normal">
           Go back to the Course Index

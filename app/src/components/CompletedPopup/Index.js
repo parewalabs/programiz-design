@@ -1,5 +1,6 @@
 import React from "react";
 import completed from "../../images/completed.png";
+import Buttons from "../Buttons/Index";
 
 const CompletedPopup = (props) => {
   return (
@@ -29,9 +30,9 @@ const CompletedPopup = (props) => {
           {props.next}
         </h2>
         <div className="pt-4 flex justify-center ">
-          <button className="bg-main text-white font-semibold rounded py-3 px-20">
+          <Buttons otherClass="bg-main text-white py-3 px-20">
             Start the {props.type === "challenge" ? "Challenge" : "Quiz"}
-          </button>
+          </Buttons>
         </div>
         <span className="pt-4 flex justify-center text-link text-xs font-normal">
           Go back to the{" "}

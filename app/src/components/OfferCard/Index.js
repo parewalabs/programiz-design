@@ -1,5 +1,6 @@
 import React from "react";
 import refer from "../../icons/refer.svg";
+import Buttons from "../Buttons/Index";
 
 const OfferCard = () => {
   return (
@@ -16,9 +17,9 @@ const OfferCard = () => {
         </div>
       </div>
       <div className="pt-5 px-4">
-        <button className="w-full bg-blue-100 text-link font-semibold rounded py-3">
+        <Buttons otherClass="w-full bg-shades20 text-link py-3">
           Start Inviting
-        </button>
+        </Buttons>
       </div>
     </div>
   );
