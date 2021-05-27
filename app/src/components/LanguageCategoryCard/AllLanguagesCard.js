@@ -1,6 +1,6 @@
 import "../../index.css";
 import React from "react";
-import rightarrow from "../../icons/rightarrow.svg";
+import Icons from "../Icons";
 
 const AllLanguagesCard = () => {
   return (
@@ -8,8 +8,12 @@ const AllLanguagesCard = () => {
       <div className="ml-5 mt-20">
         <span href="#" className="text-link mt-6 text-lg font-bold pt-4">
           View all Languages{" "}
-          <img src={rightarrow} alt="right arrow" className="inline h-6 w-6" />
         </span>
+        <Icons
+          iconName="rightarrow"
+          alt="right arrow"
+          className="inline w-6 "
+        />
       </div>
     </div>
   );

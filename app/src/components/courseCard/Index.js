@@ -1,9 +1,7 @@
-import "../../index.css";
 import React from "react";
-import rightarrow from "../../icons/rightarrow.svg";
-import book from "../../icons/book.svg";
 import ellipse from "../../icons/ellipse.svg";
 import vector from "../../images/Vector2.png";
+import Icons from "../Icons";
 
 const CourseCard = (props) => {
   return (
@@ -13,7 +11,7 @@ const CourseCard = (props) => {
           {props.courseName}
         </h3>
         <div className="pt-2">
-          <img src={book} alt="book" className="inline" />
+          <Icons iconName="book" alt="book" className="inline" />
           {props.tags.map((tag, index) => {
             return (
               <li
@@ -47,7 +45,8 @@ const CourseCard = (props) => {
           </div>
         )}
         <span href="#" className="text-link text-sm">
-          Continue Learning <img src={rightarrow} alt="" className="inline" />
+          Continue Learning{" "}
+          <Icons iconName="rightarrow" alt="rightarrow" className="inline" />
         </span>
       </div>
       <img
