@@ -33,6 +33,7 @@ module.exports = {
         132: "132px",
         35.71: "35.71px",
         50: "50px",
+        60: "60px",
       },
       textColor: {
         primary: "#333333",
