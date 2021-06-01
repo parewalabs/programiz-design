@@ -2,12 +2,15 @@
   "name": "app",
   "version": "0.1.0",
   "private": true,
+  "module": "src/App.js",
+  "main": "lib/index.js",
   "dependencies": {
     "@craco/craco": "^6.1.2",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "react": "^17.0.2",
+    "react-app-rewired": "^2.1.8",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.0.1"
@@ -15,6 +18,7 @@
   "devDependencies": {
     "autoprefixer": "^9",
     "postcss": "^7",
+    "react-app-rewire-create-react-library": "^0.1.1",
     "react-styleguidist": "^11.1.6",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   },
@@ -22,7 +26,8 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build-library": "react-app-rewired build --library"
   },
   "eslintConfig": {
     "extends": [

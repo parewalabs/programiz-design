@@ -1,12 +1,3 @@
-import CourseCard from "./components/courseCard/Index";
+import AllLanguagesCard from "./components/LanguageCategoryCard/AllLanguagesCard";
 
-function App() {
-  return (
-    <div className="App">
-      <h1 className="text-3xl">Programiz design</h1>
-      <CourseCard />
-    </div>
-  );
-}
-
-export default App;
+export { AllLanguagesCard };
