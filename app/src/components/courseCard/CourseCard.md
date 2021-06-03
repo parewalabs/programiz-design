@@ -1,9 +1,18 @@
-CourseCard example:
+Course Card:
 
 ```js
 <CourseCard
   courseName="Python for data science & Machine Learning"
-  chapters="7"
-  tags={["Python", "Beginner"]}
+  tags={["7 Chapters", "Python", "Beginner"]}
+/>
+```
+
+Course Card with progress:
+
+```js
+<CourseCard
+  courseName="Python for data science & Machine Learning"
+  tags={["7 Chapters", "Python", "Beginner"]}
+  complete="30%"
 />
 ```
