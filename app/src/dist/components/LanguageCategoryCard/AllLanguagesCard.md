@@ -1,0 +1,5 @@
+AllLanguagesCard example:
+
+```js
+<AllLanguagesCard />
+```

@@ -1,0 +1,5 @@
+OfferCard example:
+
+```js
+<OfferCard />
+```
