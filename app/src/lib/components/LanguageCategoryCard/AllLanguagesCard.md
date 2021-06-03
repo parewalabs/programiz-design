@@ -1,5 +1,0 @@
-AllLanguagesCard example:
-
-```js
-<AllLanguagesCard />
-```
