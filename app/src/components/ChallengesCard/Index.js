@@ -1,8 +1,7 @@
 import "../../index.css";
 import React from "react";
-import challengesIcon from "../../icons/challengesIcon.svg";
 import ellipse from "../../icons/ellipse.svg";
-import newTag from "../../icons/newTag.svg";
+import Icons from "../Icons/index";
 
 const ChallengesCard = (props) => {
   return (
@@ -15,11 +14,15 @@ const ChallengesCard = (props) => {
         </div>
         <div className="h-14 relative flex">
           {props.newChallange ? (
-            <img src={newTag} alt="" className="absolute left-3 -top-1" />
+            <Icons
+              iconName="newTag"
+              alt="New Challenge"
+              className="absolute left-3 -top-1"
+            />
           ) : (
             ""
           )}
-          <img src={challengesIcon} alt="" className="" />
+          <Icons iconName="challengesIcon" alt="challengesIcon" />
         </div>
         <h3 className="text-xl mt-8">{props.challengeName}</h3>
         <div className="pt-2">

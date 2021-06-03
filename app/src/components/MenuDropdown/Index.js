@@ -1,40 +1,7 @@
 import React from "react";
-import python from "../../icons/python.svg";
-import c from "../../icons/c.svg";
-import cpp from "../../icons/cpp.svg";
-import java from "../../icons/java.svg";
-import js from "../../icons/js.svg";
-import das from "../../icons/dsa.svg";
-import csharp from "../../icons/csharp.svg";
-import kotlin from "../../icons/kotlin.svg";
-import swift from "../../icons/swift.svg";
+import Icons from "../Icons/index";
 
 const MenuDropdown = (props) => {
-  const languageLogo = (LanguageName) => {
-    switch (LanguageName) {
-      case "python":
-        return python;
-      case "c":
-        return c;
-      case "cpp":
-        return cpp;
-      case "java":
-        return java;
-      case "js":
-        return js;
-      case "dsa":
-        return das;
-      case "csharp":
-        return csharp;
-      case "kotlin":
-        return kotlin;
-      case "swift":
-        return swift;
-
-      default:
-        return "";
-    }
-  };
   return (
     <div className="w-825 h-396 rounded text-primary-blue">
       <div className="pt-10 pl-10">
@@ -50,10 +17,10 @@ const MenuDropdown = (props) => {
               >
                 <div className="py-4 pl-6">
                   <span className="inline-block align-middle">
-                    <img
-                      src={languageLogo(language.code)}
+                    <Icons
+                      iconName={language.code}
                       alt={language.name}
-                      className="float-left "
+                      className="float-left"
                     />
                   </span>
                   <span className="text-base text-primary-blue pl-2">

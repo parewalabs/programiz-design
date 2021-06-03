@@ -1,5 +1,6 @@
-LanguageCategoryCard example:
+Language Category Card:
 
 ```js
-<LanguageCategoryCard language="c++" />
+// type changing language to pyton or c or java
+<LanguageCategoryCard languageCode="cpp" language="C++" />
 ```
