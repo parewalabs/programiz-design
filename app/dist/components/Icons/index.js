@@ -1,5 +1,5 @@
 import React from "react";
-import dashboard from "../../../icons/dashboard.svg";
+import dashboard from "../../icons/dashboard.svg";
 import course from "../../icons/course.svg";
 import search from "../../icons/searchIcon.svg";
 import bookmark from "../../icons/bookmark.svg";
