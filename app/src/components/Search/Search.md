@@ -1,5 +1,0 @@
-Search example:
-
-```js
-<Search />
-```

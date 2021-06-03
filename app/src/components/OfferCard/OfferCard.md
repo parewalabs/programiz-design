@@ -1,5 +1,0 @@
-OfferCard example:
-
-```js
-<OfferCard />
-```
