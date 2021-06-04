@@ -6,7 +6,7 @@ const LeaderboardCard = props => {
     className: "w-350 h-auto rounded-md border text-primary-blue focus:ring-2 hover:border-main"
   }, /*#__PURE__*/React.createElement("h1", {
     className: "text-2xl leading-9 font-semibold text-primary-blue text-center pt-8"
-  }, "Leaderboard"), props.topUsers.map(topUser => {
+  }, "Leaderboard"), props.topUsers && props.topUsers.users.map(topUser => {
     return /*#__PURE__*/React.createElement("div", {
       key: topUser.leaderboardUser.userId,
       className: "w-full px-6 pt-4 flex"
@@ -31,7 +31,7 @@ const LeaderboardCard = props => {
     }, topUser.score))));
   }), /*#__PURE__*/React.createElement("div", {
     className: "mt-2 pb-10"
-  }, props.realtiveUsers.map(realtiveUser => {
+  }, props.realtiveUsers && props.realtiveUsers.users.map(realtiveUser => {
     let active = false;
 
     if (realtiveUser.leaderboardUser.userId === Number(props.loggedInId)) {
