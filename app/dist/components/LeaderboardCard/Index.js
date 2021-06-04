@@ -34,17 +34,17 @@ const LeaderboardCard = props => {
   }, props.realtiveUsers.map(realtiveUser => {
     let active = false;
 
-    if (realtiveUser.leaderboardUser.userId === realtiveUser.loggedInId) {
+    if (realtiveUser.leaderboardUser.userId === Number(props.loggedInId)) {
       active = true;
     }
 
     return /*#__PURE__*/React.createElement("div", {
       key: realtiveUser.leaderboardUser.userId,
-      className: `px-5 py-1 w-full flex ${active === true ? "border-l-2 border-secondary first:bg-compiler-base" : ""}`
+      className: `px-5 py-1 w-full flex ${active === true ? "border-l-2 border-secondary bg-compiler-base" : ""}`
     }, /*#__PURE__*/React.createElement("div", {
       className: "w-14 text-sm flex items-center"
     }, realtiveUser.rank, "."), /*#__PURE__*/React.createElement("div", {
-      className: "px-2 w-full flex"
+      className: `w-full flex ${active === true ? "px-1 w-full flex" : "px-2"}`
     }, /*#__PURE__*/React.createElement("div", {
       className: `items-center ${active === true ? "p-0.5 rounded-full border border-secondary" : ""}`
     }, /*#__PURE__*/React.createElement("div", {

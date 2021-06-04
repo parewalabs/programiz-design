@@ -7,6 +7,7 @@ import MainChallengeCard from "./components/ChallengesCard/MainChallengeCard";
 import CourseCard from "./components/CourseCard/Index";
 import ExamplesCard from "./components/ExamplesCard/Index";
 import PopularExamplesCard from "./components/ExamplesCard/PopularExamplesCard";
+import LeaderboardCard from "./components/LeaderboardCard/Index";
 
 export {
   AllLanguagesCard,
@@ -18,4 +19,5 @@ export {
   CourseCard,
   ExamplesCard,
   PopularExamplesCard,
+  LeaderboardCard,
 };

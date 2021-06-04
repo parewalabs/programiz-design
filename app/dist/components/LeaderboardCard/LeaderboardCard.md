@@ -2,6 +2,7 @@ Leaderboard Card:
 
 ```js
 <LeaderboardCard
+  loggedInId="10"
   topUsers={[
     {
       leaderboardUser: {
@@ -40,7 +41,6 @@ Leaderboard Card:
       },
       rank: "19.7k",
       score: 0,
-      loggedInId: 10,
     },
     {
       leaderboardUser: {

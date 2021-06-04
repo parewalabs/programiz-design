@@ -4,7 +4,6 @@ import React from "react";
 const LeaderboardCard = (props) => {
   return (
     <div className="w-350 h-auto rounded-md border text-primary-blue focus:ring-2 hover:border-main">
-      {/*<div>*/}
       <h1 className="text-2xl leading-9 font-semibold text-primary-blue text-center pt-8">
         Leaderboard
       </h1>
@@ -44,7 +43,9 @@ const LeaderboardCard = (props) => {
       <div className="mt-2 pb-10">
         {props.realtiveUsers.map((realtiveUser) => {
           let active = false;
-          if (realtiveUser.leaderboardUser.userId === realtiveUser.loggedInId) {
+          if (
+            realtiveUser.leaderboardUser.userId === Number(props.loggedInId)
+          ) {
             active = true;
           }
           return (
@@ -52,14 +53,18 @@ const LeaderboardCard = (props) => {
               key={realtiveUser.leaderboardUser.userId}
               className={`px-5 py-1 w-full flex ${
                 active === true
-                  ? "border-l-2 border-secondary first:bg-compiler-base"
+                  ? "border-l-2 border-secondary bg-compiler-base"
                   : ""
               }`}
             >
               <div className="w-14 text-sm flex items-center">
                 {realtiveUser.rank}.
               </div>
-              <div className="px-2 w-full flex">
+              <div
+                className={`w-full flex ${
+                  active === true ? "px-1 w-full flex" : "px-2"
+                }`}
+              >
                 <div
                   className={`items-center ${
                     active === true
@@ -96,7 +101,6 @@ const LeaderboardCard = (props) => {
           );
         })}
       </div>
-      {/*</div>*/}
     </div>
   );
 };
