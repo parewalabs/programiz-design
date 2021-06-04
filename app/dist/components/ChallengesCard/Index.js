@@ -8,7 +8,7 @@ const ChallengesCard = props => {
     className: "w-160 h-200 rounded border-2 text-primary-blue focus:ring-2 hover:border-main"
   }, /*#__PURE__*/React.createElement("div", {
     className: "mx-4 mt-4"
-  }, /*#__PURE__*/React.createElement("div", {
+  }, props.challengePoints && /*#__PURE__*/React.createElement("div", {
     className: " h-5 w-37 border border-seperator rounded-xl flex items-center justify-center float-right"
   }, /*#__PURE__*/React.createElement("span", {
     className: "align-middle text-sm font-bold text-warning"
@@ -22,8 +22,9 @@ const ChallengesCard = props => {
     iconName: "challengesIcon",
     alt: "challengesIcon"
   })), /*#__PURE__*/React.createElement("h3", {
-    className: "text-xl mt-8"
-  }, props.challengeName), /*#__PURE__*/React.createElement("div", {
+    className: "text-xl mt-8 truncate",
+    title: props.challengeName
+  }, props.challengeName), props.tags && /*#__PURE__*/React.createElement("div", {
     className: "pt-2"
   }, props.tags.map((tag, index) => {
     return /*#__PURE__*/React.createElement("li", {
