@@ -4,7 +4,7 @@ import Buttons from "./components/Buttons/Index";
 import ChallengesCard from "./components/ChallengesCard/Index";
 import ChallengesPageCard from "./components/ChallengesCard/ChallengesPageCard";
 import MainChallengeCard from "./components/ChallengesCard/MainChallengeCard";
-import courseCard from "./components/CourseCard/Index";
+import CourseCard from "./components/CourseCard/Index";
 import ExamplesCard from "./components/ExamplesCard/Index";
 import PopularExamplesCard from "./components/ExamplesCard/PopularExamplesCard";
 
@@ -15,7 +15,7 @@ export {
   ChallengesCard,
   ChallengesPageCard,
   MainChallengeCard,
-  courseCard,
+  CourseCard,
   ExamplesCard,
   PopularExamplesCard,
 };
