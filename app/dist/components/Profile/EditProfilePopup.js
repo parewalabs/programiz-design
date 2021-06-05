@@ -6,7 +6,7 @@ import Buttons from "../Buttons/Index";
 const EdtiProfilePopup = () => {
   const [disabledButton, setDisabledButton] = useState(true);
   return /*#__PURE__*/React.createElement("div", {
-    className: "w-730 h-705 rounded-md border-2"
+    className: "w-327 lg:w-730 h-705 rounded-md border-2"
   }, /*#__PURE__*/React.createElement("div", {
     className: "flex justify-center"
   }, /*#__PURE__*/React.createElement("img", {
@@ -18,8 +18,10 @@ const EdtiProfilePopup = () => {
   }, /*#__PURE__*/React.createElement(Buttons, {
     otherClass: "text-link py-1.5 px-4 border border-main"
   }, "Change Photo")), /*#__PURE__*/React.createElement("div", {
-    className: "pt-6 px-44"
-  }, /*#__PURE__*/React.createElement("form", null, /*#__PURE__*/React.createElement("div", {
+    className: "pt-6 flex justify-center"
+  }, /*#__PURE__*/React.createElement("form", {
+    className: "w-full lg:mx-32 mx-10 "
+  }, /*#__PURE__*/React.createElement("div", {
     className: "mb-6"
   }, /*#__PURE__*/React.createElement("label", {
     className: "block text-sm text-caption text-opacity-80 mb-2",

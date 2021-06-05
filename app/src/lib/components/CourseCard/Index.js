@@ -5,7 +5,7 @@ import Icons from "../Icons";
 
 const CourseCard = (props) => {
   return (
-    <div className="w-160 lg:w-350 h-236 rounded border-2 text-primary-blue focus:ring-2 hover:border-secondary relative">
+    <div className="w-327 lg:w-350 h-236 rounded border-2 text-primary-blue focus:ring-2 hover:border-secondary relative">
       <div className="mx-5 mt-5">
         <h3 className="font-normal text-22 leading-30 font-semibold text-primary-blue">
           {props.courseName}

@@ -5,7 +5,7 @@ import Icons from "../Icons";
 
 const MainChallengesCard = props => {
   return /*#__PURE__*/React.createElement("div", {
-    className: "w-350 h-200 rounded border-2 text-primary-blue focus:ring-2 hover:border-main"
+    className: "w-327 lg:w-350 h-200 rounded border-2 text-primary-blue focus:ring-2 hover:border-main"
   }, /*#__PURE__*/React.createElement("div", {
     className: "px-4 pt-4"
   }, /*#__PURE__*/React.createElement("div", {

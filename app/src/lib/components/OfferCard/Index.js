@@ -4,7 +4,7 @@ import Buttons from "../Buttons/Index";
 
 const OfferCard = () => {
   return (
-    <div className="w-350 h-200 rounded border-2 text-primary-blue focus:ring-2 hover:border-main">
+    <div className="w-327 lg:w-350 h-200 rounded border-2 text-primary-blue focus:ring-2 hover:border-main">
       <div className="pt-6 px-4">
         <span className="float-left pr-4">
           <img src={refer} alt="refer and get pro" />

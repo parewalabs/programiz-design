@@ -4,8 +4,8 @@ import Buttons from "../Buttons/Index";
 
 const ChallengesPageCard = (props) => {
   return (
-    <div className="w-730 h-210 rounded border-2 text-primary-blue focus:ring-2 hover:border-main relative">
-      <div className="pt-8 pl-8">
+    <div className="lg:w-730 w-327  h-210 rounded border-2 text-primary-blue focus:ring-2 hover:border-main relative">
+      <div className="pt-8 pl-8 absolute">
         <p className="text-base text-primary-blue">
           {props.challengeTaken === true
             ? "Resume your last challenge:"

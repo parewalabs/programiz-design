@@ -6,7 +6,7 @@ import Buttons from "../Buttons/Index";
 const EdtiProfilePopup = () => {
   const [disabledButton, setDisabledButton] = useState(true);
   return (
-    <div className="w-730 h-705 rounded-md border-2">
+    <div className="w-327 lg:w-730 h-705 rounded-md border-2">
       <div className="flex justify-center">
         <img
           src={avatar}
@@ -19,8 +19,8 @@ const EdtiProfilePopup = () => {
           Change Photo
         </Buttons>
       </div>
-      <div className="pt-6 px-44">
-        <form>
+      <div className="pt-6 flex justify-center">
+        <form className="w-full lg:mx-32 mx-10 ">
           <div className="mb-6">
             <label
               className="block text-sm text-caption text-opacity-80 mb-2"

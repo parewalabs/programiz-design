@@ -5,7 +5,7 @@ import Icons from "../Icons";
 
 const MainChallengesCard = (props) => {
   return (
-    <div className="w-350 h-200 rounded border-2 text-primary-blue focus:ring-2 hover:border-main">
+    <div className="w-327 lg:w-350 h-200 rounded border-2 text-primary-blue focus:ring-2 hover:border-main">
       <div className="px-4 pt-4">
         <div className=" h-5 w-37 border border-seperator rounded-xl flex items-center justify-center float-right">
           <span className="align-middle text-sm font-bold text-warning">

@@ -5,7 +5,7 @@ import Icons from "../Icons";
 
 const CourseCard = props => {
   return /*#__PURE__*/React.createElement("div", {
-    className: "w-160 lg:w-350 h-236 rounded border-2 text-primary-blue focus:ring-2 hover:border-secondary relative"
+    className: "w-327 lg:w-350 h-236 rounded border-2 text-primary-blue focus:ring-2 hover:border-secondary relative"
   }, /*#__PURE__*/React.createElement("div", {
     className: "mx-5 mt-5"
   }, /*#__PURE__*/React.createElement("h3", {

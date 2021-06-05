@@ -4,7 +4,7 @@ import Buttons from "../Buttons/Index";
 
 const CompletedPopup = props => {
   return /*#__PURE__*/React.createElement("div", {
-    className: "w-705 h-730 border border-seperator"
+    className: "lg:w-705 w-327 h-autp border border-seperator"
   }, /*#__PURE__*/React.createElement("div", {
     className: "w-full relative text-center"
   }, /*#__PURE__*/React.createElement("h2", {
@@ -14,13 +14,13 @@ const CompletedPopup = props => {
     className: "",
     alt: "completed successfull"
   })), /*#__PURE__*/React.createElement("div", {
-    className: "px-24"
+    className: "flex flex-col justify-center"
   }, /*#__PURE__*/React.createElement("div", {
     className: props.type !== "challenge" ? "hidden" : ""
   }, /*#__PURE__*/React.createElement("p", {
     className: "flex justify-center text-base text-primary-blue pt-10 pb-8"
   }, "We added ", props.score, " points to your leaderboard"), /*#__PURE__*/React.createElement("hr", {
-    className: "flex justify-center border border-seperator"
+    className: "flex justify-center border border-seperator bg-seperator mx-20"
   })), /*#__PURE__*/React.createElement("div", {
     className: "flex justify-center pt-10"
   }, /*#__PURE__*/React.createElement("p", {
@@ -32,7 +32,7 @@ const CompletedPopup = props => {
   }, /*#__PURE__*/React.createElement(Buttons, {
     otherClass: "bg-main text-white py-3 px-20"
   }, "Start the ", props.type === "challenge" ? "Challenge" : "Quiz")), /*#__PURE__*/React.createElement("span", {
-    className: "pt-4 flex justify-center text-link text-xs font-normal"
+    className: "pt-4 pb-40 flex justify-center text-link text-xs font-normal"
   }, "Go back to the", " ", props.type === "challenge" ? "Challenge" : "Course Index")));
 };
 

@@ -4,9 +4,9 @@ import Buttons from "../Buttons/Index";
 
 const ChallengesPageCard = props => {
   return /*#__PURE__*/React.createElement("div", {
-    className: "w-730 h-210 rounded border-2 text-primary-blue focus:ring-2 hover:border-main relative"
+    className: "lg:w-730 w-327  h-210 rounded border-2 text-primary-blue focus:ring-2 hover:border-main relative"
   }, /*#__PURE__*/React.createElement("div", {
-    className: "pt-8 pl-8"
+    className: "pt-8 pl-8 absolute"
   }, /*#__PURE__*/React.createElement("p", {
     className: "text-base text-primary-blue"
   }, props.challengeTaken === true ? "Resume your last challenge:" : "Start first challenge:"), /*#__PURE__*/React.createElement("h3", {

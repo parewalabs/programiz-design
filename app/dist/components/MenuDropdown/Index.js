@@ -3,13 +3,13 @@ import Icons from "../Icons/index";
 
 const MenuDropdown = props => {
   return /*#__PURE__*/React.createElement("div", {
-    className: "w-825 h-396 rounded text-primary-blue"
+    className: "w-327 lg:w-825 h-auto border rounded text-primary-blue"
   }, /*#__PURE__*/React.createElement("div", {
-    className: "pt-10 pl-10"
+    className: "py-10 px-10"
   }, /*#__PURE__*/React.createElement("span", {
     className: "text-xl text-primary-blue font-normal"
   }, "Choose your learning path"), /*#__PURE__*/React.createElement("div", {
-    className: "grid grid-flow-row grid-cols-3 grid-rows-3 gap-6 pt-4"
+    className: "grid grid-flow-row lg:grid-cols-3 grid-cols-1 gap-6 pt-4"
   }, props.languages.map(language => {
     return /*#__PURE__*/React.createElement("div", {
       className: "border border-seperator rounded",

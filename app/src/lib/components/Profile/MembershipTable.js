@@ -2,7 +2,7 @@ import React from "react";
 
 const MembershipTable = (props) => {
   return (
-    <div className="w-445 h-168 rounded border-2 text-primary-blue">
+    <div className="lg:w-445 w-327 h-168 rounded border-2 text-primary-blue">
       <table className="w-full mt-6 ml-6">
         <tbody>
           <tr>

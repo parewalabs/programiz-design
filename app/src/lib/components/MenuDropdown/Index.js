@@ -3,12 +3,12 @@ import Icons from "../Icons/index";
 
 const MenuDropdown = (props) => {
   return (
-    <div className="w-825 h-396 rounded text-primary-blue">
-      <div className="pt-10 pl-10">
+    <div className="w-327 lg:w-825 h-auto border rounded text-primary-blue">
+      <div className="py-10 px-10">
         <span className="text-xl text-primary-blue font-normal">
           Choose your learning path
         </span>
-        <div className="grid grid-flow-row grid-cols-3 grid-rows-3 gap-6 pt-4">
+        <div className="grid grid-flow-row lg:grid-cols-3 grid-cols-1 gap-6 pt-4">
           {props.languages.map((language) => {
             return (
               <div
