@@ -35,6 +35,7 @@ module.exports = {
         35.71: "35.71px",
         50: "50px",
         60: "60px",
+        70: "70px",
       },
       textColor: {
         primary: "#333333",
@@ -57,6 +58,7 @@ module.exports = {
         seperator: "#D3DCE6",
         "compiler-base": "#F5F5F5",
         shades20: "#CDDDFD",
+        active: "#007EFA",
       },
       fontFamily: {
         "Euclid Circular A": ["Euclid Circular A"],
@@ -82,6 +84,7 @@ module.exports = {
       height: ["first"],
       margin: ["first", "last"],
       opacity: ["disabled"],
+      borderWidth: ["hover", "focus"],
     },
   },
   plugins: [],
