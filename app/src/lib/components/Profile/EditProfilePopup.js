@@ -1,10 +1,9 @@
 import React from "react";
 import { useState } from "react";
-import avatar from "../../images/avatar1.png";
 import Buttons from "../Buttons/Index";
 import Icons from "../Icons/index";
 
-const EdtiProfilePopup = () => {
+const EdtiProfilePopup = (props) => {
   const [disabledButton, setDisabledButton] = useState(true);
   const [showModal, setShowModal] = React.useState(false);
 
@@ -28,11 +27,15 @@ const EdtiProfilePopup = () => {
           <div className="justify-center pt-2 flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
             <div className="w-327 lg:w-730 h-705 rounded-md border-2 bg-white mt-10">
               <div className="flex justify-center">
-                <img
-                  src={avatar}
-                  alt="avatar"
-                  className="h-28 w-28 rounded-full mt-10 "
-                />
+                <div className="w-28 h-28 rounded-full bg-blue-400 mt-10">
+                  {props.userInfo.profilePic !== "" && (
+                    <img
+                      src={props.userInfo.profilePic}
+                      className="w-28 h-28 rounded-full"
+                      alt={props.userInfo.fullName}
+                    />
+                  )}
+                </div>
               </div>
               <div className="flex justify-center mt-2">
                 <Buttons otherClass="text-link py-1.5 px-4 border border-main">
@@ -53,7 +56,7 @@ const EdtiProfilePopup = () => {
                       id="userName"
                       type="text"
                       placeholder="Full Name"
-                      defaultValue="Bishal Mishra"
+                      defaultValue={props.userInfo.fullName}
                       onChange={() => setDisabledButton(false)}
                     />
                   </div>
@@ -69,7 +72,7 @@ const EdtiProfilePopup = () => {
                       id="UserEmail"
                       type="text"
                       placeholder="Email Address"
-                      defaultValue="bishal@idealaya.com.np"
+                      defaultValue={props.userInfo.email}
                       onChange={() => setDisabledButton(false)}
                     />
                   </div>
