@@ -42,7 +42,10 @@ const MainChallengesCard = (props) => {
             );
           })}
         </div>
-        <span href="#" className="text-link text-sm font-normal">
+        <span
+          onClick={props.customClickEvent}
+          className="text-link text-sm font-normal cursor-pointer"
+        >
           Start Challenge{" "}
           <Icons iconName="rightarrow" alt="right arrow" className="inline" />
         </span>

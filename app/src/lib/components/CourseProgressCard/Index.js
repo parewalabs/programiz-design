@@ -35,7 +35,10 @@ const CourseProgressCard = (props) => {
           {props.message}
         </p>
         <div className="pt-4 pb-10">
-          <Buttons otherClass="bg-main text-white py-3 px-4">
+          <Buttons
+            otherClass="bg-main text-white py-3 px-4"
+            customClickEvent={props.customClickEvent}
+          >
             {props.complete === "0%" ? "Start" : "Continue"} Learning
           </Buttons>
         </div>

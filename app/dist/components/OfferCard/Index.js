@@ -2,7 +2,7 @@ import React from "react";
 import refer from "../../icons/refer.svg";
 import Buttons from "../Buttons/Index";
 
-const OfferCard = () => {
+const OfferCard = props => {
   return /*#__PURE__*/React.createElement("div", {
     className: "w-327 lg:w-350 h-200 rounded border-2 text-primary-blue focus:ring-2 hover:border-main"
   }, /*#__PURE__*/React.createElement("div", {
@@ -21,7 +21,8 @@ const OfferCard = () => {
   }, "For every friend you invite, get 5 days of PRO for free."))), /*#__PURE__*/React.createElement("div", {
     className: "pt-5 px-4"
   }, /*#__PURE__*/React.createElement(Buttons, {
-    otherClass: "w-full bg-shades20 text-link py-3"
+    otherClass: "w-full bg-shades20 text-link py-3",
+    customClickEvent: props.customClickEvent
   }, "Start Inviting")));
 };
 

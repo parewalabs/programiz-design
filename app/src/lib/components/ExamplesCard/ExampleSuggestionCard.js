@@ -11,7 +11,12 @@ const ExampleSuggestionCard = (props) => {
           {props.name}
         </h3>
         <div className="pt-4 flex ">
-          <Buttons otherClass="bg-main text-white py-3 px-12">Start</Buttons>
+          <Buttons
+            customClickEvent={props.customClickEvent}
+            otherClass="bg-main text-white py-3 px-12"
+          >
+            Start
+          </Buttons>
         </div>
       </div>
       <img

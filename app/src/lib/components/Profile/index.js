@@ -5,18 +5,6 @@ const Profile = (props) => {
   return (
     <div>
       <div className="flex items-center pb-4">
-        {/*<span
-          className={`w-120 h-120 rounded-full bg-blue-400 ${
-            props.userInfo.profilePic === "" ? "" : "hidden"
-          }`}
-        ></span>
-        <img
-          src={props.userInfo.profilePic}
-          alt="name"
-          className={`w-120 h-120 rounded-full ${
-            props.userInfo.profilePic === "" ? "hidden" : ""
-          }`}
-        />*/}
         <div className="w-120 h-120 rounded-full bg-blue-400">
           {props.userInfo.profilePic !== "" && (
             <img

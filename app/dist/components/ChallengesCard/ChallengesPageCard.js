@@ -11,8 +11,9 @@ const ChallengesPageCard = props => {
     className: "text-base text-primary-blue"
   }, props.challengeTaken === true ? "Resume your last challenge:" : "Start first challenge:"), /*#__PURE__*/React.createElement("h3", {
     className: "text-xl font-semibold text-primary-blue"
-  }, "Store Item and Access it"), /*#__PURE__*/React.createElement(Buttons, {
-    otherClass: "bg-main text-white py-3 px-12 mt-4"
+  }, props.challengeName), /*#__PURE__*/React.createElement(Buttons, {
+    otherClass: "bg-main text-white py-3 px-12 mt-4",
+    customClickEvent: props.customClickEvent
   }, "Start")), /*#__PURE__*/React.createElement("img", {
     src: shape,
     className: "absolute top-8 right-4",

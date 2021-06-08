@@ -1,6 +1,6 @@
 import React from "react";
 import ellipse from "../../icons/ellipse.svg";
-import vector from "../../images/Vector2.png";
+//import vector from "../../images/Vector2.png";
 import Icons from "../Icons";
 
 const CourseCard = (props) => {
@@ -44,16 +44,19 @@ const CourseCard = (props) => {
             </div>
           </div>
         )}
-        <span href="#" className="text-link text-sm">
+        <span
+          onClick={props.customClickEvent}
+          className="text-link text-sm cursor-pointer"
+        >
           Continue Learning{" "}
           <Icons iconName="rightarrow" alt="rightarrow" className="inline" />
         </span>
       </div>
-      <img
+      {/*<img
         src={vector}
         alt="profile Course"
         className="absolute top-0 -right-0"
-      />
+      />*/}
     </div>
   );
 };

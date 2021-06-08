@@ -35,7 +35,8 @@ const CourseProgressCard = props => {
   }, props.message), /*#__PURE__*/React.createElement("div", {
     className: "pt-4 pb-10"
   }, /*#__PURE__*/React.createElement(Buttons, {
-    otherClass: "bg-main text-white py-3 px-4"
+    otherClass: "bg-main text-white py-3 px-4",
+    customClickEvent: props.customClickEvent
   }, props.complete === "0%" ? "Start" : "Continue", " Learning"))));
 };
 
