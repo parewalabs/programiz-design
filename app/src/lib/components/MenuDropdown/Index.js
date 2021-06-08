@@ -1,10 +1,10 @@
 import React from "react";
 import Icons from "../Icons/index";
 
+const setCurrentLanguage = (lang) => {
+  localStorage.setItem("currentLanguage", lang);
+};
 const MenuDropdown = (props) => {
-  const setCurrentLanguage = (lang) => {
-    localStorage.setItem("currentLanguage", lang);
-  };
   return (
     <div className="w-327 lg:w-825 h-auto border rounded text-primary-blue">
       <div className="py-10 px-10">
@@ -17,7 +17,7 @@ const MenuDropdown = (props) => {
               <a href="/courses" key={language.id}>
                 <div
                   className="border border-seperator rounded cursor-pointer"
-                  onClick={setCurrentLanguage(language.code)}
+                  onClick={() => setCurrentLanguage(language.code)}
                 >
                   <div className="py-4 pl-6">
                     <span className="inline-block align-middle">

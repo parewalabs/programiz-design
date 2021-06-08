@@ -10,7 +10,6 @@ const NavBar = () => {
   const [menuDropdown, setMenuDropdown] = useState(false);
 
   const toggleMenuDropdown = () => {
-    console.log(menuDropdown);
     setMenuDropdown(!menuDropdown);
   };
 
@@ -18,12 +17,13 @@ const NavBar = () => {
     className: "w-327 lg:w-full h-70 border flex items-center"
   }, /*#__PURE__*/React.createElement("div", {
     className: "w-full relative flex items-center lg:px-8 p-2"
+  }, /*#__PURE__*/React.createElement("a", {
+    href: "/"
   }, /*#__PURE__*/React.createElement("img", {
     src: logoWeb,
     alt: "Programiz Web",
-    className: "hidden lg:block cursor-pointer" //  onCLick={() => }
-
-  }), /*#__PURE__*/React.createElement("img", {
+    className: "hidden lg:block cursor-pointer"
+  })), /*#__PURE__*/React.createElement("img", {
     src: logoMobile,
     alt: "Programiz Web",
     className: "block lg:hidden  cursor-pointer"
@@ -71,7 +71,7 @@ const NavBar = () => {
     profilePic: "",
     otherClass: "ml-2 cursor-pointer"
   }))))), /*#__PURE__*/React.createElement("div", {
-    className: `justify-center flex ${menuDropdown === true ? "block" : "hidden"}`
+    className: `absolute z-1 flex ml-10 bg-white flex ${menuDropdown === true ? "block" : "hidden"}`
   }, /*#__PURE__*/React.createElement(MenuDropdown, {
     languages: [{
       id: "1",

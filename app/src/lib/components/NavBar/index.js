@@ -9,19 +9,19 @@ import MenuDropdown from "../MenuDropdown/Index";
 const NavBar = () => {
   const [menuDropdown, setMenuDropdown] = useState(false);
   const toggleMenuDropdown = () => {
-    console.log(menuDropdown);
     setMenuDropdown(!menuDropdown);
   };
   return (
     <>
       <nav className="w-327 lg:w-full h-70 border flex items-center">
         <div className="w-full relative flex items-center lg:px-8 p-2">
-          <img
-            src={logoWeb}
-            alt="Programiz Web"
-            className="hidden lg:block cursor-pointer"
-            //  onCLick={() => }
-          />
+          <a href="/">
+            <img
+              src={logoWeb}
+              alt="Programiz Web"
+              className="hidden lg:block cursor-pointer"
+            />
+          </a>
           <img
             src={logoMobile}
             alt="Programiz Web"
@@ -70,7 +70,7 @@ const NavBar = () => {
         </div>
       </nav>
       <div
-        className={`justify-center flex ${
+        className={`absolute z-1 flex ml-10 bg-white flex ${
           menuDropdown === true ? "block" : "hidden"
         }`}
       >

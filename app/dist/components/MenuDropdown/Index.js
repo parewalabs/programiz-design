@@ -1,11 +1,11 @@
 import React from "react";
 import Icons from "../Icons/index";
 
-const MenuDropdown = props => {
-  const setCurrentLanguage = lang => {
-    localStorage.setItem("currentLanguage", lang);
-  };
+const setCurrentLanguage = lang => {
+  localStorage.setItem("currentLanguage", lang);
+};
 
+const MenuDropdown = props => {
   return /*#__PURE__*/React.createElement("div", {
     className: "w-327 lg:w-825 h-auto border rounded text-primary-blue"
   }, /*#__PURE__*/React.createElement("div", {
@@ -20,7 +20,7 @@ const MenuDropdown = props => {
       key: language.id
     }, /*#__PURE__*/React.createElement("div", {
       className: "border border-seperator rounded cursor-pointer",
-      onClick: setCurrentLanguage(language.code)
+      onClick: () => setCurrentLanguage(language.code)
     }, /*#__PURE__*/React.createElement("div", {
       className: "py-4 pl-6"
     }, /*#__PURE__*/React.createElement("span", {
