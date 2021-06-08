@@ -8,4 +8,5 @@ import CourseCard from "./components/CourseCard/Index";
 import ExamplesCard from "./components/ExamplesCard/Index";
 import PopularExamplesCard from "./components/ExamplesCard/PopularExamplesCard";
 import LeaderboardCard from "./components/LeaderboardCard/Index";
-export { AllLanguagesCard, LanguageCategoryCard, Buttons, ChallengesCard, ChallengesPageCard, MainChallengeCard, CourseCard, ExamplesCard, PopularExamplesCard, LeaderboardCard };
+import Profile from "./components/Profile/index";
+export { AllLanguagesCard, LanguageCategoryCard, Buttons, ChallengesCard, ChallengesPageCard, MainChallengeCard, CourseCard, ExamplesCard, PopularExamplesCard, LeaderboardCard, Profile };

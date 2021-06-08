@@ -8,6 +8,7 @@ import CourseCard from "./components/CourseCard/Index";
 import ExamplesCard from "./components/ExamplesCard/Index";
 import PopularExamplesCard from "./components/ExamplesCard/PopularExamplesCard";
 import LeaderboardCard from "./components/LeaderboardCard/Index";
+import Profile from "./components/Profile/index";
 
 export {
   AllLanguagesCard,
@@ -20,4 +21,5 @@ export {
   ExamplesCard,
   PopularExamplesCard,
   LeaderboardCard,
+  Profile,
 };
