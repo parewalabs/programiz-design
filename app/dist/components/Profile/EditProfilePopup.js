@@ -2,11 +2,29 @@ import React from "react";
 import { useState } from "react";
 import avatar from "../../images/avatar1.png";
 import Buttons from "../Buttons/Index";
+import Icons from "../Icons/index";
 
 const EdtiProfilePopup = () => {
   const [disabledButton, setDisabledButton] = useState(true);
-  return /*#__PURE__*/React.createElement("div", {
-    className: "w-327 lg:w-730 h-705 rounded-md border-2"
+  const [showModal, setShowModal] = React.useState(false);
+
+  const popupToggle = () => {
+    setShowModal(!showModal);
+  };
+
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Buttons, {
+    otherClass: "text-link bg-shades20 py-3 px-4",
+    customClickEvent: () => popupToggle()
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "justify-center flex"
+  }, "Edit Profile", " ", /*#__PURE__*/React.createElement(Icons, {
+    iconName: "edit",
+    alt: "edit profile",
+    className: "inline pl-2"
+  }))), showModal ? /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
+    className: "justify-center pt-2 flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "w-327 lg:w-730 h-705 rounded-md border-2 bg-white mt-10"
   }, /*#__PURE__*/React.createElement("div", {
     className: "flex justify-center"
   }, /*#__PURE__*/React.createElement("img", {
@@ -50,8 +68,18 @@ const EdtiProfilePopup = () => {
   }, /*#__PURE__*/React.createElement(Buttons, {
     otherClass: "saveChange bg-main text-white text-base px-4 py-3",
     disabled: disabledButton,
-    type: "button"
-  }, "Save Changes")))));
+    type: "button",
+    customClickEvent: () => popupToggle
+  }, "Save Changes"))))), /*#__PURE__*/React.createElement("span", {
+    className: "flex items-start"
+  }, /*#__PURE__*/React.createElement(Icons, {
+    iconName: "cross",
+    alt: "close",
+    className: "cursor-pointer",
+    customClickEvent: () => popupToggle()
+  }))), /*#__PURE__*/React.createElement("div", {
+    className: "opacity-1.5 fixed inset-0 z-20 bg-popup"
+  })) : null);
 };
 
 export default EdtiProfilePopup;

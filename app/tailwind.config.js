@@ -59,6 +59,7 @@ module.exports = {
         "compiler-base": "#F5F5F5",
         shades20: "#CDDDFD",
         active: "#007EFA",
+        popup: "#1F2023",
       },
       fontFamily: {
         "Euclid Circular A": ["Euclid Circular A"],
