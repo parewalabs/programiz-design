@@ -68,8 +68,8 @@ const NavBar = props => {
     title: "profile"
   }, /*#__PURE__*/React.createElement(Avatar, {
     score: "10",
-    username: "props.fullName",
-    profilePic: "props.profilePic",
+    username: props.fullName,
+    profilePic: props.profilePic,
     otherClass: "ml-2 cursor-pointer"
   }))))), /*#__PURE__*/React.createElement("div", {
     className: `absolute z-1 flex ml-10 bg-white flex ${menuDropdown === true ? "block" : "hidden"}`

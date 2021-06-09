@@ -61,8 +61,8 @@ const NavBar = (props) => {
             <a href="/profile" title="profile">
               <Avatar
                 score="10"
-                username="props.fullName"
-                profilePic="props.profilePic"
+                username={props.fullName}
+                profilePic={props.profilePic}
                 otherClass="ml-2 cursor-pointer"
               />
             </a>
