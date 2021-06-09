@@ -9,7 +9,7 @@ const LoginForm = (props) => {
   };
 
   return (
-    <form className="w-327 lg:w-445" onSubmit={() => submitHandler()}>
+    <form className="w-327 lg:w-445" onSubmit={submitHandler}>
       <div className="mb-6">
         <label
           className="block text-sm text-caption text-opacity-80 mb-2"
