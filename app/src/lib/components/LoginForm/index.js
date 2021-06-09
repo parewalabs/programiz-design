@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Buttons from "../Buttons/Index";
 
 const LoginForm = (props) => {
+  const [details, setDetails] = useState({ email: "", password: "" });
+  const submitHandler = (e) => {
+    e.preventDefault();
+    props.login(details);
+  };
+
   return (
-    <form className="w-445 lg:mx-32" onSubmit={props.handleSubmit}>
+    <form className="w-327 lg:w-445" onSubmit={() => submitHandler()}>
       <div className="mb-6">
         <label
           className="block text-sm text-caption text-opacity-80 mb-2"
@@ -16,6 +22,9 @@ const LoginForm = (props) => {
           id="UserEmail"
           type="text"
           placeholder="Email Address"
+          onChange={(e) => setDetails({ ...details, email: e.target.value })}
+          value={details.email}
+          required
         />
       </div>
       <div className="mb-6">
@@ -30,6 +39,9 @@ const LoginForm = (props) => {
           id="userName"
           type="password"
           placeholder="Password"
+          onChange={(e) => setDetails({ ...details, password: e.target.value })}
+          value={details.password}
+          required
         />
       </div>
       <div className="">
