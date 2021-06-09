@@ -13,6 +13,7 @@ import SavedItemsCard from "./components/SavedItemsCard/Index";
 import LeaderboardCard from "./components/LeaderboardCard/Index";
 import ProfileComponent from "./components/Profile/index";
 import NavBar from "./components/NavBar/index";
+import LoginForm from "./components/LoginForm/index";
 
 export {
   AllLanguagesCard,
@@ -30,4 +31,5 @@ export {
   LeaderboardCard,
   ProfileComponent,
   NavBar,
+  LoginForm,
 };
