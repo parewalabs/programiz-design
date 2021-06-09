@@ -9,7 +9,7 @@ const LoginForm = props => {
 
   const submitHandler = e => {
     e.preventDefault();
-    props.login(details);
+    props.loginUser(details);
   };
 
   return /*#__PURE__*/React.createElement("form", {

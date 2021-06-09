@@ -5,7 +5,7 @@ const LoginForm = (props) => {
   const [details, setDetails] = useState({ email: "", password: "" });
   const submitHandler = (e) => {
     e.preventDefault();
-    props.login(details);
+    props.loginUser(details);
   };
 
   return (
