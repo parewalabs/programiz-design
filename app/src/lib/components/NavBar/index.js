@@ -6,7 +6,7 @@ import Avatar from "../Avatar/Index";
 import Search from "../Search/Index";
 import MenuDropdown from "../MenuDropdown/Index";
 
-const NavBar = () => {
+const NavBar = (props) => {
   const [menuDropdown, setMenuDropdown] = useState(false);
   const toggleMenuDropdown = () => {
     setMenuDropdown(!menuDropdown);
@@ -58,11 +58,11 @@ const NavBar = () => {
                 className="ml-2 cursor-pointer"
               />
             </a>
-            <a href="/profile">
+            <a href="/profile" title="profile">
               <Avatar
                 score="10"
-                username="Albert"
-                profilePic=""
+                username="props.fullName"
+                profilePic="props.profilePic"
                 otherClass="ml-2 cursor-pointer"
               />
             </a>

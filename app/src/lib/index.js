@@ -14,6 +14,7 @@ import LeaderboardCard from "./components/LeaderboardCard/Index";
 import ProfileComponent from "./components/Profile/index";
 import NavBar from "./components/NavBar/index";
 import LoginForm from "./components/LoginForm/index";
+import WelcomeMessage from "./components/WelcomeMessage/index";
 
 export {
   AllLanguagesCard,
@@ -32,4 +33,5 @@ export {
   ProfileComponent,
   NavBar,
   LoginForm,
+  WelcomeMessage,
 };
