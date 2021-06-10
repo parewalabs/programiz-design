@@ -14,9 +14,9 @@ const NavBar = props => {
   };
 
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("nav", {
-    className: "w-327 lg:w-full h-70 border flex items-center"
+    className: "md:w-327 lg:w-full h-70 border flex items-center"
   }, /*#__PURE__*/React.createElement("div", {
-    className: "w-full relative flex items-center lg:px-8 p-2"
+    className: "w-full relative flex items-center lg:px-40 p-2"
   }, /*#__PURE__*/React.createElement("a", {
     href: "/"
   }, /*#__PURE__*/React.createElement("img", {
@@ -51,7 +51,7 @@ const NavBar = props => {
   }, /*#__PURE__*/React.createElement("a", {
     href: "/compiler"
   }, "Compiler")), /*#__PURE__*/React.createElement("div", {
-    className: "absolute lg:right-8 right-2 flex items-center pr-0"
+    className: "absolute lg:right-40 right-2 flex items-center "
   }, /*#__PURE__*/React.createElement(Search, {
     className: "hidden lg:flex"
   }), /*#__PURE__*/React.createElement(Icons, {
@@ -72,7 +72,7 @@ const NavBar = props => {
     profilePic: props.profilePic,
     otherClass: "ml-2 cursor-pointer"
   }))))), /*#__PURE__*/React.createElement("div", {
-    className: `absolute z-1 flex ml-10 bg-white flex ${menuDropdown === true ? "block" : "hidden"}`
+    className: `absolute z-1 flex ml-40 bg-white flex ${menuDropdown === true ? "block" : "hidden"}`
   }, /*#__PURE__*/React.createElement(MenuDropdown, {
     languages: [{
       id: "1",

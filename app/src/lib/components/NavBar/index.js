@@ -13,8 +13,8 @@ const NavBar = (props) => {
   };
   return (
     <>
-      <nav className="w-327 lg:w-full h-70 border flex items-center">
-        <div className="w-full relative flex items-center lg:px-8 p-2">
+      <nav className="md:w-327 lg:w-full h-70 border flex items-center">
+        <div className="w-full relative flex items-center lg:px-40 p-2">
           <a href="/">
             <img
               src={logoWeb}
@@ -45,7 +45,7 @@ const NavBar = (props) => {
           <div className="py-5 mr-8 lg:block hover:border-b-2 hover:border-active hidden inline cursor-pointer">
             <a href="/compiler">Compiler</a>
           </div>
-          <div className="absolute lg:right-8 right-2 flex items-center pr-0">
+          <div className="absolute lg:right-40 right-2 flex items-center ">
             <Search className="hidden lg:flex" />
             <Icons
               iconName="searchIcon"
@@ -70,7 +70,7 @@ const NavBar = (props) => {
         </div>
       </nav>
       <div
-        className={`absolute z-1 flex ml-10 bg-white flex ${
+        className={`absolute z-1 flex ml-40 bg-white flex ${
           menuDropdown === true ? "block" : "hidden"
         }`}
       >
