@@ -5,12 +5,14 @@ import Buttons from "../Buttons/Index";
 
 const CourseProgressCard = (props) => {
   return (
-    <div className="w-327 lg:w-730 h-auto border-2 border-separate rounded focus:ring-2 hover:border-secondary relative">
-      <img
-        src={artwork}
-        alt="artwork"
-        className="w-273 h-20 absolute pt-0 right-3.5"
-      />
+    <div
+      className="w-327 lg:w-730 h-auto border-2 border-separate rounded focus:ring-2 hover:border-secondary relative"
+      style={{
+        backgroundImage: `url(${artwork})`,
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "90% 0px",
+      }}
+    >
       <div className="pt-10 pl-10">
         <h2 className="text-3xl font-bold text-primary-blue">
           {props.complete === "0%"

@@ -1,11 +1,29 @@
 import React from "react";
-import ellipse from "../../icons/ellipse.svg"; //import vector from "../../images/Vector2.png";
-
+import ellipse from "../../icons/ellipse.svg";
 import Icons from "../Icons";
+import courseVector1 from "../../images/courseVector1.png";
+import courseVector2 from "../../images/courseVector2.svg";
 
 const CourseCard = props => {
+  let vector = {};
+
+  if (props.vector === 1) {
+    vector = {
+      backgroundImage: `url(${courseVector1})`,
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "center bottom"
+    };
+  } else {
+    vector = {
+      backgroundImage: `url(${courseVector2})`,
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "center bottom"
+    };
+  }
+
   return /*#__PURE__*/React.createElement("div", {
-    className: "w-327 lg:w-350 h-236 rounded border-2 text-primary-blue focus:ring-2 hover:border-secondary relative"
+    className: "w-327 lg:w-350 h-236 rounded border-2 text-primary-blue focus:ring-2 hover:border-secondary relative",
+    style: vector
   }, /*#__PURE__*/React.createElement("div", {
     className: "mx-5 mt-5"
   }, /*#__PURE__*/React.createElement("h3", {
