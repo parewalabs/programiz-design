@@ -17,6 +17,7 @@ import LoginForm from "./components/LoginForm/index";
 import WelcomeMessage from "./components/WelcomeMessage/index";
 import BottomNav from "./components/BottomNav/index";
 import CourseIndex from "./components/CourseIndex/Index";
+import CourseProgressCard from "./components/CourseProgressCard/Index";
 
 export {
   AllLanguagesCard,
@@ -26,6 +27,7 @@ export {
   ChallengesPageCard,
   MainChallengeCard,
   CourseCard,
+  CourseProgressCard,
   ExamplesCard,
   ExampleSuggestionCard,
   PopularExamplesCard,
