@@ -16,6 +16,7 @@ import NavBar from "./components/NavBar/index";
 import LoginForm from "./components/LoginForm/index";
 import WelcomeMessage from "./components/WelcomeMessage/index";
 import BottomNav from "./components/BottomNav/index";
+import CourseIndex from "./components/CourseIndex/Index";
 
 export {
   AllLanguagesCard,
@@ -36,4 +37,5 @@ export {
   LoginForm,
   WelcomeMessage,
   BottomNav,
+  CourseIndex,
 };
