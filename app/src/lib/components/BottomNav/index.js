@@ -5,7 +5,7 @@ import ellipseActive from "../../icons/ellipseActive.svg";
 const BottomNav = () => {
   const page = localStorage.getItem("page");
   return (
-    <div className="w-full h-16 border">
+    <div className="w-full h-16 border-t block lg:hidden">
       <div className="px-14 flex pt-2 pb-1">
         <div className="flex flex-col items-center justify-center">
           <Icons

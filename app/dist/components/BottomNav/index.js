@@ -5,7 +5,7 @@ import ellipseActive from "../../icons/ellipseActive.svg";
 const BottomNav = () => {
   const page = localStorage.getItem("page");
   return /*#__PURE__*/React.createElement("div", {
-    className: "w-full h-16 border"
+    className: "w-full h-16 border-t block lg:hidden"
   }, /*#__PURE__*/React.createElement("div", {
     className: "px-14 flex pt-2 pb-1"
   }, /*#__PURE__*/React.createElement("div", {
