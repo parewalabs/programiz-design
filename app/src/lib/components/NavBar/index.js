@@ -11,6 +11,7 @@ const NavBar = (props) => {
   const toggleMenuDropdown = () => {
     setMenuDropdown(!menuDropdown);
   };
+  const page = localStorage.getItem("page");
   return (
     <>
       <nav className="md:w-327 lg:w-full h-70 border flex items-center">
@@ -21,19 +22,27 @@ const NavBar = (props) => {
               alt="Programiz Web"
               className="hidden lg:block cursor-pointer"
             />
+            <img
+              src={logoMobile}
+              alt="Programiz Web"
+              className="block lg:hidden cursor-pointer"
+            />
           </a>
-          <img
-            src={logoMobile}
-            alt="Programiz Web"
-            className="block lg:hidden  cursor-pointer"
-          />
-          <div className="py-5 mr-8 hover:border-b-2 hover:border-active ml-8 lg:block hidden inline cursor-pointer">
+          <div
+            className={`py-5 mr-8 lg:block hover:border-b-2 hover:border-active hidden inline cursor-pointer ${
+              page === "dashboard" ? "border-b-2 border-active" : ""
+            }`}
+          >
             <Icons iconName="dashboard" alt="dashboard" className="inline" />
             <span className="text-base text-primary-blue pl-2 inline">
               <a href="/">Dashboard</a>
             </span>
           </div>
-          <div className="py-5 mr-8 lg:block hover:border-b-2 hover:border-active hidden inline cursor-pointer">
+          <div
+            className={`py-5 mr-8 lg:block hover:border-b-2 hover:border-active hidden inline cursor-pointer ${
+              page === "courses" ? "border-b-2 border-active" : ""
+            }`}
+          >
             <span
               className="text-base text-primary-blue inline"
               onClick={() => toggleMenuDropdown()}
@@ -42,7 +51,11 @@ const NavBar = (props) => {
             </span>
             <Icons iconName="downarrow" alt="Courses" className="inline" />
           </div>
-          <div className="py-5 mr-8 lg:block hover:border-b-2 hover:border-active hidden inline cursor-pointer">
+          <div
+            className={`py-5 mr-8 lg:block hover:border-b-2 hover:border-active hidden inline cursor-pointer ${
+              page === "compiler" ? "border-b-2 border-active" : ""
+            }`}
+          >
             <a href="/compiler">Compiler</a>
           </div>
           <div className="absolute lg:right-40 right-2 flex items-center ">

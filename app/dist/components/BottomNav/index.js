@@ -8,6 +8,8 @@ const BottomNav = () => {
     className: "w-full h-16 border-t block lg:hidden"
   }, /*#__PURE__*/React.createElement("div", {
     className: "px-14 flex pt-2 pb-1"
+  }, /*#__PURE__*/React.createElement("a", {
+    href: "/"
   }, /*#__PURE__*/React.createElement("div", {
     className: "flex flex-col items-center justify-center"
   }, /*#__PURE__*/React.createElement(Icons, {
@@ -24,7 +26,9 @@ const BottomNav = () => {
     src: ellipseActive,
     alt: "active",
     className: page === "dashboard" ? "block" : "hidden"
-  })), /*#__PURE__*/React.createElement("div", {
+  }))), /*#__PURE__*/React.createElement("a", {
+    href: "/courses"
+  }, /*#__PURE__*/React.createElement("div", {
     className: "flex flex-col items-center justify-center px-7"
   }, /*#__PURE__*/React.createElement(Icons, {
     iconName: "course",
@@ -40,7 +44,9 @@ const BottomNav = () => {
     src: ellipseActive,
     alt: "tags",
     className: page === "course" ? "block" : "hidden"
-  })), /*#__PURE__*/React.createElement("div", {
+  }))), /*#__PURE__*/React.createElement("a", {
+    href: "/compiler"
+  }, /*#__PURE__*/React.createElement("div", {
     className: "flex flex-col items-center justify-center"
   }, /*#__PURE__*/React.createElement(Icons, {
     iconName: "compiler",
@@ -56,7 +62,7 @@ const BottomNav = () => {
     src: ellipseActive,
     alt: "tags",
     className: page === "compiler" ? "block" : "hidden"
-  }))));
+  })))));
 };
 
 export default BottomNav;

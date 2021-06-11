@@ -13,6 +13,7 @@ const NavBar = props => {
     setMenuDropdown(!menuDropdown);
   };
 
+  const page = localStorage.getItem("page");
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("nav", {
     className: "md:w-327 lg:w-full h-70 border flex items-center"
   }, /*#__PURE__*/React.createElement("div", {
@@ -23,12 +24,12 @@ const NavBar = props => {
     src: logoWeb,
     alt: "Programiz Web",
     className: "hidden lg:block cursor-pointer"
-  })), /*#__PURE__*/React.createElement("img", {
+  }), /*#__PURE__*/React.createElement("img", {
     src: logoMobile,
     alt: "Programiz Web",
-    className: "block lg:hidden  cursor-pointer"
-  }), /*#__PURE__*/React.createElement("div", {
-    className: "py-5 mr-8 hover:border-b-2 hover:border-active ml-8 lg:block hidden inline cursor-pointer"
+    className: "block lg:hidden cursor-pointer"
+  })), /*#__PURE__*/React.createElement("div", {
+    className: `py-5 mr-8 lg:block hover:border-b-2 hover:border-active hidden inline cursor-pointer ${page === "dashboard" ? "border-b-2 border-active" : ""}`
   }, /*#__PURE__*/React.createElement(Icons, {
     iconName: "dashboard",
     alt: "dashboard",
@@ -38,7 +39,7 @@ const NavBar = props => {
   }, /*#__PURE__*/React.createElement("a", {
     href: "/"
   }, "Dashboard"))), /*#__PURE__*/React.createElement("div", {
-    className: "py-5 mr-8 lg:block hover:border-b-2 hover:border-active hidden inline cursor-pointer"
+    className: `py-5 mr-8 lg:block hover:border-b-2 hover:border-active hidden inline cursor-pointer ${page === "courses" ? "border-b-2 border-active" : ""}`
   }, /*#__PURE__*/React.createElement("span", {
     className: "text-base text-primary-blue inline",
     onClick: () => toggleMenuDropdown()
@@ -47,7 +48,7 @@ const NavBar = props => {
     alt: "Courses",
     className: "inline"
   })), /*#__PURE__*/React.createElement("div", {
-    className: "py-5 mr-8 lg:block hover:border-b-2 hover:border-active hidden inline cursor-pointer"
+    className: `py-5 mr-8 lg:block hover:border-b-2 hover:border-active hidden inline cursor-pointer ${page === "compiler" ? "border-b-2 border-active" : ""}`
   }, /*#__PURE__*/React.createElement("a", {
     href: "/compiler"
   }, "Compiler")), /*#__PURE__*/React.createElement("div", {
