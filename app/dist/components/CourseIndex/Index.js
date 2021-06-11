@@ -42,8 +42,16 @@ const CourseIndex = props => {
       className: `StepProgress-item is-done hover:text-main cursor-pointer text-primary-blue mb-4 ${lesson.progress === true ? "font-bold" : ""}`,
       key: lesson.id,
       onClick: props.customClickEvent
-    }, lesson.title);
-  })))));
+    }, /*#__PURE__*/React.createElement("a", {
+      href: `/lesson/${lesson.id}/details`
+    }, lesson.title));
+  }), props.course.quiz && /*#__PURE__*/React.createElement("li", {
+    className: `StepProgress-item is-done hover:text-main cursor-pointer text-primary-blue mb-4`,
+    key: props.course.quiz.id,
+    onClick: props.customClickEvent
+  }, /*#__PURE__*/React.createElement("a", {
+    href: `/quiz/${props.course.quiz.id}`
+  }, props.course.quiz.title))))));
 };
 
 export default CourseIndex;

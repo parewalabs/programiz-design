@@ -45,10 +45,21 @@ const CourseIndex = (props) => {
                     key={lesson.id}
                     onClick={props.customClickEvent}
                   >
-                    {lesson.title}
+                    <a href={`/lesson/${lesson.id}/details`}>{lesson.title}</a>
                   </li>
                 );
               })}
+            {props.course.quiz && (
+              <li
+                className={`StepProgress-item is-done hover:text-main cursor-pointer text-primary-blue mb-4`}
+                key={props.course.quiz.id}
+                onClick={props.customClickEvent}
+              >
+                <a href={`/quiz/${props.course.quiz.id}`}>
+                  {props.course.quiz.title}
+                </a>
+              </li>
+            )}
           </ul>
         </div>
       </div>
