@@ -29,17 +29,19 @@ const NavBar = props => {
     alt: "Programiz Web",
     className: "block lg:hidden cursor-pointer"
   })), /*#__PURE__*/React.createElement("div", {
-    className: `py-5 mr-8 lg:block hover:border-b-2 hover:border-active hidden inline cursor-pointer ${page === "dashboard" ? "border-b-2 border-active" : ""}`
+    className: `py-5 mx-8 lg:block hover:border-b-2 hover:border-active hidden inline cursor-pointer ${page === "dashboard" ? "border-b-2 border-active" : ""}`
+  }, /*#__PURE__*/React.createElement("a", {
+    href: "/"
   }, /*#__PURE__*/React.createElement(Icons, {
     iconName: "dashboard",
     alt: "dashboard",
     className: "inline"
   }), /*#__PURE__*/React.createElement("span", {
     className: "text-base text-primary-blue pl-2 inline"
-  }, /*#__PURE__*/React.createElement("a", {
-    href: "/"
   }, "Dashboard"))), /*#__PURE__*/React.createElement("div", {
     className: `py-5 mr-8 lg:block hover:border-b-2 hover:border-active hidden inline cursor-pointer ${page === "courses" ? "border-b-2 border-active" : ""}`
+  }, /*#__PURE__*/React.createElement("a", {
+    href: "/courses"
   }, /*#__PURE__*/React.createElement("span", {
     className: "text-base text-primary-blue inline",
     onClick: () => toggleMenuDropdown()
@@ -47,7 +49,7 @@ const NavBar = props => {
     iconName: "downarrow",
     alt: "Courses",
     className: "inline"
-  })), /*#__PURE__*/React.createElement("div", {
+  }))), /*#__PURE__*/React.createElement("div", {
     className: `py-5 mr-8 lg:block hover:border-b-2 hover:border-active hidden inline cursor-pointer ${page === "compiler" ? "border-b-2 border-active" : ""}`
   }, /*#__PURE__*/React.createElement("a", {
     href: "/compiler"

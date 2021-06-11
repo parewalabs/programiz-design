@@ -29,27 +29,31 @@ const NavBar = (props) => {
             />
           </a>
           <div
-            className={`py-5 mr-8 lg:block hover:border-b-2 hover:border-active hidden inline cursor-pointer ${
+            className={`py-5 mx-8 lg:block hover:border-b-2 hover:border-active hidden inline cursor-pointer ${
               page === "dashboard" ? "border-b-2 border-active" : ""
             }`}
           >
-            <Icons iconName="dashboard" alt="dashboard" className="inline" />
-            <span className="text-base text-primary-blue pl-2 inline">
-              <a href="/">Dashboard</a>
-            </span>
+            <a href="/">
+              <Icons iconName="dashboard" alt="dashboard" className="inline" />
+              <span className="text-base text-primary-blue pl-2 inline">
+                Dashboard
+              </span>
+            </a>
           </div>
           <div
             className={`py-5 mr-8 lg:block hover:border-b-2 hover:border-active hidden inline cursor-pointer ${
               page === "courses" ? "border-b-2 border-active" : ""
             }`}
           >
-            <span
-              className="text-base text-primary-blue inline"
-              onClick={() => toggleMenuDropdown()}
-            >
-              Courses
-            </span>
-            <Icons iconName="downarrow" alt="Courses" className="inline" />
+            <a href="/courses">
+              <span
+                className="text-base text-primary-blue inline"
+                onClick={() => toggleMenuDropdown()}
+              >
+                Courses
+              </span>
+              <Icons iconName="downarrow" alt="Courses" className="inline" />
+            </a>
           </div>
           <div
             className={`py-5 mr-8 lg:block hover:border-b-2 hover:border-active hidden inline cursor-pointer ${
