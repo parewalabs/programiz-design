@@ -6,18 +6,9 @@ const Profile = (props) => {
   return (
     <div>
       <div className="flex items-center pb-4">
-        {/*<div className="w-120 h-120 rounded-full bg-blue-400">
-          {props.userInfo.profilePic !== "" && (
-            <img
-              src={props.userInfo.profilePic}
-              className="w-120 h-120 rounded-full"
-              alt={props.userInfo.fullName}
-            />
-          )}
-        </div>*/}
         <Avatar
-          username={props.fullName}
-          profilePic={props.profilePic}
+          username={props.userInfo.fullName}
+          profilePic={props.userInfo.profilePic}
           size="w-120 h-120"
         />
         <div className="pl-4">

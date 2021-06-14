@@ -5,7 +5,7 @@ import Buttons from "../Buttons/Index";
 
 const CourseCompletedPopup = props => {
   return /*#__PURE__*/React.createElement("div", {
-    className: "lg:w-705 w-327 h-auto border border-seperator rounded"
+    className: "lg:w-705 w-327 h-auto border border-seperator rounded bg-white"
   }, /*#__PURE__*/React.createElement("div", {
     className: "w-full relative text-center"
   }, /*#__PURE__*/React.createElement("h2", {

@@ -15,7 +15,7 @@ const NavBar = props => {
 
   const page = localStorage.getItem("page");
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("nav", {
-    className: "md:w-327 lg:w-full h-70 border flex items-center"
+    className: "md:w-327 lg:w-full h-70 border flex items-center bg-white"
   }, /*#__PURE__*/React.createElement("div", {
     className: "w-full relative flex items-center lg:px-40 p-2"
   }, /*#__PURE__*/React.createElement("a", {

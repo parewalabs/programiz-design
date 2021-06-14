@@ -35,7 +35,7 @@ const LanguageCategoryCard = (props) => {
           alt={props.language}
           className="inline"
         />
-        <h5 className="font-normal text-base mt-7 uppercase font-semibold text-primary-blue">
+        <h5 className="font-normal text-base mt-7 uppercase font-semibold text-primary-blue bg-white">
           {props.language} Programming
         </h5>
         <span

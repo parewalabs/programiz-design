@@ -16,7 +16,7 @@ const CourseIndex = props => {
   };
 
   return /*#__PURE__*/React.createElement("div", {
-    className: "accordion lg:w-730 w-327 mb-2"
+    className: "accordion lg:w-730 w-327 mb-2 bg-white"
   }, /*#__PURE__*/React.createElement("div", {
     className: `contentBx border border-seperator rounded ${isActive}`
   }, /*#__PURE__*/React.createElement("div", {

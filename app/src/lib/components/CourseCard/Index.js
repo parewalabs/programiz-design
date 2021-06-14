@@ -21,7 +21,7 @@ const CourseCard = (props) => {
   }
   return (
     <div
-      className="w-327 lg:w-350 h-236 rounded border-2 text-primary-blue focus:ring-2 hover:border-secondary relative"
+      className="w-327 lg:w-350 h-236 rounded border-2 text-primary-blue focus:ring-2 hover:border-secondary relative bg-white"
       style={vector}
     >
       <div className="mx-5 mt-5">

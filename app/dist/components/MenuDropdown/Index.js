@@ -7,7 +7,7 @@ const setCurrentLanguage = lang => {
 
 const MenuDropdown = props => {
   return /*#__PURE__*/React.createElement("div", {
-    className: "w-327 lg:w-825 h-auto border rounded text-primary-blue"
+    className: "w-327 lg:w-825 h-auto border rounded text-primary-blue bg-white"
   }, /*#__PURE__*/React.createElement("div", {
     className: "py-10 px-10"
   }, /*#__PURE__*/React.createElement("span", {

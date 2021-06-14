@@ -3,7 +3,7 @@ import Icons from "../Icons";
 
 const Search = props => {
   return /*#__PURE__*/React.createElement("div", {
-    className: `w-308 h-12 flex border rounded ${props.className}`
+    className: `w-308 h-12 flex border rounded bg-white ${props.className}`
   }, /*#__PURE__*/React.createElement("span", {
     className: "w-auto flex justify-end items-center text-primary p-2"
   }, /*#__PURE__*/React.createElement(Icons, {

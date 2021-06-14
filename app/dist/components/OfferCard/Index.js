@@ -4,7 +4,7 @@ import Buttons from "../Buttons/Index";
 
 const OfferCard = props => {
   return /*#__PURE__*/React.createElement("div", {
-    className: "w-327 lg:w-350 h-200 rounded border-2 text-primary-blue focus:ring-2 hover:border-main"
+    className: "w-327 lg:w-350 h-200 rounded border-2 text-primary-blue focus:ring-2 hover:border-main bg-white"
   }, /*#__PURE__*/React.createElement("div", {
     className: "pt-6 px-4"
   }, /*#__PURE__*/React.createElement("span", {

@@ -36,7 +36,7 @@ const LanguageCategoryCard = props => {
     alt: props.language,
     className: "inline"
   }), /*#__PURE__*/React.createElement("h5", {
-    className: "font-normal text-base mt-7 uppercase font-semibold text-primary-blue"
+    className: "font-normal text-base mt-7 uppercase font-semibold text-primary-blue bg-white"
   }, props.language, " Programming"), /*#__PURE__*/React.createElement("span", {
     onClick: props.customClickEvent,
     className: "text-link mt-6 text-sm pt-4 cursor-pointer"
