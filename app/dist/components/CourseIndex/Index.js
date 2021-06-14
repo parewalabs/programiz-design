@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import Icons from "../Icons/index";
 import "./CourseIndex.css";
+import CircleProgress from "./CircleProgress";
 
 const CourseIndex = props => {
   const [isActive, setActive] = useState("");
@@ -22,7 +23,7 @@ const CourseIndex = props => {
     className: "label h-60 px-6 pt-3.5 cursor-pointer",
     onClick: toggleClass
   }, /*#__PURE__*/React.createElement("h3", {
-    className: "text-primary-blue text-xl leading-30 font-medium inline"
+    className: "text-primary-blue text-xl leading-30 font-medium inline truncate"
   }, props.course.title), /*#__PURE__*/React.createElement("div", {
     className: "float-right"
   }, /*#__PURE__*/React.createElement(Icons, {
@@ -39,10 +40,12 @@ const CourseIndex = props => {
     className: "StepProgress"
   }, props.course && props.course.lessons.map(lesson => {
     return /*#__PURE__*/React.createElement("li", {
-      className: `StepProgress-item is-done hover:text-main cursor-pointer text-primary-blue mb-4 ${lesson.progress === true ? "font-bold" : ""}`,
+      className: `StepProgress-item is-done hover:text-main cursor-pointer text-primary-blue mb-4 flex items-center ${lesson.progress === true ? "font-bold" : ""}`,
       key: lesson.id,
       onClick: props.customClickEvent
-    }, /*#__PURE__*/React.createElement("a", {
+    }, /*#__PURE__*/React.createElement(CircleProgress, {
+      percentage: 33
+    }), /*#__PURE__*/React.createElement("a", {
       href: `/lesson/${lesson.id}/details`
     }, lesson.title));
   }), props.course.quiz && /*#__PURE__*/React.createElement("li", {
