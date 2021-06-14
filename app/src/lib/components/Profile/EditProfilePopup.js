@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import Buttons from "../Buttons/Index";
 import Icons from "../Icons/index";
+import Avatar from "../Avatar/Index";
 
 const EdtiProfilePopup = (props) => {
   const [disabledButton, setDisabledButton] = useState(true);
@@ -27,15 +28,12 @@ const EdtiProfilePopup = (props) => {
           <div className="justify-center pt-2 flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
             <div className="w-327 lg:w-730 h-705 rounded-md border-2 bg-white mt-10">
               <div className="flex justify-center">
-                <div className="w-28 h-28 rounded-full bg-blue-400 mt-10">
-                  {props.userInfo.profilePic !== "" && (
-                    <img
-                      src={props.userInfo.profilePic}
-                      className="w-28 h-28 rounded-full"
-                      alt={props.userInfo.fullName}
-                    />
-                  )}
-                </div>
+                <Avatar
+                  username={props.userInfo.fullName}
+                  profilePic={props.userInfo.profilePic}
+                  size="w-28 h-28"
+                  className="mt-10"
+                />
               </div>
               <div className="flex justify-center mt-2">
                 <Buttons otherClass="text-link py-1.5 px-4 border border-main">
