@@ -16,4 +16,6 @@ import NavBar from "./components/NavBar/index";
 import LoginForm from "./components/LoginForm/index";
 import WelcomeMessage from "./components/WelcomeMessage/index";
 import BottomNav from "./components/BottomNav/index";
-export { AllLanguagesCard, LanguageCategoryCard, Buttons, ChallengesCard, ChallengesPageCard, MainChallengeCard, CourseCard, ExamplesCard, ExampleSuggestionCard, PopularExamplesCard, ReferencesCard, SavedItemsCard, LeaderboardCard, ProfileComponent, NavBar, LoginForm, WelcomeMessage, BottomNav };
+import CourseIndex from "./components/CourseIndex/Index";
+import CourseProgressCard from "./components/CourseProgressCard/Index";
+export { AllLanguagesCard, LanguageCategoryCard, Buttons, ChallengesCard, ChallengesPageCard, MainChallengeCard, CourseCard, CourseProgressCard, ExamplesCard, ExampleSuggestionCard, PopularExamplesCard, ReferencesCard, SavedItemsCard, LeaderboardCard, ProfileComponent, NavBar, LoginForm, WelcomeMessage, BottomNav, CourseIndex };

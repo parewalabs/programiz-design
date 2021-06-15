@@ -3,7 +3,7 @@ import { useState } from "react";
 import Icons from "../Icons/index";
 import "./CourseIndex.css";
 
-const CourseIndex = () => {
+const CourseIndex = (props) => {
   const [isActive, setActive] = useState("");
   const [downarrow, setDownarrow] = useState("");
   const [uparrow, setUparrow] = useState("hidden");
@@ -15,32 +15,51 @@ const CourseIndex = () => {
   };
 
   return (
-    <div className="accordion">
-      <div
-        className={`contentBx w-730 border border-seperator rounded ${isActive}`}
-      >
-        <div className="label px-6 py-2 cursor-pointer" onClick={toggleClass}>
+    <div className="accordion lg:w-730 w-327 mb-2">
+      <div className={`contentBx border border-seperator rounded ${isActive}`}>
+        <div
+          className="label h-60 px-6 pt-3.5 cursor-pointer"
+          onClick={toggleClass}
+        >
           <h3 className="text-primary-blue text-xl leading-30 font-medium inline">
-            Introduction
+            {props.course.title}
           </h3>
-          <Icons
-            iconName="downarrow"
-            alt="downarrow"
-            className={`float-right inline pt-1 ${downarrow}`}
-          />
-          <Icons
-            iconName="uparrow"
-            alt="uparrow"
-            className={`float-right inline pt-1 ${uparrow}`}
-          />
+          <div className="float-right">
+            <Icons
+              iconName="downarrow"
+              alt="downarrow"
+              className={`${downarrow}`}
+            />
+            <Icons iconName="uparrow" alt="uparrow" className={`${uparrow}`} />
+          </div>
         </div>
         <div className="border-t border-separate content">
           <ul className="StepProgress">
-            <li className="StepProgress-item is-done">Post a contest</li>
-            <li className="StepProgress-item is-done">Award an entry</li>
-            <li className="StepProgress-item current">Post a contest</li>
-            <li className="StepProgress-item">Handover</li>
-            <li className="StepProgress-item">Provide feedback</li>
+            {props.course &&
+              props.course.lessons.map((lesson) => {
+                return (
+                  <li
+                    className={`StepProgress-item is-done hover:text-main cursor-pointer text-primary-blue mb-4 ${
+                      lesson.progress === true ? "font-bold" : ""
+                    }`}
+                    key={lesson.id}
+                    onClick={props.customClickEvent}
+                  >
+                    <a href={`/lesson/${lesson.id}/details`}>{lesson.title}</a>
+                  </li>
+                );
+              })}
+            {props.course.quiz && (
+              <li
+                className={`StepProgress-item is-done hover:text-main cursor-pointer text-primary-blue mb-4`}
+                key={props.course.quiz.id}
+                onClick={props.customClickEvent}
+              >
+                <a href={`/quiz/${props.course.quiz.id}`}>
+                  {props.course.quiz.title}
+                </a>
+              </li>
+            )}
           </ul>
         </div>
       </div>
