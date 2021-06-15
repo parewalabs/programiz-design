@@ -2,7 +2,7 @@ import React from "react";
 
 const MembershipTable = props => {
   return /*#__PURE__*/React.createElement("div", {
-    className: "w-445 h-168 rounded border-2 text-primary-blue"
+    className: "lg:w-445 w-327 h-168 rounded border-2 text-primary-blue"
   }, /*#__PURE__*/React.createElement("table", {
     className: "w-full mt-6 ml-6"
   }, /*#__PURE__*/React.createElement("tbody", null, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("td", null, /*#__PURE__*/React.createElement("p", {

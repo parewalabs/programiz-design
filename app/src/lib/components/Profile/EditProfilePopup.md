@@ -1,5 +1,11 @@
 Edit Profile Popup :
 
 ```js
-<EdtiProfilePopup />
+<EdtiProfilePopup
+  userInfo={{
+    fullName: "Bishal Mishra",
+    email: "bishal@idealaya.com.np",
+    profilePic: "",
+  }}
+/>
 ```

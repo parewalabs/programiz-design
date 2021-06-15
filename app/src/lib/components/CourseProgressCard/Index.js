@@ -5,7 +5,7 @@ import Buttons from "../Buttons/Index";
 
 const CourseProgressCard = (props) => {
   return (
-    <div className="w-730 h-288 border-2 border-separate rounded focus:ring-2 hover:border-secondary relative">
+    <div className="w-327 lg:w-730 h-auto border-2 border-separate rounded focus:ring-2 hover:border-secondary relative">
       <img
         src={artwork}
         alt="artwork"
@@ -31,9 +31,14 @@ const CourseProgressCard = (props) => {
             ></div>
           </div>
         </div>
-        <p className="text-sm text-primary-blue pt-4 pr-80">{props.message}</p>
-        <div className="pt-4 flex ">
-          <Buttons otherClass="bg-main text-white py-3 px-4">
+        <p className="text-sm text-primary-blue pt-4 truncate">
+          {props.message}
+        </p>
+        <div className="pt-4 pb-10">
+          <Buttons
+            otherClass="bg-main text-white py-3 px-4"
+            customClickEvent={props.customClickEvent}
+          >
             {props.complete === "0%" ? "Start" : "Continue"} Learning
           </Buttons>
         </div>

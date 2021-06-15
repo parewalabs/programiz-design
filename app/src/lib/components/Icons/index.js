@@ -12,6 +12,7 @@ import book from "../../icons/book.svg";
 import rightarrow from "../../icons/rightarrow.svg";
 import challengesIcon from "../../icons/challengesIcon.svg";
 import newTag from "../../icons/newTag.svg";
+import cross from "../../icons/cross.svg";
 
 //language Icons
 import python from "../../icons/python.svg";
@@ -53,6 +54,8 @@ const Icons = (props) => {
         return challengesIcon;
       case "newTag":
         return newTag;
+      case "cross":
+        return cross;
 
       case "python":
         return python;
@@ -81,6 +84,7 @@ const Icons = (props) => {
       src={selectIcon(props.iconName)}
       alt={props.alt}
       className={props.className}
+      onClick={props.customClickEvent}
     />
   );
 };

@@ -1,11 +1,11 @@
 import React from "react";
-import ellipse from "../../icons/ellipse.svg";
-import vector from "../../images/Vector2.png";
+import ellipse from "../../icons/ellipse.svg"; //import vector from "../../images/Vector2.png";
+
 import Icons from "../Icons";
 
 const CourseCard = props => {
   return /*#__PURE__*/React.createElement("div", {
-    className: "w-160 lg:w-350 h-236 rounded border-2 text-primary-blue focus:ring-2 hover:border-secondary relative"
+    className: "w-327 lg:w-350 h-236 rounded border-2 text-primary-blue focus:ring-2 hover:border-secondary relative"
   }, /*#__PURE__*/React.createElement("div", {
     className: "mx-5 mt-5"
   }, /*#__PURE__*/React.createElement("h3", {
@@ -37,17 +37,13 @@ const CourseCard = props => {
       width: props.complete
     }
   })))), /*#__PURE__*/React.createElement("span", {
-    href: "#",
-    className: "text-link text-sm"
+    onClick: props.customClickEvent,
+    className: "text-link text-sm cursor-pointer"
   }, "Continue Learning", " ", /*#__PURE__*/React.createElement(Icons, {
     iconName: "rightarrow",
     alt: "rightarrow",
     className: "inline"
-  }))), /*#__PURE__*/React.createElement("img", {
-    src: vector,
-    alt: "profile Course",
-    className: "absolute top-0 -right-0"
-  }));
+  }))));
 };
 
 export default CourseCard;

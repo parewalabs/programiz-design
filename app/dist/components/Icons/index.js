@@ -11,7 +11,8 @@ import compiler from "../../icons/compiler.svg";
 import book from "../../icons/book.svg";
 import rightarrow from "../../icons/rightarrow.svg";
 import challengesIcon from "../../icons/challengesIcon.svg";
-import newTag from "../../icons/newTag.svg"; //language Icons
+import newTag from "../../icons/newTag.svg";
+import cross from "../../icons/cross.svg"; //language Icons
 
 import python from "../../icons/python.svg";
 import c from "../../icons/c.svg";
@@ -65,6 +66,9 @@ const Icons = props => {
       case "newTag":
         return newTag;
 
+      case "cross":
+        return cross;
+
       case "python":
         return python;
 
@@ -100,7 +104,8 @@ const Icons = props => {
   return /*#__PURE__*/React.createElement("img", {
     src: selectIcon(props.iconName),
     alt: props.alt,
-    className: props.className
+    className: props.className,
+    onClick: props.customClickEvent
   });
 };
 

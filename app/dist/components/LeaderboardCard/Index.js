@@ -3,7 +3,7 @@ import React from "react";
 
 const LeaderboardCard = props => {
   return /*#__PURE__*/React.createElement("div", {
-    className: "w-350 h-auto rounded-md border text-primary-blue focus:ring-2 hover:border-main"
+    className: "lg:w-350 w-327 h-auto rounded-md border text-primary-blue focus:ring-2 hover:border-main"
   }, /*#__PURE__*/React.createElement("h1", {
     className: "text-2xl leading-9 font-semibold text-primary-blue text-center pt-8"
   }, "Leaderboard"), props.topUsers && props.topUsers.users.map(topUser => {

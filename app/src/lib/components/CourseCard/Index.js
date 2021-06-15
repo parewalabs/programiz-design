@@ -1,11 +1,11 @@
 import React from "react";
 import ellipse from "../../icons/ellipse.svg";
-import vector from "../../images/Vector2.png";
+//import vector from "../../images/Vector2.png";
 import Icons from "../Icons";
 
 const CourseCard = (props) => {
   return (
-    <div className="w-160 lg:w-350 h-236 rounded border-2 text-primary-blue focus:ring-2 hover:border-secondary relative">
+    <div className="w-327 lg:w-350 h-236 rounded border-2 text-primary-blue focus:ring-2 hover:border-secondary relative">
       <div className="mx-5 mt-5">
         <h3 className="font-normal text-22 leading-30 font-semibold text-primary-blue">
           {props.courseName}
@@ -44,16 +44,19 @@ const CourseCard = (props) => {
             </div>
           </div>
         )}
-        <span href="#" className="text-link text-sm">
+        <span
+          onClick={props.customClickEvent}
+          className="text-link text-sm cursor-pointer"
+        >
           Continue Learning{" "}
           <Icons iconName="rightarrow" alt="rightarrow" className="inline" />
         </span>
       </div>
-      <img
+      {/*<img
         src={vector}
         alt="profile Course"
         className="absolute top-0 -right-0"
-      />
+      />*/}
     </div>
   );
 };

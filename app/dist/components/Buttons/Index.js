@@ -5,6 +5,7 @@ const Buttons = props => {
     className: ""
   }, /*#__PURE__*/React.createElement("button", {
     className: "text-base disabled:opacity-50 font-semibold rounded " + props.otherClass,
+    onClick: props.customClickEvent,
     disabled: props.disabled
   }, props.children));
 };
