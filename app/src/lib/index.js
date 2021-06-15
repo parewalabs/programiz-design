@@ -18,6 +18,7 @@ import WelcomeMessage from "./components/WelcomeMessage/index";
 import BottomNav from "./components/BottomNav/index";
 import CourseIndex from "./components/CourseIndex/Index";
 import CourseProgressCard from "./components/CourseProgressCard/Index";
+import Icons from "./components/Icons/index";
 
 export {
   AllLanguagesCard,
@@ -40,4 +41,5 @@ export {
   WelcomeMessage,
   BottomNav,
   CourseIndex,
+  Icons,
 };
