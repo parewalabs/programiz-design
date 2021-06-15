@@ -1,0 +1,70 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+
+@layer base {
+  @font-face {
+    font-family: "Euclid Circular A";
+    src: url(../fonts/EuclidCircularA-Bold.otf) format("otf");
+  }
+
+  @font-face {
+    font-family: "Euclid Circular A";
+    src: url(../fonts/EuclidCircularA-BoldItalic.otf) format("otf");
+  }
+
+  @font-face {
+    font-family: "Euclid Circular A";
+    src: url(../fonts/EuclidCircularA-Light.otf) format("otf");
+  }
+
+  @font-face {
+    font-family: "Euclid Circular A";
+    src: url(../fonts/EuclidCircularA-LightItalic.otf) format("otf");
+  }
+
+  @font-face {
+    font-family: "Euclid Circular A";
+    src: url(../fonts/EuclidCircularA-Medium.otf) format("otf");
+  }
+
+  @font-face {
+    font-family: "Euclid Circular A";
+    src: url(../fonts/EuclidCircularA-MediumItalic.otf) format("otf");
+  }
+  @font-face {
+    font-family: "Euclid Circular A";
+    src: url(../fonts/EuclidCircularA-Regular.otf) format("otf");
+  }
+  @font-face {
+    font-family: "Euclid Circular A";
+    src: url(../fonts/EuclidCircularA-RegularItalic.otf) format("otf");
+  }
+  @font-face {
+    font-family: "Euclid Circular A";
+    src: url(../fonts/EuclidCircularA-Semibold.otf) format("otf");
+  }
+  @font-face {
+    font-family: "Euclid Circular A";
+    src: url(../fonts/EuclidCircularA-SemiboldItalic.otf) format("otf");
+  }
+  @font-face {
+    font-family: "Euclid Circular A";
+    src: url(../fonts/EuclidCircularA-MediumItalic.otf) format("otf");
+  }
+}
+@tailwind utilities;
+
+/*body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}*/
