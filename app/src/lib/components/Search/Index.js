@@ -3,7 +3,9 @@ import Icons from "../Icons";
 
 const Search = (props) => {
   return (
-    <div className={`w-308 h-12 flex border rounded ${props.className}`}>
+    <div
+      className={`w-308 h-12 flex border rounded bg-white ${props.className}`}
+    >
       <span className="w-auto flex justify-end items-center text-primary p-2">
         <Icons iconName="searchIcon" alt="Search" />
       </span>

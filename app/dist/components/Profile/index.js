@@ -6,8 +6,8 @@ const Profile = props => {
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "flex items-center pb-4"
   }, /*#__PURE__*/React.createElement(Avatar, {
-    username: props.fullName,
-    profilePic: props.profilePic,
+    username: props.userInfo.fullName,
+    profilePic: props.userInfo.profilePic,
     size: "w-120 h-120"
   }), /*#__PURE__*/React.createElement("div", {
     className: "pl-4"

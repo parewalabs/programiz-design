@@ -16,7 +16,7 @@ const CourseIndex = (props) => {
   };
 
   return (
-    <div className="accordion lg:w-730 w-327 mb-2">
+    <div className="accordion lg:w-730 w-327 mb-2 bg-white">
       <div className={`contentBx border border-seperator rounded ${isActive}`}>
         <div
           className="label h-60 px-6 pt-3.5 cursor-pointer"

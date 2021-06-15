@@ -6,7 +6,7 @@ const setCurrentLanguage = (lang) => {
 };
 const MenuDropdown = (props) => {
   return (
-    <div className="w-327 lg:w-825 h-auto border rounded text-primary-blue">
+    <div className="w-327 lg:w-825 h-auto border rounded text-primary-blue bg-white">
       <div className="py-10 px-10">
         <span className="text-xl text-primary-blue font-normal">
           Choose your learning path

@@ -13,7 +13,7 @@ const LoginForm = props => {
   };
 
   return /*#__PURE__*/React.createElement("form", {
-    className: "w-327 lg:w-445",
+    className: "w-327 lg:w-445 bg-white",
     onSubmit: submitHandler
   }, /*#__PURE__*/React.createElement("div", {
     className: "mb-6"

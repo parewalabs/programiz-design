@@ -3,7 +3,7 @@ import Buttons from "../Buttons/Index";
 
 const InvoicesTable = (props) => {
   return (
-    <div className="w-825 h-auto rounded-md border-2">
+    <div className="w-825 h-auto rounded-md border-2 bg-white">
       <table className="w-full my-4 border-collapse table-fixed overflow-hidden">
         <thead className="border-b-1">
           <tr className="text-sm text-primary-blue border-b-1 text-left border-b">

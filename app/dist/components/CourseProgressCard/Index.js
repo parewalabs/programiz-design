@@ -5,7 +5,7 @@ import Buttons from "../Buttons/Index";
 
 const CourseProgressCard = props => {
   return /*#__PURE__*/React.createElement("div", {
-    className: "w-327 lg:w-730 h-auto border-2 border-separate rounded focus:ring-2 hover:border-secondary relative",
+    className: "w-327 lg:w-730 h-auto border-2 border-separate rounded focus:ring-2 hover:border-secondary relative bg-white",
     style: {
       backgroundImage: `url(${artwork})`,
       backgroundRepeat: "no-repeat",

@@ -14,7 +14,7 @@ const NavBar = (props) => {
   const page = localStorage.getItem("page");
   return (
     <>
-      <nav className="md:w-327 lg:w-full h-70 border flex items-center">
+      <nav className="md:w-327 lg:w-full h-70 border flex items-center bg-white">
         <div className="w-full relative flex items-center lg:px-40 p-2">
           <a href="/">
             <img

@@ -3,7 +3,7 @@ import Icons from "../Icons";
 
 const AllLanguagesCard = props => {
   return /*#__PURE__*/React.createElement("div", {
-    className: "w-160 h-200 rounded border-2 text-primary-blue focus:ring-2 hover:border-main"
+    className: "w-160 h-200 rounded border-2 text-primary-blue focus:ring-2 hover:border-main bg-white"
   }, /*#__PURE__*/React.createElement("div", {
     className: "ml-5 mt-20 cursor-pointer"
   }, /*#__PURE__*/React.createElement("span", {

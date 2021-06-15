@@ -22,7 +22,7 @@ const LanguageCategoryCard = (props) => {
   }
   return (
     <div
-      className="w-160 h-200 rounded border-2 text-primary-blue focus:ring-2 hover:border-main relative"
+      className="w-160 h-200 rounded border-2 text-primary-blue focus:ring-2 hover:border-main relative bg-white"
       style={{
         backgroundImage: `url(${vector1}), url(${vector2})`,
         backgroundRepeat: "no-repeat",

@@ -5,7 +5,7 @@ import ellipseActive from "../../icons/ellipseActive.svg";
 const BottomNav = () => {
   const page = localStorage.getItem("page");
   return /*#__PURE__*/React.createElement("div", {
-    className: "w-full h-16 border-t block lg:hidden"
+    className: "w-full h-16 border-t block lg:hidden bg-white"
   }, /*#__PURE__*/React.createElement("div", {
     className: "px-14 flex pt-2 pb-1"
   }, /*#__PURE__*/React.createElement("a", {
@@ -44,24 +44,6 @@ const BottomNav = () => {
     src: ellipseActive,
     alt: "tags",
     className: page === "course" ? "block" : "hidden"
-  }))), /*#__PURE__*/React.createElement("a", {
-    href: "/compiler"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "flex flex-col items-center justify-center"
-  }, /*#__PURE__*/React.createElement(Icons, {
-    iconName: "compiler",
-    alt: "compiler",
-    className: page === "compiler" ? "hidden" : "block"
-  }), /*#__PURE__*/React.createElement(Icons, {
-    iconName: "compilerActive",
-    alt: "compilerActive",
-    className: page === "compiler" ? "block" : "hidden"
-  }), /*#__PURE__*/React.createElement("span", {
-    className: `text-base ${page === "compiler" ? "text-link" : "text-primary-blue"}`
-  }, "Compiler"), /*#__PURE__*/React.createElement("img", {
-    src: ellipseActive,
-    alt: "tags",
-    className: page === "compiler" ? "block" : "hidden"
   })))));
 };
 

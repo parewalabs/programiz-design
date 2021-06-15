@@ -3,7 +3,7 @@ import Icons from "../Icons";
 
 const AllLanguagesCard = (props) => {
   return (
-    <div className="w-160 h-200 rounded border-2 text-primary-blue focus:ring-2 hover:border-main">
+    <div className="w-160 h-200 rounded border-2 text-primary-blue focus:ring-2 hover:border-main bg-white">
       <div className="ml-5 mt-20 cursor-pointer">
         <span
           onClick={props.customClickEvent}

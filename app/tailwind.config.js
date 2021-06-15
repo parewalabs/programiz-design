@@ -82,7 +82,7 @@ module.exports = {
   variants: {
     extend: {
       backgroundColor: ["first"],
-      fontWeight: ["first"],
+      fontWeight: ["first", "hover", "focus"],
       width: ["first"],
       height: ["first"],
       margin: ["first", "last"],

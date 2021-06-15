@@ -3,7 +3,7 @@ import vector from "../../images/Vector.png";
 
 const SavedItemsCard = props => {
   return /*#__PURE__*/React.createElement("div", {
-    className: "w-255 h-132 rounded border-2 text-primary-blue focus:ring-2 hover:border-tertiary relative cursor-pointer",
+    className: "w-255 h-132 rounded border-2 text-primary-blue focus:ring-2 hover:border-tertiary relative cursor-pointer bg-white",
     onClick: props.customClickEvent
   }, /*#__PURE__*/React.createElement("div", {
     className: "px-6 pt-6"

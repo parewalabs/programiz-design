@@ -5,7 +5,7 @@ import ellipseActive from "../../icons/ellipseActive.svg";
 const BottomNav = () => {
   const page = localStorage.getItem("page");
   return (
-    <div className="w-full h-16 border-t block lg:hidden">
+    <div className="w-full h-16 border-t block lg:hidden bg-white">
       <div className="px-14 flex pt-2 pb-1">
         <a href="/">
           <div className="flex flex-col items-center justify-center">
@@ -54,32 +54,6 @@ const BottomNav = () => {
               src={ellipseActive}
               alt="tags"
               className={page === "course" ? "block" : "hidden"}
-            />
-          </div>
-        </a>
-        <a href="/compiler">
-          <div className="flex flex-col items-center justify-center">
-            <Icons
-              iconName="compiler"
-              alt="compiler"
-              className={page === "compiler" ? "hidden" : "block"}
-            />
-            <Icons
-              iconName="compilerActive"
-              alt="compilerActive"
-              className={page === "compiler" ? "block" : "hidden"}
-            />
-            <span
-              className={`text-base ${
-                page === "compiler" ? "text-link" : "text-primary-blue"
-              }`}
-            >
-              Compiler
-            </span>
-            <img
-              src={ellipseActive}
-              alt="tags"
-              className={page === "compiler" ? "block" : "hidden"}
             />
           </div>
         </a>
