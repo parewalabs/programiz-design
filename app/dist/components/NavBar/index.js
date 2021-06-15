@@ -6,7 +6,7 @@ import Avatar from "../Avatar/Index";
 import Search from "../Search/Index";
 import MenuDropdown from "../MenuDropdown/Index";
 
-const NavBar = () => {
+const NavBar = props => {
   const [menuDropdown, setMenuDropdown] = useState(false);
 
   const toggleMenuDropdown = () => {
@@ -64,11 +64,12 @@ const NavBar = () => {
     alt: "Bookmark",
     className: "ml-2 cursor-pointer"
   })), /*#__PURE__*/React.createElement("a", {
-    href: "/profile"
+    href: "/profile",
+    title: "profile"
   }, /*#__PURE__*/React.createElement(Avatar, {
     score: "10",
-    username: "Albert",
-    profilePic: "",
+    username: props.fullName,
+    profilePic: props.profilePic,
     otherClass: "ml-2 cursor-pointer"
   }))))), /*#__PURE__*/React.createElement("div", {
     className: `absolute z-1 flex ml-10 bg-white flex ${menuDropdown === true ? "block" : "hidden"}`

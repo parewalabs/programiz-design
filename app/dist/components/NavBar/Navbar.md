@@ -1,5 +1,5 @@
 Nav Bar:
 
 ```js
-<NavBar />
+<NavBar profilePic="" fullName="" />
 ```

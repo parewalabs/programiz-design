@@ -8,7 +8,7 @@ const Avatar = (props) => {
           <img
             src={props.profilePic}
             alt={props.username}
-            className="w-9 rounded-full"
+            className="w-9 h-9 rounded-full"
           />
         )}
       </div>
