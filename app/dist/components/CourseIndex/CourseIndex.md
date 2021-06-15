@@ -1,0 +1,5 @@
+Course Index:
+
+```js
+<CourseIndex />
+```

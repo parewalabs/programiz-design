@@ -11,29 +11,38 @@ const NavBar = (props) => {
   const toggleMenuDropdown = () => {
     setMenuDropdown(!menuDropdown);
   };
+  const page = localStorage.getItem("page");
   return (
     <>
-      <nav className="w-327 lg:w-full h-70 border flex items-center">
-        <div className="w-full relative flex items-center lg:px-8 p-2">
+      <nav className="md:w-327 lg:w-full h-70 border flex items-center">
+        <div className="w-full relative flex items-center lg:px-40 p-2">
           <a href="/">
             <img
               src={logoWeb}
               alt="Programiz Web"
               className="hidden lg:block cursor-pointer"
             />
+            <img
+              src={logoMobile}
+              alt="Programiz Web"
+              className="block lg:hidden cursor-pointer"
+            />
           </a>
-          <img
-            src={logoMobile}
-            alt="Programiz Web"
-            className="block lg:hidden  cursor-pointer"
-          />
-          <div className="py-5 mr-8 hover:border-b-2 hover:border-active ml-8 lg:block hidden inline cursor-pointer">
+          <div
+            className={`py-5 mr-8 lg:block hover:border-b-2 hover:border-active hidden inline cursor-pointer ${
+              page === "dashboard" ? "border-b-2 border-active" : ""
+            }`}
+          >
             <Icons iconName="dashboard" alt="dashboard" className="inline" />
             <span className="text-base text-primary-blue pl-2 inline">
               <a href="/">Dashboard</a>
             </span>
           </div>
-          <div className="py-5 mr-8 lg:block hover:border-b-2 hover:border-active hidden inline cursor-pointer">
+          <div
+            className={`py-5 mr-8 lg:block hover:border-b-2 hover:border-active hidden inline cursor-pointer ${
+              page === "courses" ? "border-b-2 border-active" : ""
+            }`}
+          >
             <span
               className="text-base text-primary-blue inline"
               onClick={() => toggleMenuDropdown()}
@@ -42,10 +51,14 @@ const NavBar = (props) => {
             </span>
             <Icons iconName="downarrow" alt="Courses" className="inline" />
           </div>
-          <div className="py-5 mr-8 lg:block hover:border-b-2 hover:border-active hidden inline cursor-pointer">
+          <div
+            className={`py-5 mr-8 lg:block hover:border-b-2 hover:border-active hidden inline cursor-pointer ${
+              page === "compiler" ? "border-b-2 border-active" : ""
+            }`}
+          >
             <a href="/compiler">Compiler</a>
           </div>
-          <div className="absolute lg:right-8 right-2 flex items-center pr-0">
+          <div className="absolute lg:right-40 right-2 flex items-center ">
             <Search className="hidden lg:flex" />
             <Icons
               iconName="searchIcon"
@@ -70,7 +83,7 @@ const NavBar = (props) => {
         </div>
       </nav>
       <div
-        className={`absolute z-1 flex ml-10 bg-white flex ${
+        className={`absolute z-1 flex ml-40 bg-white flex ${
           menuDropdown === true ? "block" : "hidden"
         }`}
       >
