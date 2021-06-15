@@ -19,13 +19,16 @@ const CourseIndex = (props) => {
     <div className="accordion lg:w-730 w-327 mb-2 bg-white">
       <div className={`contentBx border border-seperator rounded ${isActive}`}>
         <div
-          className="label h-60 px-6 pt-3.5 cursor-pointer"
+          className="label h-60 px-6 cursor-pointer flex justify-between"
           onClick={toggleClass}
         >
-          <h3 className="text-primary-blue text-xl leading-30 font-medium inline truncate">
+          <h3
+            className="text-primary-blue text-xl leading-30 font-medium inline truncate overflow-hidden flex items-center"
+            title={props.course.title}
+          >
             {props.course.title}
           </h3>
-          <div className="float-right">
+          <div className="flex justify-end pl-2">
             <Icons
               iconName="downarrow"
               alt="downarrow"
@@ -47,7 +50,13 @@ const CourseIndex = (props) => {
                     onClick={props.customClickEvent}
                   >
                     <CircleProgress percentage={33} />
-                    <a href={`/lesson/${lesson.id}/details`}>{lesson.title}</a>
+                    <a
+                      href={`/lesson/${lesson.id}/details`}
+                      className="truncate ml-4"
+                      title={lesson.title}
+                    >
+                      {lesson.title}
+                    </a>
                   </li>
                 );
               })}
@@ -58,7 +67,11 @@ const CourseIndex = (props) => {
                 onClick={props.customClickEvent}
               >
                 <CircleProgress percentage={0} />
-                <a href={`/quiz/${props.course.quiz.id}`}>
+                <a
+                  href={`/quiz/${props.course.quiz.id}`}
+                  className="truncate ml-4"
+                  title={props.course.quiz.title}
+                >
                   {props.course.quiz.title}
                 </a>
               </li>

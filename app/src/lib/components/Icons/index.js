@@ -16,6 +16,8 @@ import rightarrow from "../../icons/rightarrow.svg";
 import challengesIcon from "../../icons/challengesIcon.svg";
 import newTag from "../../icons/newTag.svg";
 import cross from "../../icons/cross.svg";
+import bookmarkLight from "../../icons/bookmarkLight.svg";
+import burgerMenu from "../../icons/burgerMenu.svg";
 
 //language Icons
 import python from "../../icons/python.svg";
@@ -47,6 +49,8 @@ const Icons = (props) => {
         return uparrow;
       case "bookmark":
         return bookmark;
+      case "bookmarkLight":
+        return bookmarkLight;
       case "userPlus":
         return userPlus;
       case "edit":
@@ -65,6 +69,8 @@ const Icons = (props) => {
         return newTag;
       case "cross":
         return cross;
+      case "burgerMenu":
+        return burgerMenu;
 
       case "python":
         return python;

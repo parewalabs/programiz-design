@@ -19,7 +19,7 @@ import BottomNav from "./components/BottomNav/index";
 import CourseIndex from "./components/CourseIndex/Index";
 import CourseProgressCard from "./components/CourseProgressCard/Index";
 import Icons from "./components/Icons/index";
-
+import SidebarToc from "./components/SidebarToc/index";
 export {
   AllLanguagesCard,
   LanguageCategoryCard,
@@ -42,4 +42,5 @@ export {
   BottomNav,
   CourseIndex,
   Icons,
+  SidebarToc,
 };
