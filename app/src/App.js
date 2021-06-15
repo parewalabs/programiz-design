@@ -1,3 +1,8 @@
-import AllLanguagesCard from "./components/LanguageCategoryCard/AllLanguagesCard";
-
-export { AllLanguagesCard };
+function App() {
+  return (
+    <div className="App">
+      <h1 className="text-3xl">Programiz design</h1>
+    </div>
+  );
+}
+export default App;
