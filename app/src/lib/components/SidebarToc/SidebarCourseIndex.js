@@ -16,7 +16,7 @@ const SidebarCourseIndex = (props) => {
   };
 
   return (
-    <div className="sidebarAccordion w-72 h-full">
+    <div className="sidebarAccordion w-72">
       <div
         className={`contentBx border-t border-seperator ${
           isActive === true ? "active" : ""

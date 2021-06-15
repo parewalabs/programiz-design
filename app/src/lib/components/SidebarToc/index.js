@@ -4,7 +4,7 @@ import SidebarCourseIndex from "./SidebarCourseIndex";
 
 const SidebarToc = (props) => {
   return (
-    <div className="w-72 bg-sidebar">
+    <div className="w-72 h-full bg-sidebar">
       <div className="px-6 pt-6">
         <Icons iconName="burgerMenu" alt="Menu" className="float-right" />
         <h3 className="text-primary-blue text-22 leading-30 font-semibold pt-14">

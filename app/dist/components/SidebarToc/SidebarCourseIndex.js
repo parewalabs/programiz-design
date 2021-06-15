@@ -16,7 +16,7 @@ const SidebarCourseIndex = props => {
   };
 
   return /*#__PURE__*/React.createElement("div", {
-    className: "sidebarAccordion w-72 h-full"
+    className: "sidebarAccordion w-72"
   }, /*#__PURE__*/React.createElement("div", {
     className: `contentBx border-t border-seperator ${isActive === true ? "active" : ""}`
   }, /*#__PURE__*/React.createElement("div", {

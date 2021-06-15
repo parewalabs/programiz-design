@@ -4,7 +4,7 @@ import SidebarCourseIndex from "./SidebarCourseIndex";
 
 const SidebarToc = props => {
   return /*#__PURE__*/React.createElement("div", {
-    className: "w-72 bg-sidebar"
+    className: "w-72 h-full bg-sidebar"
   }, /*#__PURE__*/React.createElement("div", {
     className: "px-6 pt-6"
   }, /*#__PURE__*/React.createElement(Icons, {
