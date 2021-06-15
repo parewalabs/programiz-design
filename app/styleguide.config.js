@@ -16,5 +16,5 @@ module.exports = {
   webpackConfig,
   components: "src/lib/components/**/*.js",
   require: [path.join(__dirname, "./src/index.css")],
-  styleguideDir: "../docs",
+  styleguideDir: "./docs",
 };
