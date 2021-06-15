@@ -45,15 +45,13 @@ const NavBar = (props) => {
               page === "courses" ? "border-b-2 border-active" : ""
             }`}
           >
-            <a href="/courses">
-              <span
-                className="text-base text-primary-blue inline"
-                onClick={() => toggleMenuDropdown()}
-              >
-                Courses
-              </span>
-              <Icons iconName="downarrow" alt="Courses" className="inline" />
-            </a>
+            <span
+              className="text-base text-primary-blue inline"
+              onClick={() => toggleMenuDropdown()}
+            >
+              Courses
+            </span>
+            <Icons iconName="downarrow" alt="Courses" className="inline" />
           </div>
 
           <div className="absolute lg:right-40 right-2 flex items-center ">

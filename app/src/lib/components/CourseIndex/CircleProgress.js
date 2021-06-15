@@ -9,7 +9,7 @@ import correctColor from "../../icons/correctColor.svg";
 const CircleProgress = (props) => {
   const checked = props.percentage === 100 ? correctColor : correct;
   return (
-    <div style={{ width: "20px", marginRight: "15px" }}>
+    <div style={{ width: "20px" }}>
       <CircularProgressbarWithChildren
         value={props.percentage}
         styles={buildStyles({

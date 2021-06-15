@@ -20,12 +20,13 @@ const CourseIndex = props => {
   }, /*#__PURE__*/React.createElement("div", {
     className: `contentBx border border-seperator rounded ${isActive}`
   }, /*#__PURE__*/React.createElement("div", {
-    className: "label h-60 px-6 pt-3.5 cursor-pointer",
+    className: "label h-60 px-6 cursor-pointer flex justify-between",
     onClick: toggleClass
   }, /*#__PURE__*/React.createElement("h3", {
-    className: "text-primary-blue text-xl leading-30 font-medium inline truncate"
+    className: "text-primary-blue text-xl leading-30 font-medium inline truncate overflow-hidden flex items-center",
+    title: props.course.title
   }, props.course.title), /*#__PURE__*/React.createElement("div", {
-    className: "float-right"
+    className: "flex justify-end pl-2"
   }, /*#__PURE__*/React.createElement(Icons, {
     iconName: "downarrow",
     alt: "downarrow",
@@ -46,7 +47,9 @@ const CourseIndex = props => {
     }, /*#__PURE__*/React.createElement(CircleProgress, {
       percentage: 33
     }), /*#__PURE__*/React.createElement("a", {
-      href: `/lesson/${lesson.id}/details`
+      href: `/lesson/${lesson.id}/details`,
+      className: "truncate ml-4",
+      title: lesson.title
     }, lesson.title));
   }), props.course.quiz && /*#__PURE__*/React.createElement("li", {
     className: `StepProgress-item is-done hover:text-main cursor-pointer text-primary-blue mb-4 flex items-center `,
@@ -55,7 +58,9 @@ const CourseIndex = props => {
   }, /*#__PURE__*/React.createElement(CircleProgress, {
     percentage: 0
   }), /*#__PURE__*/React.createElement("a", {
-    href: `/quiz/${props.course.quiz.id}`
+    href: `/quiz/${props.course.quiz.id}`,
+    className: "truncate ml-4",
+    title: props.course.quiz.title
   }, props.course.quiz.title))))));
 };
 

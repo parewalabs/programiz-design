@@ -7,8 +7,7 @@ const CircleProgress = props => {
   const checked = props.percentage === 100 ? correctColor : correct;
   return /*#__PURE__*/React.createElement("div", {
     style: {
-      width: "20px",
-      marginRight: "15px"
+      width: "20px"
     }
   }, /*#__PURE__*/React.createElement(CircularProgressbarWithChildren, {
     value: props.percentage,

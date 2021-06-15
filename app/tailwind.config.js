@@ -62,6 +62,7 @@ module.exports = {
         shades20: "#CDDDFD",
         active: "#007EFA",
         popup: "#1F2023",
+        sidebar: "#F5F5F5",
       },
       fontFamily: {
         "Euclid Circular A": ["Euclid Circular A"],
