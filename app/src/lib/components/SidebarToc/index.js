@@ -25,10 +25,10 @@ const SidebarToc = (props) => {
           Course Index
         </p>
       </div>
-      <SidebarCourseIndex course={props.course} />
-      <SidebarCourseIndex course={props.course} />
-      <SidebarCourseIndex course={props.course} />
-      <SidebarCourseIndex course={props.course} />
+      {props.toc &&
+        props.toc.map((toc) => {
+          return <SidebarCourseIndex course={toc} key={toc.id} />;
+        })}
     </div>
   );
 };

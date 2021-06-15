@@ -26,14 +26,11 @@ const SidebarToc = props => {
     }
   }))), /*#__PURE__*/React.createElement("p", {
     className: "text-primary-blue text-sm font-normal pt-8 items-start pb-2"
-  }, "Course Index")), /*#__PURE__*/React.createElement(SidebarCourseIndex, {
-    course: props.course
-  }), /*#__PURE__*/React.createElement(SidebarCourseIndex, {
-    course: props.course
-  }), /*#__PURE__*/React.createElement(SidebarCourseIndex, {
-    course: props.course
-  }), /*#__PURE__*/React.createElement(SidebarCourseIndex, {
-    course: props.course
+  }, "Course Index")), props.toc && props.toc.map(toc => {
+    return /*#__PURE__*/React.createElement(SidebarCourseIndex, {
+      course: toc,
+      key: toc.id
+    });
   }));
 };
 
