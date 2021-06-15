@@ -49,10 +49,12 @@ const CourseIndex = props => {
       href: `/lesson/${lesson.id}/details`
     }, lesson.title));
   }), props.course.quiz && /*#__PURE__*/React.createElement("li", {
-    className: `StepProgress-item is-done hover:text-main cursor-pointer text-primary-blue mb-4`,
+    className: `StepProgress-item is-done hover:text-main cursor-pointer text-primary-blue mb-4 flex items-center `,
     key: props.course.quiz.id,
     onClick: props.customClickEvent
-  }, /*#__PURE__*/React.createElement("a", {
+  }, /*#__PURE__*/React.createElement(CircleProgress, {
+    percentage: 0
+  }), /*#__PURE__*/React.createElement("a", {
     href: `/quiz/${props.course.quiz.id}`
   }, props.course.quiz.title))))));
 };

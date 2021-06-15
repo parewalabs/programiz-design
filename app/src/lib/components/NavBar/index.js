@@ -55,13 +55,7 @@ const NavBar = (props) => {
               <Icons iconName="downarrow" alt="Courses" className="inline" />
             </a>
           </div>
-          <div
-            className={`py-5 mr-8 lg:block hover:border-b-2 hover:border-active hidden inline cursor-pointer ${
-              page === "compiler" ? "border-b-2 border-active" : ""
-            }`}
-          >
-            <a href="/compiler">Compiler</a>
-          </div>
+
           <div className="absolute lg:right-40 right-2 flex items-center ">
             <Search className="hidden lg:flex" />
             <Icons
@@ -77,10 +71,10 @@ const NavBar = (props) => {
             </a>
             <a href="/profile" title="profile">
               <Avatar
-                score="10"
                 username={props.fullName}
                 profilePic={props.profilePic}
-                otherClass="ml-2 cursor-pointer"
+                size="w-9 h-9"
+                className="ml-2 cursor-pointer"
               />
             </a>
           </div>

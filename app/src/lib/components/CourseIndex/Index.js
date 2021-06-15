@@ -53,7 +53,7 @@ const CourseIndex = (props) => {
               })}
             {props.course.quiz && (
               <li
-                className={`StepProgress-item is-done hover:text-main cursor-pointer text-primary-blue mb-4`}
+                className={`StepProgress-item is-done hover:text-main cursor-pointer text-primary-blue mb-4 flex items-center `}
                 key={props.course.quiz.id}
                 onClick={props.customClickEvent}
               >

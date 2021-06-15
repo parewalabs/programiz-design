@@ -50,10 +50,6 @@ const NavBar = props => {
     alt: "Courses",
     className: "inline"
   }))), /*#__PURE__*/React.createElement("div", {
-    className: `py-5 mr-8 lg:block hover:border-b-2 hover:border-active hidden inline cursor-pointer ${page === "compiler" ? "border-b-2 border-active" : ""}`
-  }, /*#__PURE__*/React.createElement("a", {
-    href: "/compiler"
-  }, "Compiler")), /*#__PURE__*/React.createElement("div", {
     className: "absolute lg:right-40 right-2 flex items-center "
   }, /*#__PURE__*/React.createElement(Search, {
     className: "hidden lg:flex"
@@ -70,10 +66,10 @@ const NavBar = props => {
     href: "/profile",
     title: "profile"
   }, /*#__PURE__*/React.createElement(Avatar, {
-    score: "10",
     username: props.fullName,
     profilePic: props.profilePic,
-    otherClass: "ml-2 cursor-pointer"
+    size: "w-9 h-9",
+    className: "ml-2 cursor-pointer"
   }))))), /*#__PURE__*/React.createElement("div", {
     className: `absolute z-1 flex ml-40 bg-white flex ${menuDropdown === true ? "block" : "hidden"}`
   }, /*#__PURE__*/React.createElement(MenuDropdown, {
