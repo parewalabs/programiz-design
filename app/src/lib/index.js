@@ -20,7 +20,7 @@ import CourseIndex from "./components/CourseIndex/Index";
 import CourseProgressCard from "./components/CourseProgressCard/Index";
 import Icons from "./components/Icons/index";
 import SidebarToc from "./components/SidebarToc/index";
-import CompletedPopup from "./components/CompletedPopup/index";
+import CompletedPopup from "./components/CompletedPopup/Index";
 
 export {
   AllLanguagesCard,
