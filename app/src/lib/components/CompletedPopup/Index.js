@@ -4,7 +4,7 @@ import Buttons from "../Buttons/Index";
 
 const CompletedPopup = (props) => {
   return (
-    <div className="lg:w-705 w-327 h-autp border border-seperator">
+    <div className="lg:w-705 w-327 h-autp border border-seperator bg-white">
       <div className="w-full relative text-center">
         <h2 className="text-xl text-primary-blue font font-semibold absolute pt-8 left-2/4 -ml-20">
           Successfully

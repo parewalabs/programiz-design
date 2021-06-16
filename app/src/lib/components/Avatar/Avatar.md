@@ -1,5 +1,5 @@
 Avatar example:
 
 ```js
-<Avatar score="10" username="Albert" />
+<Avatar username="avatar" profilePic="" className="" size="w-9 h-9" />
 ```

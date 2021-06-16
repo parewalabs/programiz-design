@@ -5,12 +5,13 @@ import Buttons from "../Buttons/Index";
 
 const CourseProgressCard = props => {
   return /*#__PURE__*/React.createElement("div", {
-    className: "w-327 lg:w-730 h-auto border-2 border-separate rounded focus:ring-2 hover:border-secondary relative"
-  }, /*#__PURE__*/React.createElement("img", {
-    src: artwork,
-    alt: "artwork",
-    className: "w-273 h-20 absolute pt-0 right-3.5"
-  }), /*#__PURE__*/React.createElement("div", {
+    className: "w-327 lg:w-730 h-auto border-2 border-separate rounded focus:ring-2 hover:border-secondary relative bg-white",
+    style: {
+      backgroundImage: `url(${artwork})`,
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "90% 0px"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
     className: "pt-10 pl-10"
   }, /*#__PURE__*/React.createElement("h2", {
     className: "text-3xl font-bold text-primary-blue"
@@ -35,7 +36,8 @@ const CourseProgressCard = props => {
   }, props.message), /*#__PURE__*/React.createElement("div", {
     className: "pt-4 pb-10"
   }, /*#__PURE__*/React.createElement(Buttons, {
-    otherClass: "bg-main text-white py-3 px-4"
+    otherClass: "bg-main text-white py-3 px-4",
+    customClickEvent: props.customClickEvent
   }, props.complete === "0%" ? "Start" : "Continue", " Learning"))));
 };
 

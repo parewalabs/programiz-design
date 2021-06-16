@@ -1,6 +1,8 @@
 import React from "react";
 import dashboard from "../../icons/dashboard.svg";
+import dashboardActive from "../../icons/dashboardActive.svg";
 import course from "../../icons/course.svg";
+import courseActive from "../../icons/courseActive.svg";
 import search from "../../icons/searchIcon.svg";
 import bookmark from "../../icons/bookmark.svg";
 import downarrow from "../../icons/downarrow.svg";
@@ -8,10 +10,14 @@ import uparrow from "../../icons/uparrow.svg";
 import userPlus from "../../icons/userPlus.svg";
 import edit from "../../icons/edit.svg";
 import compiler from "../../icons/compiler.svg";
+import compilerActive from "../../icons/compilerActive.svg";
 import book from "../../icons/book.svg";
 import rightarrow from "../../icons/rightarrow.svg";
 import challengesIcon from "../../icons/challengesIcon.svg";
-import newTag from "../../icons/newTag.svg"; //language Icons
+import newTag from "../../icons/newTag.svg";
+import cross from "../../icons/cross.svg";
+import bookmarkLight from "../../icons/bookmarkLight.svg";
+import burgerMenu from "../../icons/burgerMenu.svg"; //language Icons
 
 import python from "../../icons/python.svg";
 import c from "../../icons/c.svg";
@@ -29,8 +35,14 @@ const Icons = props => {
       case "dashboard":
         return dashboard;
 
+      case "dashboardActive":
+        return dashboardActive;
+
       case "course":
         return course;
+
+      case "courseActive":
+        return courseActive;
 
       case "searchIcon":
         return search;
@@ -44,6 +56,9 @@ const Icons = props => {
       case "bookmark":
         return bookmark;
 
+      case "bookmarkLight":
+        return bookmarkLight;
+
       case "userPlus":
         return userPlus;
 
@@ -52,6 +67,9 @@ const Icons = props => {
 
       case "compiler":
         return compiler;
+
+      case "compilerActive":
+        return compilerActive;
 
       case "book":
         return book;
@@ -64,6 +82,12 @@ const Icons = props => {
 
       case "newTag":
         return newTag;
+
+      case "cross":
+        return cross;
+
+      case "burgerMenu":
+        return burgerMenu;
 
       case "python":
         return python;
@@ -100,7 +124,8 @@ const Icons = props => {
   return /*#__PURE__*/React.createElement("img", {
     src: selectIcon(props.iconName),
     alt: props.alt,
-    className: props.className
+    className: props.className,
+    onClick: props.customClickEvent
   });
 };
 

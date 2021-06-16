@@ -36,8 +36,8 @@ const MainChallengesCard = props => {
       className: index === 0 ? "hidden inline" : "inline"
     }), " ", tag, " ");
   })), /*#__PURE__*/React.createElement("span", {
-    href: "#",
-    className: "text-link text-sm font-normal"
+    onClick: props.customClickEvent,
+    className: "text-link text-sm font-normal cursor-pointer"
   }, "Start Challenge", " ", /*#__PURE__*/React.createElement(Icons, {
     iconName: "rightarrow",
     alt: "right arrow",

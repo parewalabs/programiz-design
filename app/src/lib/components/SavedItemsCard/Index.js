@@ -3,7 +3,10 @@ import vector from "../../images/Vector.png";
 
 const SavedItemsCard = (props) => {
   return (
-    <div className="w-255 h-132 rounded border-2 text-primary-blue focus:ring-2 hover:border-tertiary relative">
+    <div
+      className="w-255 h-132 rounded border-2 text-primary-blue focus:ring-2 hover:border-tertiary relative cursor-pointer bg-white"
+      onClick={props.customClickEvent}
+    >
       <div className="px-6 pt-6">
         <p className="text-sm">{props.type}</p>
         <h4 className="text-lg text-primary-blue">{props.name}</h4>

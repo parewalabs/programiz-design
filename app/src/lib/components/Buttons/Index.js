@@ -8,6 +8,8 @@ const Buttons = (props) => {
           "text-base disabled:opacity-50 font-semibold rounded " +
           props.otherClass
         }
+        type={props.type}
+        onClick={props.customClickEvent}
         disabled={props.disabled}
       >
         {props.children}

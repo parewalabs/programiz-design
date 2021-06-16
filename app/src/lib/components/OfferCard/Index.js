@@ -2,9 +2,9 @@ import React from "react";
 import refer from "../../icons/refer.svg";
 import Buttons from "../Buttons/Index";
 
-const OfferCard = () => {
+const OfferCard = (props) => {
   return (
-    <div className="w-327 lg:w-350 h-200 rounded border-2 text-primary-blue focus:ring-2 hover:border-main">
+    <div className="w-327 lg:w-350 h-200 rounded border-2 text-primary-blue focus:ring-2 hover:border-main bg-white">
       <div className="pt-6 px-4">
         <span className="float-left pr-4">
           <img src={refer} alt="refer and get pro" />
@@ -17,7 +17,10 @@ const OfferCard = () => {
         </div>
       </div>
       <div className="pt-5 px-4">
-        <Buttons otherClass="w-full bg-shades20 text-link py-3">
+        <Buttons
+          otherClass="w-full bg-shades20 text-link py-3"
+          customClickEvent={props.customClickEvent}
+        >
           Start Inviting
         </Buttons>
       </div>

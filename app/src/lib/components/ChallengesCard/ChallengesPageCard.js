@@ -12,9 +12,14 @@ const ChallengesPageCard = (props) => {
             : "Start first challenge:"}
         </p>
         <h3 className="text-xl font-semibold text-primary-blue">
-          Store Item and Access it
+          {props.challengeName}
         </h3>
-        <Buttons otherClass="bg-main text-white py-3 px-12 mt-4">Start</Buttons>
+        <Buttons
+          otherClass="bg-main text-white py-3 px-12 mt-4"
+          customClickEvent={props.customClickEvent}
+        >
+          Start
+        </Buttons>
       </div>
       <img src={shape} className="absolute top-8 right-4" alt="design shape" />
     </div>

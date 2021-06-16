@@ -14,6 +14,7 @@ const ExampleSuggestionCard = props => {
   }, props.name), /*#__PURE__*/React.createElement("div", {
     className: "pt-4 flex "
   }, /*#__PURE__*/React.createElement(Buttons, {
+    customClickEvent: props.customClickEvent,
     otherClass: "bg-main text-white py-3 px-12"
   }, "Start"))), /*#__PURE__*/React.createElement("img", {
     src: path,

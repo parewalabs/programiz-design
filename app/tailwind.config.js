@@ -16,6 +16,7 @@ module.exports = {
         273: "273px",
         255: "255px",
         208: "208px",
+        120: "120px",
         160: "160px",
         37: "37px",
       },
@@ -32,9 +33,11 @@ module.exports = {
         200: "200px",
         168: "168px",
         132: "132px",
+        120: "120px",
         35.71: "35.71px",
         50: "50px",
         60: "60px",
+        70: "70px",
       },
       textColor: {
         primary: "#333333",
@@ -57,6 +60,9 @@ module.exports = {
         seperator: "#D3DCE6",
         "compiler-base": "#F5F5F5",
         shades20: "#CDDDFD",
+        active: "#007EFA",
+        popup: "#1F2023",
+        sidebar: "#F5F5F5",
       },
       fontFamily: {
         "Euclid Circular A": ["Euclid Circular A"],
@@ -77,11 +83,12 @@ module.exports = {
   variants: {
     extend: {
       backgroundColor: ["first"],
-      fontWeight: ["first"],
+      fontWeight: ["first", "hover", "focus"],
       width: ["first"],
       height: ["first"],
       margin: ["first", "last"],
       opacity: ["disabled"],
+      borderWidth: ["hover", "focus"],
     },
   },
   plugins: [],

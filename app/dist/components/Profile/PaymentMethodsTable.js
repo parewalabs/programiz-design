@@ -3,7 +3,7 @@ import Buttons from "../Buttons/Index";
 
 const PaymentMethodsTable = props => {
   return /*#__PURE__*/React.createElement("div", {
-    className: "w-825 h-auto rounded-md border-2"
+    className: "w-825 h-auto rounded-md border-2 bg-white"
   }, /*#__PURE__*/React.createElement("table", {
     className: "w-full my-4 border-collapse "
   }, /*#__PURE__*/React.createElement("thead", {
