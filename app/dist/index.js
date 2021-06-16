@@ -20,4 +20,5 @@ import CourseIndex from "./components/CourseIndex/Index";
 import CourseProgressCard from "./components/CourseProgressCard/Index";
 import Icons from "./components/Icons/index";
 import SidebarToc from "./components/SidebarToc/index";
-export { AllLanguagesCard, LanguageCategoryCard, Buttons, ChallengesCard, ChallengesPageCard, MainChallengeCard, CourseCard, CourseProgressCard, ExamplesCard, ExampleSuggestionCard, PopularExamplesCard, ReferencesCard, SavedItemsCard, LeaderboardCard, ProfileComponent, NavBar, LoginForm, WelcomeMessage, BottomNav, CourseIndex, Icons, SidebarToc };
+import CompletedPopup from "./components/CompletedPopup/index";
+export { AllLanguagesCard, LanguageCategoryCard, Buttons, ChallengesCard, ChallengesPageCard, MainChallengeCard, CourseCard, CourseProgressCard, ExamplesCard, ExampleSuggestionCard, PopularExamplesCard, ReferencesCard, SavedItemsCard, LeaderboardCard, ProfileComponent, NavBar, LoginForm, WelcomeMessage, BottomNav, CourseIndex, Icons, SidebarToc, CompletedPopup };
