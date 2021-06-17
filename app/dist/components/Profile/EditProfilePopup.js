@@ -22,7 +22,7 @@ const EdtiProfilePopup = props => {
     alt: "edit profile",
     className: "inline pl-2"
   }))), showModal ? /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
-    className: "justify-center pt-2 flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none bg-white"
+    className: "justify-center pt-2 flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none bg-black bg-opacity-80"
   }, /*#__PURE__*/React.createElement("div", {
     className: "w-327 lg:w-730 h-705 rounded-md border-2 bg-white mt-10"
   }, /*#__PURE__*/React.createElement("div", {
@@ -78,9 +78,7 @@ const EdtiProfilePopup = props => {
     alt: "close",
     className: "cursor-pointer",
     customClickEvent: () => popupToggle()
-  }))), /*#__PURE__*/React.createElement("div", {
-    className: "opacity-1.5 fixed inset-0 z-20 bg-popup"
-  })) : null);
+  })))) : null);
 };
 
 export default EdtiProfilePopup;
