@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.6a894551.chunk.css",
-    "main.js": "/build/main.0888aec4.js",
+    "main.css": "/static/css/main.57e14245.chunk.css",
+    "main.js": "/build/main.5fdb3202.js",
     "runtime-main.js": "/build/bundle.3527ec54.js",
-    "build/2.22074d92.js": "/build/2.22074d92.js",
-    "build/2.22074d92.js.LICENSE.txt": "/build/2.22074d92.js.LICENSE.txt",
+    "build/2.c6da71fa.js": "/build/2.c6da71fa.js",
+    "build/2.c6da71fa.js.LICENSE.txt": "/build/2.c6da71fa.js.LICENSE.txt",
     "index.html": "/index.html",
-    "static/css/main.6a894551.chunk.css.map": "/static/css/main.6a894551.chunk.css.map",
+    "static/css/main.57e14245.chunk.css.map": "/static/css/main.57e14245.chunk.css.map",
     "static/media/index.css": "/static/media/EuclidCircularA-SemiboldItalic.5bf89882.otf",
     "static/media/LCCvector1.a0a7e1f9.svg": "/static/media/LCCvector1.a0a7e1f9.svg",
     "static/media/LCCvector2.28628556.svg": "/static/media/LCCvector2.28628556.svg",
@@ -57,8 +57,8 @@
   },
   "entrypoints": [
     "build/bundle.3527ec54.js",
-    "build/2.22074d92.js",
-    "static/css/main.6a894551.chunk.css",
-    "build/main.0888aec4.js"
+    "build/2.c6da71fa.js",
+    "static/css/main.57e14245.chunk.css",
+    "build/main.5fdb3202.js"
   ]
 }

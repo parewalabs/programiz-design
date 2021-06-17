@@ -23,7 +23,7 @@ const CompletedPopup = (props) => {
                 <h2 className="text-xl text-primary-blue font font-semibold absolute pt-8 left-2/4 -ml-20">
                   Successfully
                   <br />
-                  Completed Lesson
+                  Completed {props.type}
                 </h2>
 
                 <img src={completed} className="" alt="completed successfull" />
