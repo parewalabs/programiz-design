@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import logoWeb from "../../images/logoWeb.svg";
 import logoMobile from "../../images/logoMobile.svg";
 import Icons from "../Icons/index.js";
@@ -12,9 +12,24 @@ const NavBar = (props) => {
     setMenuDropdown(!menuDropdown);
   };
   const page = localStorage.getItem("page");
+
+  const escFunction = (event) => {
+    if (event.keyCode === 27) {
+      setMenuDropdown(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("keydown", escFunction, false);
+
+    return () => {
+      document.removeEventListener("keydown", escFunction, false);
+    };
+  }, []);
+
   return (
-    <>
-      <nav className="md:w-327 lg:w-full h-70 border flex items-center bg-white">
+    <div className="relative">
+      <nav className="md:w-327 lg:w-full relative z-10 h-70 border flex items-center bg-white">
         <div className="w-full relative flex items-center lg:px-40 p-2">
           <a href="/">
             <img
@@ -44,13 +59,10 @@ const NavBar = (props) => {
             className={`py-5 mr-8 lg:block hover:border-b-2 hover:border-active hidden inline cursor-pointer ${
               page === "courses" ? "border-b-2 border-active" : ""
             }`}
+            onClick={() => toggleMenuDropdown()}
+            tabIndex="0"
           >
-            <span
-              className="text-base text-primary-blue inline"
-              onClick={() => toggleMenuDropdown()}
-            >
-              Courses
-            </span>
+            <span className="text-base text-primary-blue inline">Courses</span>
             <Icons iconName="downarrow" alt="Courses" className="inline" />
           </div>
 
@@ -78,9 +90,16 @@ const NavBar = (props) => {
           </div>
         </div>
       </nav>
+      {menuDropdown && (
+        <button
+          tabIndex="-1"
+          onClick={() => setMenuDropdown(false)}
+          className="fixed inset-0 w-full h-full bg-black opacity-80 cursor-default"
+        ></button>
+      )}
       <div
-        className={`absolute z-1 flex ml-40 bg-white flex ${
-          menuDropdown === true ? "block" : "hidden"
+        className={`absolute ml-40 bg-white ${
+          menuDropdown ? "block" : "hidden"
         }`}
       >
         <MenuDropdown
@@ -91,7 +110,7 @@ const NavBar = (props) => {
           ]}
         />
       </div>
-    </>
+    </div>
   );
 };
 

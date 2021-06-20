@@ -4,11 +4,11 @@ const Avatar = props => {
   return /*#__PURE__*/React.createElement("div", {
     className: `relative flex ${props.className}`
   }, /*#__PURE__*/React.createElement("div", {
-    className: `rounded-full bg-blue-400 ${props.size}`
+    className: `rounded-full overflow-hidden bg-blue-400 ${props.size}`
   }, props.profilePic !== "" && /*#__PURE__*/React.createElement("img", {
     src: props.profilePic,
     alt: props.username,
-    className: `rounded-full ${props.size}`
+    className: "h-full w-full object-cover"
   })));
 };
 

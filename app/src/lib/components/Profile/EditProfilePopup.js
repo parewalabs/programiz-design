@@ -25,7 +25,7 @@ const EdtiProfilePopup = (props) => {
       </Buttons>
       {showModal ? (
         <>
-          <div className="justify-center pt-2 flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none bg-white">
+          <div className="justify-center pt-2 flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none bg-black bg-opacity-80">
             <div className="w-327 lg:w-730 h-705 rounded-md border-2 bg-white mt-10">
               <div className="flex justify-center">
                 <Avatar
@@ -96,7 +96,6 @@ const EdtiProfilePopup = (props) => {
               />
             </span>
           </div>
-          <div className="opacity-1.5 fixed inset-0 z-20 bg-popup"></div>
         </>
       ) : null}
     </>

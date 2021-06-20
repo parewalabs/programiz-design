@@ -22,7 +22,7 @@ const CompletedPopup = props => {
     className: "w-full relative text-center"
   }, /*#__PURE__*/React.createElement("h2", {
     className: "text-xl text-primary-blue font font-semibold absolute pt-8 left-2/4 -ml-20"
-  }, "Successfully", /*#__PURE__*/React.createElement("br", null), "Completed Lesson"), /*#__PURE__*/React.createElement("img", {
+  }, "Successfully", /*#__PURE__*/React.createElement("br", null), "Completed ", props.type), /*#__PURE__*/React.createElement("img", {
     src: completed,
     className: "",
     alt: "completed successfull"
