@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.57e14245.chunk.css",
-    "main.js": "/build/main.5fdb3202.js",
+    "main.css": "/static/css/main.f54f3d13.chunk.css",
+    "main.js": "/build/main.a357cb76.js",
     "runtime-main.js": "/build/bundle.3527ec54.js",
-    "build/2.c6da71fa.js": "/build/2.c6da71fa.js",
-    "build/2.c6da71fa.js.LICENSE.txt": "/build/2.c6da71fa.js.LICENSE.txt",
+    "build/2.3a481829.js": "/build/2.3a481829.js",
+    "build/2.3a481829.js.LICENSE.txt": "/build/2.3a481829.js.LICENSE.txt",
     "index.html": "/index.html",
-    "static/css/main.57e14245.chunk.css.map": "/static/css/main.57e14245.chunk.css.map",
+    "static/css/main.f54f3d13.chunk.css.map": "/static/css/main.f54f3d13.chunk.css.map",
     "static/media/index.css": "/static/media/EuclidCircularA-SemiboldItalic.5bf89882.otf",
     "static/media/LCCvector1.a0a7e1f9.svg": "/static/media/LCCvector1.a0a7e1f9.svg",
     "static/media/LCCvector2.28628556.svg": "/static/media/LCCvector2.28628556.svg",
@@ -14,6 +14,10 @@
     "static/media/LCCvector4.eb1198e1.svg": "/static/media/LCCvector4.eb1198e1.svg",
     "static/media/LCCvector5.209b6ba7.svg": "/static/media/LCCvector5.209b6ba7.svg",
     "static/media/LCCvector6.0a8f31bb.svg": "/static/media/LCCvector6.0a8f31bb.svg",
+    "static/media/SaveItemVector1.79463d39.svg": "/static/media/SaveItemVector1.79463d39.svg",
+    "static/media/SaveItemVector2.0e923a70.svg": "/static/media/SaveItemVector2.0e923a70.svg",
+    "static/media/SaveItemVector3.32a00d2e.svg": "/static/media/SaveItemVector3.32a00d2e.svg",
+    "static/media/SaveItemVector4.4ba61226.svg": "/static/media/SaveItemVector4.4ba61226.svg",
     "static/media/Shape.6c902e12.png": "/static/media/Shape.6c902e12.png",
     "static/media/book.bff83e7b.svg": "/static/media/book.bff83e7b.svg",
     "static/media/bookmark.871b8066.svg": "/static/media/bookmark.871b8066.svg",
@@ -57,8 +61,8 @@
   },
   "entrypoints": [
     "build/bundle.3527ec54.js",
-    "build/2.c6da71fa.js",
-    "static/css/main.57e14245.chunk.css",
-    "build/main.5fdb3202.js"
+    "build/2.3a481829.js",
+    "static/css/main.f54f3d13.chunk.css",
+    "build/main.a357cb76.js"
   ]
 }
