@@ -5,20 +5,19 @@ import courseVector1 from "../../images/courseVector1.png";
 import courseVector2 from "../../images/courseVector2.svg";
 
 const CourseCard = (props) => {
-  let vector = {};
-  if (props.vector === 1) {
-    vector = {
-      backgroundImage: `url(${courseVector1})`,
-      backgroundRepeat: "no-repeat",
-      backgroundPosition: "center bottom",
-    };
-  } else {
-    vector = {
-      backgroundImage: `url(${courseVector2})`,
-      backgroundRepeat: "no-repeat",
-      backgroundPosition: "center bottom",
-    };
-  }
+  const SelectVector = (vectorType) => {
+    switch (vectorType) {
+      case 1:
+        return courseVector1;
+      default:
+        return courseVector2;
+    }
+  };
+  let vector = {
+    backgroundImage: `url(${SelectVector(props.vector)})`,
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center bottom",
+  };
   return (
     <div
       className="w-327 lg:w-350 h-236 rounded border-2 text-primary-blue focus:ring-2 hover:border-secondary relative bg-white"
