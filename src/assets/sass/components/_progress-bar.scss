@@ -1,0 +1,20 @@
+.progress-bar{
+  @include e(count){
+    @include getFontSize("tiny");
+    color: getColor("text.main");
+    margin-bottom: getSpacing("1x");
+  }
+  @include e(track){
+    border-radius: 2px;
+    width: 100%;
+    height: 4px;
+    background-color: getColor("grey.borderGray");
+    position: relative;
+  }
+  @include e(bar) {
+    position: absolute;
+    height: 100%;
+    border-radius: 2px;
+    background-color: getColor("secondary.base");
+  }
+}

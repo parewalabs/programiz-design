@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from "react";
-import Buttons from "../Buttons/Index";
+import {Button} from "lib";
 import Icons from "../Icons/index";
-import Avatar from "../Avatar/Index";
+import { Avatar } from "lib";
 
 const EdtiProfilePopup = (props) => {
   const [disabledButton, setDisabledButton] = useState(true);
@@ -14,7 +14,7 @@ const EdtiProfilePopup = (props) => {
 
   return (
     <>
-      <Buttons
+      <Button
         otherClass="text-link bg-shades20 py-3 px-4"
         customClickEvent={() => popupToggle()}
       >
@@ -22,7 +22,7 @@ const EdtiProfilePopup = (props) => {
           Edit Profile{" "}
           <Icons iconName="edit" alt="edit profile" className="inline pl-2" />
         </span>
-      </Buttons>
+      </Button>
       {showModal ? (
         <>
           <div className="justify-center pt-2 flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none bg-black bg-opacity-80">
@@ -36,9 +36,9 @@ const EdtiProfilePopup = (props) => {
                 />
               </div>
               <div className="flex justify-center mt-2">
-                <Buttons otherClass="text-link py-1.5 px-4 border border-main">
+                <Button otherClass="text-link py-1.5 px-4 border border-main">
                   Change Photo
-                </Buttons>
+                </Button>
               </div>
               <div className="pt-6 flex justify-center">
                 <form className="w-full lg:mx-32 mx-10 ">
@@ -75,14 +75,14 @@ const EdtiProfilePopup = (props) => {
                     />
                   </div>
                   <div className="flex items-center justify-center">
-                    <Buttons
+                    <Button
                       otherClass="saveChange bg-main text-white text-base px-4 py-3"
                       disabled={disabledButton}
                       type="button"
                       customClickEvent={() => popupToggle}
                     >
                       Save Changes
-                    </Buttons>
+                    </Button>
                   </div>
                 </form>
               </div>

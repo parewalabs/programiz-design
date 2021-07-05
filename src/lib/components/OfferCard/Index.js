@@ -1,6 +1,6 @@
 import React from "react";
 import refer from "../../icons/refer.svg";
-import Buttons from "../Buttons/Index";
+import {Button} from "lib";
 
 const OfferCard = (props) => {
   return (
@@ -17,12 +17,12 @@ const OfferCard = (props) => {
         </div>
       </div>
       <div className="pt-5 px-4">
-        <Buttons
+        <Button
           otherClass="w-full bg-shades20 text-link py-3"
           customClickEvent={props.customClickEvent}
         >
           Start Inviting
-        </Buttons>
+        </Button>
       </div>
     </div>
   );

@@ -1,8 +1,8 @@
 /* ./src/index.css */
-@tailwind base;
+/* @tailwind base; */
 @tailwind components;
 
-@layer base {
+/* @layer base {
   @font-face {
     font-family: "Euclid Circular A";
     src: url(./fonts/EuclidCircularA-Bold.otf) format("otf");
@@ -52,5 +52,5 @@
     font-family: "Euclid Circular A";
     src: url(./fonts/EuclidCircularA-MediumItalic.otf) format("otf");
   }
-}
+} */
 @tailwind utilities;

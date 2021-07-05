@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Buttons from "../Buttons/Index";
+import {Button} from "lib";
 
 const LoginForm = (props) => {
   const [details, setDetails] = useState({ email: "", password: "" });
@@ -45,12 +45,12 @@ const LoginForm = (props) => {
         />
       </div>
       <div className="">
-        <Buttons
+        <Button
           otherClass="saveChange bg-main text-white text-base px-4 py-3"
           type="submit"
         >
           Login
-        </Buttons>
+        </Button>
       </div>
     </form>
   );

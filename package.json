@@ -11,8 +11,11 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "classnames": "^2.3.1",
     "postcss": "^7",
     "react-circular-progressbar": "^2.0.4",
+    "react-icons": "^4.2.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "rimraf": "^3.0.2",
     "web-vitals": "^1.0.1"
@@ -24,6 +27,7 @@
     "@babel/preset-react": "^7.13.13",
     "@craco/craco": "^6.1.2",
     "autoprefixer": "^9",
+    "node-sass": "^6.0.1",
     "postcss-cli": "7.1.2",
     "postcss-preset-env": "^6.7.0",
     "react": "^17.0.2",
@@ -34,6 +38,8 @@
   "scripts": {
     "start": "craco start",
     "test": "craco test",
+    "styler": "npx styleguidist server",
+    "build-stylist": "npx styleguidist build",
     "build": "rm -rf ./dist && NODE_ENV=production babel src/lib --out-dir ./dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__ && ./node_modules/.bin/postcss ./src/index.css --output ./dist/index.css "
   },
   "eslintConfig": {

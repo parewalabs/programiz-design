@@ -1,7 +1,7 @@
 import React from "react";
 import certificateSmall from "../../images/certificateSmall.png";
 import artwork from "../../images/artwork.png";
-import Buttons from "../Buttons/Index";
+import {Button} from "lib";
 
 const CourseProgressCard = (props) => {
   return (
@@ -37,12 +37,12 @@ const CourseProgressCard = (props) => {
           {props.message}
         </p>
         <div className="pt-4 pb-10">
-          <Buttons
+          <Button
             otherClass="bg-main text-white py-3 px-4"
             customClickEvent={props.customClickEvent}
           >
             {props.complete === "0%" ? "Start" : "Continue"} Learning
-          </Buttons>
+          </Button>
         </div>
       </div>
     </div>

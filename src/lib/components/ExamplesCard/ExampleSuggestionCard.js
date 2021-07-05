@@ -1,6 +1,6 @@
 import React from "react";
 import path from "../../images/paths.png";
-import Buttons from "../Buttons/Index";
+import {Button} from "lib";
 
 const ExampleSuggestionCard = (props) => {
   return (
@@ -11,12 +11,12 @@ const ExampleSuggestionCard = (props) => {
           {props.name}
         </h3>
         <div className="pt-4 flex ">
-          <Buttons
+          <Button
             customClickEvent={props.customClickEvent}
             otherClass="bg-main text-white py-3 px-12"
           >
             Start
-          </Buttons>
+          </Button>
         </div>
       </div>
       <img

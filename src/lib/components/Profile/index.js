@@ -1,6 +1,6 @@
 import React from "react";
 import EdtiProfilePopup from "./EditProfilePopup";
-import Avatar from "../Avatar/Index";
+import { Avatar } from "lib";
 
 const Profile = (props) => {
   return (

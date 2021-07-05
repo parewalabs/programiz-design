@@ -1,5 +1,5 @@
 import React from "react";
-import Buttons from "../Buttons/Index";
+import {Button} from "lib";
 
 const PaymentMethodsTable = (props) => {
   return (
@@ -19,9 +19,9 @@ const PaymentMethodsTable = (props) => {
                 <td className="pl-6 pt-4">{method.paymentMethod}</td>
                 <td className="pt-6">{method.expirationDate}</td>
                 <td className="pt-6">
-                  <Buttons className="text-link py-1.5 px-4 border border-main">
+                  <Button className="text-link py-1.5 px-4 border border-main">
                     Remove
-                  </Buttons>
+                  </Button>
                 </td>
               </tr>
             );

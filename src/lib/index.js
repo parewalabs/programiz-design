@@ -1,10 +1,11 @@
+import Avatar from "./components/Avatar/Avatar";
+import Button from "./components/Button/Button";
 import AllLanguagesCard from "./components/LanguageCategoryCard/AllLanguagesCard";
 import LanguageCategoryCard from "./components/LanguageCategoryCard/Index";
-import Buttons from "./components/Buttons/Index";
 import ChallengesCard from "./components/ChallengesCard/Index";
 import ChallengesPageCard from "./components/ChallengesCard/ChallengesPageCard";
 import MainChallengeCard from "./components/ChallengesCard/MainChallengeCard";
-import CourseCard from "./components/CourseCard/Index";
+import CourseCard from "./components/CourseCard/CourseCard";
 import ExamplesCard from "./components/ExamplesCard/Index";
 import ExampleSuggestionCard from "./components/ExamplesCard/ExampleSuggestionCard";
 import PopularExamplesCard from "./components/ExamplesCard/PopularExamplesCard";
@@ -21,11 +22,15 @@ import CourseProgressCard from "./components/CourseProgressCard/Index";
 import Icons from "./components/Icons/index";
 import SidebarToc from "./components/SidebarToc/index";
 import CompletedPopup from "./components/CompletedPopup/Index";
+import Card from "./components/Card/Card";
+
 
 export {
+  Avatar,
   AllLanguagesCard,
   LanguageCategoryCard,
-  Buttons,
+  Card,
+  Button,
   ChallengesCard,
   ChallengesPageCard,
   MainChallengeCard,

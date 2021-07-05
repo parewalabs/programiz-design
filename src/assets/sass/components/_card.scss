@@ -1,0 +1,29 @@
+.card {
+  background-color: $white;
+  border-radius: 6px;
+  border: 1px solid getColor("grey.borderGray");
+  @include m(shadowed) {
+    box-shadow: 0px 10px 40px 0px rgba(getColor("text.main"), 0.05);
+  }
+}
+
+.challenge-card {
+  padding: getSpacing("10x");
+  position: relative;
+  overflow: hidden;
+  @include e(content) {
+    position: relative;
+    z-index: 1;
+  }
+  @include e(img){
+    position: absolute;
+    right: 16px;
+    top: 32px;
+    z-index: 0;
+  }
+}
+
+.course-tile {
+  padding: getSpacing("6x");
+  min-height: 236px;
+}

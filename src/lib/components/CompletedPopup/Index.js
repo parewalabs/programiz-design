@@ -1,6 +1,6 @@
 import React from "react";
 import completed from "../../images/completed.png";
-import Buttons from "../Buttons/Index";
+import {Button} from "lib";
 
 const CompletedPopup = (props) => {
   const [showModal, setShowModal] = React.useState(false);
@@ -9,12 +9,12 @@ const CompletedPopup = (props) => {
   };
   return (
     <>
-      <Buttons
+      <Button
         otherClass="text-white bg-main py-3 px-4"
         customClickEvent={() => popupToggle()}
       >
         <span className="justify-center flex">Finish</span>
-      </Buttons>
+      </Button>
       {showModal ? (
         <>
           <div className="flex justify-center items-center pt-2 flex fixed inset-0 z-10 outline-none focus:outline-none bg-black bg-opacity-50">
@@ -37,12 +37,12 @@ const CompletedPopup = (props) => {
                   {props.next}
                 </h2>
                 <div className="pt-4 flex justify-center ">
-                  <Buttons
+                  <Button
                     otherClass="bg-main text-white py-3 px-20"
                     customClickEvent={() => popupToggle()}
                   >
                     Start the {props.nextType}
-                  </Buttons>
+                  </Button>
                 </div>
                 <a
                   href="/course"

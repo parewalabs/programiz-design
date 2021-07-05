@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import logoWeb from "../../images/logoWeb.svg";
 import logoMobile from "../../images/logoMobile.svg";
 import Icons from "../Icons/index.js";
-import Avatar from "../Avatar/Index";
+import { Avatar } from "lib";
 import Search from "../Search/Index";
 import MenuDropdown from "../MenuDropdown/Index";
 

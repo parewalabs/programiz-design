@@ -1,5 +1,0 @@
-LoginForm
-
-```js
-<LoginForm />
-```

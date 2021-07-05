@@ -1,5 +1,5 @@
 Avatar example:
 
 ```js
-<Avatar username="avatar" profilePic="" className="" size="w-9 h-9" />
+<Avatar imageUrl="https://randomuser.me/api/portraits/men/36.jpg" userName="Programiz User"/>
 ```
