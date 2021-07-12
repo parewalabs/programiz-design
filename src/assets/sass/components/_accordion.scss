@@ -1,0 +1,30 @@
+.accordion{
+  width: 100%;
+  @include e(row){
+    background-color: $white;
+    border: 1px solid getColor("grey.borderGray");
+    border-radius: 4px;
+  }
+  @include e(chevron){
+    @include transition;
+  }
+  @include e(title){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: getSpacing("4x") getSpacing("6x");
+    cursor: pointer;
+  
+    @include m(active){
+      border-bottom: 1px solid getColor("grey.borderGray");
+      .accordion{
+        @include e(chevron){
+          transform: rotate(180deg); 
+        }
+      }
+    }
+  }
+  @include e(content){
+    overflow: hidden;
+  }
+}

@@ -1,28 +1,32 @@
 import React from "react";
-import {Button} from "lib";
+import PropTypes from 'prop-types';
+import {Button, Card} from "lib";
+import {VIEW_INVOICE, DESCRIPTION, AMOUNT, DATE} from "lib/language/Profile.language";
 
 const InvoicesTable = (props) => {
+  const {invoices} = props;
+
   return (
-    <div className="w-825 h-auto rounded-md border-2 bg-white">
-      <table className="w-full my-4 border-collapse table-fixed overflow-hidden">
-        <thead className="border-b-1">
-          <tr className="text-sm text-primary-blue border-b-1 text-left border-b">
-            <th className="font-normal py-2 pl-6 w-3/4">Description</th>
-            <th className="font-normal py-2 w-1/4">Amount</th>
-            <th className="font-normal py-2 w-1/4">Date</th>
-            <th className="w-1/4"></th>
+    <Card shadowed className="table-responsive">
+      <table className="table">
+        <thead className="table__head">
+          <tr>
+            <th className="table__head__col">{DESCRIPTION}</th>
+            <th className="table__head__col">{AMOUNT}</th>
+            <th className="table__head__col">{DATE}</th>
+            <th className="table__head__col"></th>
           </tr>
         </thead>
-        <tbody>
-          {props.invoices.map((invoice) => {
+        <tbody className="table__body">
+          {invoices.map((invoice) => {
             return (
-              <tr className="text-base text-primary-blue" key={invoice.id}>
-                <td className="pl-6 pt-4">{invoice.description}</td>
-                <td className="pt-6">{invoice.amount}</td>
-                <td className="pt-6">{invoice.date}</td>
-                <td className="pt-6">
-                  <Button otherClass="text-link py-1.5 px-4 border border-main">
-                    View Invoice
+              <tr className="table__body" key={invoice.id}>
+                <td className="table__body__col">{invoice.description}</td>
+                <td className="table__body__col">{invoice.amount}</td>
+                <td className="table__body__col">{invoice.date}</td>
+                <td className="table__body__col table__body__col--fw">
+                  <Button type="primary-outline" size="small" fullWidth>
+                    { VIEW_INVOICE }
                   </Button>
                 </td>
               </tr>
@@ -30,8 +34,17 @@ const InvoicesTable = (props) => {
           })}
         </tbody>
       </table>
-    </div>
+    </Card>
   );
 };
+
+InvoicesTable.propTypes = {
+  /** Data Array for the table*/
+  invoices: PropTypes.array,
+}
+
+InvoicesTable.defaultProps = {
+  invoices: [],
+}
 
 export default InvoicesTable;

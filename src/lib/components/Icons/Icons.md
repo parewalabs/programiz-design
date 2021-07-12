@@ -1,22 +1,4 @@
-Icons:
 
-```js
-<Icons iconName="dashboard" alt="dashboard"/>
-<Icons iconName="course" alt="course" />
-<Icons iconName="searchIcon" alt="searchIcon" />
-<Icons iconName="compiler" alt="compiler" />
-<Icons iconName="bookmark" alt="bookmark" />
-<Icons iconName="bookmarkLight" alt="bookmarkLight" />
-<Icons iconName="downarrow" alt="downarrow" />
-<Icons iconName="uparrow" alt="uparrow" />
-<Icons iconName="userPlus" alt="userPlus" className="bg-blue-400 "/>
-<Icons iconName="edit" alt="edit" />
-<Icons iconName="book" alt="book" />
-<Icons iconName="rightarrow" alt="rightarrow" />
-<Icons iconName="challengesIcon" alt="challengesIcon" />
-<Icons iconName="newTag" alt="New Challenge" />
-<Icons iconName="burgerMenu" alt="Menu" />
-```
 
 Language Icons:
 

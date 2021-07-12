@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import Icons from "../Icons/index";
+// import Icons from "../Icons/index";
 import "./SidebarCourseIndex.css";
 import CircleProgress from "../CourseIndex/CircleProgress";
 
@@ -37,12 +37,12 @@ const SidebarCourseIndex = (props) => {
             {props.course.title}
           </h3>
           <div className="flex justify-end pl-2">
-            <Icons
+            {/* <Icons
               iconName="downarrow"
               alt="downarrow"
               className={`${downarrow}`}
             />
-            <Icons iconName="uparrow" alt="uparrow" className={`${uparrow}`} />
+            <Icons iconName="uparrow" alt="uparrow" className={`${uparrow}`} /> */}
           </div>
         </div>
         <div className="border-t border-separate content">
@@ -57,7 +57,7 @@ const SidebarCourseIndex = (props) => {
                     key={lesson.id}
                     onClick={props.customClickEvent}
                   >
-                    <CircleProgress percentage={33} />
+                    <CircleProgress percentage={55} />
                     <a
                       href={`/lesson/${lesson.id}/details`}
                       className="truncate ml-2"

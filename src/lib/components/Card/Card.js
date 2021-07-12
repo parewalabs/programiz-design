@@ -3,10 +3,10 @@ import PropTypes from 'prop-types'
 import classNames from "classnames";
 
 const Card = (props) => {
-  const { children, hasShadow } = props;
+  const { children, shadowed, className, style } = props;
   
   return (
-    <div className={classNames("card", { "card--shadowed": hasShadow})} {...props}>
+    <div className={classNames("card", className, { "card--shadowed": shadowed})} style={style}>
       { children }
     </div>
   );
@@ -14,11 +14,11 @@ const Card = (props) => {
 
 Card.propTypes = {
   /** Adds Shadow to the Card */
-  hasShadow: PropTypes.bool,
+  shadowed: PropTypes.bool,
 }
 
 Card.defaultProps = {
-  hasShadow: false
+  shadowed: false
 }
 
 export default Card;

@@ -29,12 +29,14 @@ body{
 .bookmarks{
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   @include e(node){
     display: flex;
     align-items: center;
     color: getColor("text.caption");
     @include getFontSize("body14");
     text-transform: capitalize;
+    flex-shrink: 0;
   }
   @include e(icon){
     width: 16px;
@@ -46,6 +48,7 @@ body{
     border-radius: 100%;
     background-color: getColor("text.caption");
     margin: 0 getSpacing("2x");
+    flex-shrink: 0;
   }
 }
 

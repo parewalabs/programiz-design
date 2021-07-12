@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import {Button} from "lib";
-import Icons from "../Icons/index";
+// import Icons from "../Icons/index";
 import { Avatar } from "lib";
 
 const EdtiProfilePopup = (props) => {
@@ -20,7 +20,7 @@ const EdtiProfilePopup = (props) => {
       >
         <span className="justify-center flex">
           Edit Profile{" "}
-          <Icons iconName="edit" alt="edit profile" className="inline pl-2" />
+          {/* <Icons iconName="edit" alt="edit profile" className="inline pl-2" /> */}
         </span>
       </Button>
       {showModal ? (
@@ -88,12 +88,12 @@ const EdtiProfilePopup = (props) => {
               </div>
             </div>
             <span className="flex items-start">
-              <Icons
+              {/* <Icons
                 iconName="cross"
                 alt="close"
                 className="cursor-pointer"
                 customClickEvent={() => popupToggle()}
-              />
+              /> */}
             </span>
           </div>
         </>

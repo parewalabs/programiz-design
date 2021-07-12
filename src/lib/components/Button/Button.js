@@ -33,20 +33,29 @@ const Button = (props) => {
   }
 
   return (
-    <button
-      className={classNames("btn", typeClass, className, sizeClass, {"btn--block": fullWidth}, {"btn--left-aligned" : isLeftAligned})}
-      onClick={onClick}
-      disabled={disabled}
-    >
-      { children }
-    </button>
+    type !== "clear" ?
+      <button
+        className={classNames("btn", typeClass, className, sizeClass, {"btn--block": fullWidth}, {"btn--left-aligned" : isLeftAligned})}
+        onClick={onClick}
+        disabled={disabled}
+      >
+        { children }
+      </button>
+      :
+      <button
+        className={classNames("btn-clear", className)}
+        onClick={onClick}
+        disabled={disabled}
+      >
+        { children }
+      </button>
   );
 };
 
 Button.propTypes = {
   /** Size modifier of Button. <br/> Available Options: <code>small</code>, <code>large</code> */
   size: PropTypes.string,
-  /** Type modifier of Avatar. <br/> Available Options: <code>primary</code>, <code>primary-light</code>, <code>primary-outline</code> */
+  /** Type modifier of Avatar. <br/> Available Options: <code>primary</code>, <code>primary-light</code>, <code>primary-outline</code> <code>clear</code> */
   type: PropTypes.string,
   /** Custom classes. */
   className: PropTypes.string,
@@ -70,7 +79,7 @@ Button.defaultProps = {
   fullWidth: false,
   disabled: false,
   children: "",
-  isLeftAligned: ""
+  isLeftAligned: false
 }
 
 export default Button;

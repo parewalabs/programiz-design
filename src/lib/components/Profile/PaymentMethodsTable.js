@@ -1,26 +1,30 @@
 import React from "react";
-import {Button} from "lib";
+import PropTypes from 'prop-types';
+import {Button, Card} from "lib";
+import {VIEW_INVOICE, PAYMENT_METHOD, EXPIRATION_DATE} from "lib/language/Profile.language";
 
 const PaymentMethodsTable = (props) => {
+  const {methods} = props;
+
   return (
-    <div className="w-825 h-auto rounded-md border-2 bg-white">
-      <table className="w-full my-4 border-collapse ">
-        <thead className="border-b-1">
-          <tr className="text-sm text-primary-blue border-b-1 text-left border-b ">
-            <th className="font-normal py-2 pl-6">Payment Method</th>
-            <th className="font-normal py-2">Expiration Date</th>
-            <th></th>
+    <Card shadowed className="table-responsive">
+      <table className="table">
+        <thead className="table__head">
+          <tr>
+            <th className="table__head__col"> {PAYMENT_METHOD} </th>
+            <th className="table__head__col">{EXPIRATION_DATE}</th>
+            <th className="table__head__col"></th>
           </tr>
         </thead>
-        <tbody>
-          {props.methods.map((method) => {
+        <tbody className="table__body">
+          {methods.map((method) => {
             return (
-              <tr className="text-base text-primary-blue" key={method.id}>
-                <td className="pl-6 pt-4">{method.paymentMethod}</td>
-                <td className="pt-6">{method.expirationDate}</td>
-                <td className="pt-6">
-                  <Button className="text-link py-1.5 px-4 border border-main">
-                    Remove
+              <tr className="table__body__row" key={method.id}>
+                <td className="table__body__col">{method.paymentMethod}</td>
+                <td className="table__body__col">{method.expirationDate}</td>
+                <td className="table__body__col table__body__col--fw">
+                  <Button type="primary-outline" size="small" fullWidth>
+                    { VIEW_INVOICE }
                   </Button>
                 </td>
               </tr>
@@ -28,8 +32,17 @@ const PaymentMethodsTable = (props) => {
           })}
         </tbody>
       </table>
-    </div>
+    </Card>
   );
 };
+
+PaymentMethodsTable.propTypes = {
+  /** Data Array for the table*/
+  methods: PropTypes.array,
+}
+
+PaymentMethodsTable.defaultProps = {
+  methods: [],
+}
 
 export default PaymentMethodsTable;

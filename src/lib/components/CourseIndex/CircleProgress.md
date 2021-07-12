@@ -1,5 +1,5 @@
 Circle Progress:
 
 ```js
-<CircleProgress percentage={33} />
+<CircleProgress percentage={20} />
 ```
