@@ -27,41 +27,43 @@ const CourseCard = (props) => {
     };
   }
   return (
-    <Card style={vectorType}>
-      <div className="course-tile">
-        <h3 className="fs-h3 color-text-main mb-2x">
-          {courseName}
-        </h3>
-        { tags && (
-          <div className="bookmarks mb-4x">
-              <div className="bookmarks__node">
-                <FiBook className="bookmarks__icon"/> { tags.chapters }
-              </div>
-              <div className="bookmarks__dot" />
-              <div className="bookmarks__node">
-                { tags.courseTitle }
-              </div>
-              <div className="bookmarks__dot" />
-              <div className="bookmarks__node">
-                { tags.courseDifficulty }
-              </div>
-          </div>
-        )}
-        {completion && (
-          <div className="progress-bar mb-4x">
-            <p className="progress-bar__count">
-              {completion}% {COMPLETE}
-            </p>
-            <div className="progress-bar__track">
-              <div className="progress-bar__bar" style={{ width: completion + '%'}}/>
+    <Card style={vectorType} className="course-card-main">
+      <Button type="clear" onClick={customClickEvent} className="course-card-main__button">
+        <div className="course-tile">
+          <h3 className="fs-h3 color-text-main mb-2x">
+            {courseName}
+          </h3>
+          { tags && (
+            <div className="bookmarks mb-4x">
+                <div className="bookmarks__node">
+                  <FiBook className="bookmarks__icon"/> { tags.chapters }
+                </div>
+                <div className="bookmarks__dot" />
+                <div className="bookmarks__node">
+                  { tags.courseTitle }
+                </div>
+                <div className="bookmarks__dot" />
+                <div className="bookmarks__node">
+                  { tags.courseDifficulty }
+                </div>
             </div>
-          </div>
-        )}
-        <Button type="clear" onClick={customClickEvent} className="d-flex align-items-center fs-body14 color-primary-base">
-          { START_LEARNING }
-          <FiArrowRight className="ml-1x"/>
-        </Button>
-      </div>
+          )}
+          {completion && (
+            <div className="progress-bar mb-4x">
+              <p className="progress-bar__count">
+                {completion}% {COMPLETE}
+              </p>
+              <div className="progress-bar__track">
+                <div className="progress-bar__bar" style={{ width: completion + '%'}}/>
+              </div>
+            </div>
+          )}
+            <span className="d-flex align-items-center fs-body14 color-primary-base">
+              { START_LEARNING }
+              <FiArrowRight className="ml-1x"/>
+            </span>
+        </div>
+      </Button>
     </Card>
   );
 };

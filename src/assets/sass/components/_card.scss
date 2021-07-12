@@ -52,6 +52,14 @@
   }
 }
 
+.course-card-main{
+  @include e(button){
+    &:hover{
+      box-shadow: 0 0 0 2px getColor("primary.base");
+    }
+  }
+}
+
 .course-tile {
   padding: getSpacing("6x");
   min-height: 236px;
