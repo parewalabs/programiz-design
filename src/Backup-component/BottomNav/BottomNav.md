@@ -2,4 +2,4 @@ BottomNav
 
 ```js
 <BottomNav />
-```
+```;

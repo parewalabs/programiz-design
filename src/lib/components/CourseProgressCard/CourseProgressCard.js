@@ -1,8 +1,8 @@
 import React from "react";
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 import { progressCardArtWork, SmallCertificate } from "lib/images/image";
 import { Button, Card, ProgressBar } from "lib";
-import { FIRST_STEP, SEE_YOU_BACK, LEARNING, START, CONTINUE } from 'lib/language/Card.language';
+import { FIRST_STEP, SEE_YOU_BACK, LEARNING, START, CONTINUE } from "lib/language/Card.language";
 
 
 const CourseProgressCard = (props) => {
@@ -44,13 +44,13 @@ CourseProgressCard.propTypes = {
   message: PropTypes.string,
   /** Custom Click Event Listener */
   customClickEvent: PropTypes.func,
-}
+};
 
 CourseProgressCard.defaultProps = {
   completion: 0,
   message: "",
   customClickEvent: "",
-}
+};
 
 
 export default CourseProgressCard;

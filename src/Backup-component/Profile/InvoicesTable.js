@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import {Button, Card} from "lib";
 import {VIEW_INVOICE, DESCRIPTION, AMOUNT, DATE} from "lib/language/Profile.language";
 
@@ -41,10 +41,10 @@ const InvoicesTable = (props) => {
 InvoicesTable.propTypes = {
   /** Data Array for the table*/
   invoices: PropTypes.array,
-}
+};
 
 InvoicesTable.defaultProps = {
   invoices: [],
-}
+};
 
 export default InvoicesTable;

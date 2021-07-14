@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 //language Icons
 import python from "../../icons/python.svg";
@@ -55,11 +55,11 @@ Icons.propTypes = {
   classNames: PropTypes.string,
   /** Custom Click Event Listener*/
   customClickEvent: PropTypes.func,
-}
+};
 
 Icons.defaultProps = {
   iconName: "",
   classNames: "",
-}
+};
 
 export default Icons;

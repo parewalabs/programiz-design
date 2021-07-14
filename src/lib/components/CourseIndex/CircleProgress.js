@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import {FiCheck} from 'react-icons/fi';
-import PropTypes from 'prop-types'
+import {FiCheck} from "react-icons/fi";
+import PropTypes from "prop-types";
 import classNames from "classnames";
 
 const CircleProgress = (props) => {
@@ -10,7 +10,7 @@ const CircleProgress = (props) => {
   const [dashArray, setDashArray] = useState(0);
 
   useEffect(() => {
-    let path = document.querySelector('.circle-progress__circle');
+    let path = document.querySelector(".circle-progress__circle");
     let circle = path.children[0];
     let length = circle.getTotalLength();
 
@@ -34,10 +34,10 @@ const CircleProgress = (props) => {
 CircleProgress.propTypes = {
   /** Precentage Progress */
   percentage: PropTypes.number,
-}
+};
 
 CircleProgress.defaultProps = {
   percentage: 0
-}
+};
 
 export default CircleProgress;

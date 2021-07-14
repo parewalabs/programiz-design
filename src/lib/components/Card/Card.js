@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 import classNames from "classnames";
 
 const Card = (props) => {
@@ -15,10 +15,10 @@ const Card = (props) => {
 Card.propTypes = {
   /** Adds Shadow to the Card */
   shadowed: PropTypes.bool,
-}
+};
 
 Card.defaultProps = {
   shadowed: false
-}
+};
 
 export default Card;

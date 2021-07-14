@@ -2,4 +2,4 @@ LoginForm
 
 ```js
 <LoginForm />
-```
+```;

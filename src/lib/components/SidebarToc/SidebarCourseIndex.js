@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 import classNames from "classnames";
 
 import { Accordion } from "lib";
@@ -63,11 +63,11 @@ SidebarCourseIndex.propTypes = {
   course: PropTypes.object,
   /** Extra classes*/
   className: PropTypes.string,
-}
+};
 
 SidebarCourseIndex.defaultProps = {
   course: [],
   className: "",
-}
+};
 
 export default SidebarCourseIndex;

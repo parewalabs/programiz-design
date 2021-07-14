@@ -1,10 +1,10 @@
 import React from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import classNames from "classnames";
-import { Card, Icons, Button } from 'lib';
+import { Card, Icons, Button } from "lib";
 import { FiArrowRight } from "react-icons/fi";
 import { VIEW, PROGRAMMING } from "lib/language/Card.language";
-import { LCCvector1, LCCvector2, LCCvector3, LCCvector4, LCCvector5, LCCvector6 } from 'lib/images/image';
+import { LCCvector1, LCCvector2, LCCvector3, LCCvector4, LCCvector5, LCCvector6 } from "lib/images/image";
 
 const LanguageCategoryCard = (props) => {
 
@@ -83,7 +83,7 @@ LanguageCategoryCard.propTypes = {
   classNames: PropTypes.string,
   /** Custom Click Event Listener*/
   customClickEvent: PropTypes.func,
-}
+};
 
 LanguageCategoryCard.defaultProps = {
   languageCode: "",
@@ -92,6 +92,6 @@ LanguageCategoryCard.defaultProps = {
   customClickEvent: "",
   type: "",
   classNames:""
-}
+};
 
 export default LanguageCategoryCard;

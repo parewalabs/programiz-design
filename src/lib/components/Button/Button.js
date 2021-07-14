@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 import classNames from "classnames";
 
 const Button = (props) => {
@@ -7,29 +7,29 @@ const Button = (props) => {
 
   let typeClass;
   switch(type) {
-    case 'primary':
-      typeClass = 'btn--primary';
+    case "primary":
+      typeClass = "btn--primary";
       break;
-    case 'primary-light':
-      typeClass = 'btn--primary-20';
+    case "primary-light":
+      typeClass = "btn--primary-20";
       break;
-    case 'primary-outline':
-      typeClass = 'btn--primary-outline';
+    case "primary-outline":
+      typeClass = "btn--primary-outline";
       break;
     default:
-      typeClass = '';
+    typeClass = "";
   }
 
   let sizeClass;
   switch(size) {
-    case 'small':
-      sizeClass = 'btn--sm';
+    case "small":
+      sizeClass = "btn--sm";
       break;
-    case 'large':
-      sizeClass = 'btn--lg';
+    case "large":
+      sizeClass = "btn--lg";
       break;
     default:
-      sizeClass = '';
+    sizeClass = "";
   }
 
   return (
@@ -69,7 +69,7 @@ Button.propTypes = {
   children: PropTypes.node,
   /** To align content of the button on left*/
   isLeftAligned: PropTypes.bool,
-}
+};
 
 Button.defaultProps = {
   size: "",
@@ -79,6 +79,6 @@ Button.defaultProps = {
   disabled: false,
   children: "",
   isLeftAligned: false
-}
+};
 
 export default Button;

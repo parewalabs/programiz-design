@@ -1,6 +1,6 @@
 import Avatar from "./components/Avatar/Avatar";
 import Button from "./components/Button/Button";
-import CircleProgress from './components/CourseIndex/CircleProgress';
+import CircleProgress from "./components/CourseIndex/CircleProgress";
 import LanguageCategoryCard from "./components/LanguageCategoryCard/LanguageCategoryCard";
 import CourseCard from "./components/CourseCard/CourseCard";
 import SavedItemsCard from "./components/SavedItemsCard/SavedItemsCard";

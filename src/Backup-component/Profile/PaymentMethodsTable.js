@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import {Button, Card} from "lib";
 import {VIEW_INVOICE, PAYMENT_METHOD, EXPIRATION_DATE} from "lib/language/Profile.language";
 
@@ -39,10 +39,10 @@ const PaymentMethodsTable = (props) => {
 PaymentMethodsTable.propTypes = {
   /** Data Array for the table*/
   methods: PropTypes.array,
-}
+};
 
 PaymentMethodsTable.defaultProps = {
   methods: [],
-}
+};
 
 export default PaymentMethodsTable;

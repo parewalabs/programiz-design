@@ -1,7 +1,7 @@
 import React from "react";
-import PropTypes, { func } from 'prop-types'
+import PropTypes, { func } from "prop-types";
 
-import { Card, Button } from 'lib';
+import { Card, Button } from "lib";
 import { neural } from "lib/images/image";
 import { RESUME_CHALLENGE, START_CHALLENGE, START } from "lib/language/Card.language";
 
@@ -39,11 +39,11 @@ ChallengesPageCard.propTypes = {
   challengeName: PropTypes.string,
   /** Function that will be triggered by button click */
   ButtonClick: PropTypes.func
-}
+};
 
 ChallengesPageCard.defaultProps = {
   newChallange: false,
-  challengeName: '',
-}
+  challengeName: "",
+};
 
 export default ChallengesPageCard;

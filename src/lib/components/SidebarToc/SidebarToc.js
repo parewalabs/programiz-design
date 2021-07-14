@@ -1,10 +1,10 @@
 import React from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import classNames from "classnames";
 import SidebarCourseIndex from "./SidebarCourseIndex";
 import { useState, useEffect, useRef } from "react";
 import { ProgressBar } from "lib";
-import { FiMenu } from 'react-icons/fi'; 
+import { FiMenu } from "react-icons/fi"; 
 
 const SidebarToc = (props) => {
   const sideBarRef = useRef(null);
@@ -58,13 +58,13 @@ SidebarToc.propTypes = {
   completion: PropTypes.string,
   /** Content Array for lessons */
   toc: PropTypes.array,
-}
+};
 
 SidebarToc.defaultProps = {
   courseTitle: "",
   completion: 0,
   toc: [],
-}
+};
 
 
 export default SidebarToc;

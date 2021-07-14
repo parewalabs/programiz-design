@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 import classNames from "classnames";
 
 const Avatar = (props) => {
@@ -7,29 +7,29 @@ const Avatar = (props) => {
 
   let sizeClass;
   switch(size) {
-    case 'large':
-      sizeClass = 'avatar--lg';
+    case "large":
+      sizeClass = "avatar--lg";
       break;
-    case 'small':
-      sizeClass = 'avatar--sm';
+    case "small":
+      sizeClass = "avatar--sm";
       break;
     default:
-      sizeClass = '';
+      sizeClass = "";
   }
   
   let shapeClass;
   switch(shape) {
-    case 'square':
-      shapeClass = 'avatar--square';
+    case "square":
+      shapeClass = "avatar--square";
       break;
-    case 'rounded':
-      shapeClass = 'avatar--rounded';
+    case "rounded":
+      shapeClass = "avatar--rounded";
       break;
-    case 'round':
-      shapeClass = 'avatar--round';
+    case "round":
+      shapeClass = "avatar--round";
       break;
     default:
-      shapeClass = 'avatar--round';
+      shapeClass = "avatar--round";
   }
 
   return (
@@ -55,7 +55,7 @@ Avatar.propTypes = {
   imageUrl: PropTypes.string,
   /** User name of Avatar */
   userName: PropTypes.string,
-}
+};
 
 Avatar.defaultProps = {
   size: "",
@@ -63,7 +63,7 @@ Avatar.defaultProps = {
   className: "",
   imageUrl: "",
   userName: ""
-}
+};
 
 
 export default Avatar;

@@ -1,6 +1,4 @@
-Profile:
-
-```js
+""`js
 <Profile
   userInfo={{
     fullName: "Bishal Mishra",
@@ -8,4 +6,4 @@ Profile:
     profilePic: "",
   }}
 />
-```
+```;

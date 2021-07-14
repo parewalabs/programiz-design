@@ -6,4 +6,4 @@ export const LEARNING = "Learning";
 export const FIRST_STEP = "Take your first step today!";
 export const SEE_YOU_BACK = "Good to see you back!";
 export const VIEW = "View";
-export const PROGRAMMING = "Programming"
+export const PROGRAMMING = "Programming";

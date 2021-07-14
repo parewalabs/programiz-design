@@ -1,6 +1,6 @@
 import React from "react";
 import {Card} from "lib";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 import {TYPE, PLAN, LAST_PAYMENT_DATE, NEXT_PAYMENT_DATE} from "lib/language/Profile.language";
 
@@ -51,13 +51,13 @@ MembershipTable.propTypes = {
   lastPaymentDate: PropTypes.string,
   /** Next payment date*/
   nextPaymentDate: PropTypes.string,
-}
+};
 
 MembershipTable.defaultProps = {
   type: "",
   plan: "",
   lastPaymentDate: "",
   nextPaymentDate: ""
-}
+};
 
 export default MembershipTable;

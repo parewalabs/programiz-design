@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 import classNames from "classnames";
 import CircleProgress from "./CircleProgress";
 import { Accordion } from "lib";
@@ -14,7 +14,7 @@ const CourseIndex = (props) => {
   return (
     <Accordion headerComponent={HeaderComponent} className={className}>
       <ul className="list list--progress py-6x px-10x">
-          { lessons 
+        { lessons 
             && lessons.map((lesson) => {
               return (
                 <li
@@ -34,24 +34,24 @@ const CourseIndex = (props) => {
                 </li>
               );
             })}
-          {props.course.quiz && (
-            <li
-              className={classNames("list__row")}
-              key={quiz.id}
+        {props.course.quiz && (
+          <li
+            className={classNames("list__row")}
+            key={quiz.id}
+          >
+            <div className="list__progress-container">
+              <CircleProgress percentage={quiz.progressPercentage}/>
+            </div>
+            <a
+              href={`/quiz/${quiz.id}`}
+              className={classNames("list__label truncate", {"text-bold" : quiz.progress })}
+              title={quiz.title}
             >
-              <div className="list__progress-container">
-                <CircleProgress percentage={quiz.progressPercentage}/>
-              </div>
-              <a
-                href={`/quiz/${quiz.id}`}
-                className={classNames("list__label truncate", {"text-bold" : quiz.progress })}
-                title={quiz.title}
-              >
-                {quiz.title}
-              </a>
-            </li>
-          )}
-        </ul>
+              {quiz.title}
+            </a>
+          </li>
+        )}
+      </ul>
     </Accordion>
   );
 };
@@ -61,11 +61,11 @@ CourseIndex.propTypes = {
   course: PropTypes.object,
   /** Extra classes */
   className: PropTypes.string
-}
+};
 
 CourseIndex.defaultProps = {
   course: {},
   className: ""
-}
+};
 
 export default CourseIndex;
