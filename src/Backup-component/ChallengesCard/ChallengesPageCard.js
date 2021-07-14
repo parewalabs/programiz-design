@@ -44,7 +44,6 @@ ChallengesPageCard.propTypes = {
 ChallengesPageCard.defaultProps = {
   newChallange: false,
   challengeName: '',
-  ButtonClick: func,
 }
 
 export default ChallengesPageCard;

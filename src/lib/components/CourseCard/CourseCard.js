@@ -1,12 +1,10 @@
 import React from "react";
 import PropTypes from 'prop-types'
 
-import { Card } from 'lib'; 
+import { Card, ProgressBar, Button} from 'lib'; 
 import { FiBook, FiArrowRight } from "react-icons/fi";
 import { courseVector1, courseVector2 } from "lib/images/image";
-
-import { COMPLETE, START_LEARNING} from 'lib/language/CourseCard.language';
-import Button from "../Button/Button";
+import { START_LEARNING} from 'lib/language/CourseCard.language';
 
 const CourseCard = (props) => {
 
@@ -49,14 +47,7 @@ const CourseCard = (props) => {
             </div>
           )}
           {completion && (
-            <div className="progress-bar mb-4x">
-              <p className="progress-bar__count">
-                {completion}% {COMPLETE}
-              </p>
-              <div className="progress-bar__track">
-                <div className="progress-bar__bar" style={{ width: completion + '%'}}/>
-              </div>
-            </div>
+            <ProgressBar completion={completion} className="mb-4x" />
           )}
             <span className="d-flex align-items-center fs-body14 color-primary-base">
               { START_LEARNING }

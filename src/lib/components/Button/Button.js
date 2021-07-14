@@ -75,7 +75,6 @@ Button.defaultProps = {
   size: "",
   type: "",
   className: "",
-  onClick: Function,
   fullWidth: false,
   disabled: false,
   children: "",

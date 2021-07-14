@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 //language Icons
 import python from "../../icons/python.svg";
@@ -12,6 +13,7 @@ import kotlin from "../../icons/kotlin.svg";
 import swift from "../../icons/swift.svg";
 
 const Icons = (props) => {
+  const {iconName, className, customClickEvent} = props;
   const selectIcon = (iconName) => {
     switch (iconName) {
       case "python":
@@ -38,12 +40,26 @@ const Icons = (props) => {
   };
   return (
     <img
-      src={selectIcon(props.iconName)}
-      alt={props.alt}
-      className={props.className}
-      onClick={props.customClickEvent}
+      src={selectIcon(iconName)}
+      alt={iconName}
+      className={className}
+      onClick={customClickEvent}
     />
   );
 };
+
+Icons.propTypes = {
+  /** Code of the Language*/
+  iconName: PropTypes.string,
+  /** Extra Classname */
+  classNames: PropTypes.string,
+  /** Custom Click Event Listener*/
+  customClickEvent: PropTypes.func,
+}
+
+Icons.defaultProps = {
+  iconName: "",
+  classNames: "",
+}
 
 export default Icons;

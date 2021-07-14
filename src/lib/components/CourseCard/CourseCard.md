@@ -18,7 +18,7 @@ Course Card:
   <div className="col-12 col-6-md col-5-lg">
     <CourseCard
       courseName="Python for data science & Machine Learning"
-      completion="30%"
+      completion="30"
       tags={{
         "chapters": "7 Chapters",
         "courseTitle": "Python",

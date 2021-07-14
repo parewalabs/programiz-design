@@ -4,9 +4,20 @@
     background-color: $white;
     border: 1px solid getColor("grey.borderGray");
     border-radius: 4px;
+    .accordion--sidebar & {
+      border-radius: 0;
+      background-color: transparent;
+      border: {
+        top: 0;
+        left:0;
+        right: 0;
+      }
+    }
   }
   @include e(chevron){
     @include transition;
+    width: 24px;
+    height: 24px;
   }
   @include e(title){
     display: flex;
@@ -14,9 +25,14 @@
     justify-content: space-between;
     padding: getSpacing("4x") getSpacing("6x");
     cursor: pointer;
-  
+    .accordion--sidebar &{
+      padding: getSpacing("3x") getSpacing("6x");
+    }
     @include m(active){
       border-bottom: 1px solid getColor("grey.borderGray");
+      .accordion--sidebar &{
+        background-color: rgba(getColor("text.main"), 0.24);
+      }
       .accordion{
         @include e(chevron){
           transform: rotate(180deg); 

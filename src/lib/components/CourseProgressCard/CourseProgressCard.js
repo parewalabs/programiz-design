@@ -1,9 +1,8 @@
 import React from "react";
 import PropTypes from 'prop-types'
 import { progressCardArtWork, SmallCertificate } from "lib/images/image";
-import { Button, Card } from "lib";
+import { Button, Card, ProgressBar } from "lib";
 import { FIRST_STEP, SEE_YOU_BACK, LEARNING, START, CONTINUE } from 'lib/language/Card.language';
-import { COMPLETE } from 'lib/language/CourseCard.language';
 
 
 const CourseProgressCard = (props) => {
@@ -23,14 +22,7 @@ const CourseProgressCard = (props) => {
         </h2>
         <div className="d-flex align-items-start">
           <div className="flex-1 mr-6x">
-            <div className="progress-bar mb-2x">
-              <p className="progress-bar__count">
-                {completion}% {COMPLETE}
-              </p>
-              <div className="progress-bar__track">
-                <div className="progress-bar__bar" style={{ width: completion + '%'}}/>
-              </div>
-            </div>
+            <ProgressBar className="mb-2x" completion={completion} />
             <p className="fs-body14 text-primary-blue mb-6x">
               {message}
             </p>

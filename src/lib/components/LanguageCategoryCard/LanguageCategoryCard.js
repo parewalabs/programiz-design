@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 import classNames from "classnames";
 import { Card, Icons, Button } from 'lib';
 import { FiArrowRight } from "react-icons/fi";

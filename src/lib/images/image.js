@@ -9,6 +9,7 @@ import LCCvector3 from "lib/images/LCCvector3.svg";
 import LCCvector4 from "lib/images/LCCvector4.svg";
 import LCCvector5 from "lib/images/LCCvector5.svg";
 import LCCvector6 from "lib/images/LCCvector6.svg";
+import vector from "lib/images/Vector.svg";
 
 
 export { 
@@ -22,5 +23,6 @@ export {
   LCCvector3,
   LCCvector4,
   LCCvector5,
-  LCCvector6
+  LCCvector6,
+  vector
 };

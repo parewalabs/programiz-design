@@ -1,5 +1,15 @@
 .list{
-  @include m(progress){}
+  @include m(progress){
+    @include m(sidebar){
+      .list{
+        @include e(progress-container){
+          &::after{
+            display: none;
+          }
+        }
+      }
+    }
+  }
   @include e(row) {
     &:not(:last-child){
       margin-bottom: getSpacing("4x");
