@@ -40,7 +40,7 @@
     "test": "craco test",
     "styler": "npx styleguidist server",
     "build-stylist": "npx styleguidist build",
-    "build": "rm -rf ./dist && NODE_ENV=production babel src/lib --out-dir ./dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__ && ./node_modules/.bin/postcss ./src/index.css --output ./dist/index.css"
+    "build": "rm -rf ./dist && NODE_ENV=production babel src/lib --out-dir ./dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__ && ./node_modules/.bin/postcss ./src/index.css --output ./dist/index.css "
   },
   "eslintConfig": {
     "extends": [

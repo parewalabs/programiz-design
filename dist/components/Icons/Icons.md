@@ -3,6 +3,9 @@
 Language Icons:
 
 ```js
+import { c } from "lib/icons/icon";
+<>
+<img src={c}/>
 <Icons iconName="python" alt="Python" />
 <Icons iconName="c" alt="C Programming" />
 <Icons iconName="java" alt="Java" />
@@ -12,4 +15,5 @@ Language Icons:
 <Icons iconName="kotlin" alt="Kotlin Programming" />
 <Icons iconName="swift" alt="Swift Programming" />
 <Icons iconName="csharp" alt="C# Programming" />
+</>
 ```

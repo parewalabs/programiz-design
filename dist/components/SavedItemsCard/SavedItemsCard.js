@@ -29,7 +29,7 @@ SavedItemsCard.propTypes = {
   /** Data value for item type*/
   type: PropTypes.string,
 
-  /** Data value for lessong name*/
+  /** Data value for lesson name*/
   name: PropTypes.string,
 
   /** Custom Click Event Listener*/
