@@ -1,0 +1,86 @@
+.accordion .contentBx {
+  position: relative;
+}
+
+.accordion .contentBx .content {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  overflow-y: auto;
+}
+
+.accordion .contentBx.active .content {
+  height: auto;
+  padding-top: 24px;
+  padding-right: 41px;
+  padding-bottom: 24px;
+  padding-left: 41px;
+}
+
+/*.StepProgress {
+  position: relative;
+}
+.StepProgress-item::before {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  top: 3px;
+  left: 10px;
+  width: 10px;
+  height: 90%;
+  border-left: 2px solid #d3dce6;
+}*/
+/*
+.StepProgress-item {
+  position: relative;
+  counter-increment: list;
+}
+.StepProgress-item:not(:last-child) {
+  padding-bottom: 20px;
+}
+*/
+/*
+.StepProgress-item::before {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  left: -30px;
+  height: 100%;
+  width: 10px;
+}
+
+
+.StepProgress-item::after {
+  content: url(../../icons/correct.svg);
+  display: inline-block;
+  position: absolute;
+  top: 3px;
+  left: -40px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #d3dce6;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.StepProgress-item.is-done ::after {
+  content: url(../../icons/correctColor.svg);
+  font-size: 10px;
+  color: #fff;
+  text-align: center;
+  border: 2px solid #0556f3;
+}
+
+.StepProgress-item.current::after {
+  content: url(../../icons/correctColor.svg);
+  display: inline-block;
+  position: absolute;
+  top: 3px;
+  left: -40px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border: 2px solid #0556f3;
+  background-color: white;
+}*/

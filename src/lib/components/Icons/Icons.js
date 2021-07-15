@@ -1,16 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-//language Icons
-import python from "../../icons/python.svg";
-import c from "../../icons/c.svg";
-import cpp from "../../icons/cpp.svg";
-import java from "../../icons/java.svg";
-import js from "../../icons/js.svg";
-import das from "../../icons/dsa.svg";
-import csharp from "../../icons/csharp.svg";
-import kotlin from "../../icons/kotlin.svg";
-import swift from "../../icons/swift.svg";
+import {python, c, cpp, java, js, das, csharp, kotlin, swift} from "lib/icons/icon";
 
 const Icons = (props) => {
   const {iconName, className, customClickEvent} = props;
