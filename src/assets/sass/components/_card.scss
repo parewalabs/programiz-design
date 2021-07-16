@@ -1,0 +1,82 @@
+.card {
+  background-color: $white;
+  border-radius: 6px;
+  border: 1px solid getColor("grey.borderGray");
+  height: 100%;
+  @include m(shadowed) {
+    box-shadow: 0px 10px 40px 0px rgba(getColor("text.main"), 0.05);
+  }
+}
+
+.challenge-card {
+  padding: getSpacing("10x");
+  position: relative;
+  overflow: hidden;
+  @include e(content) {
+    position: relative;
+    z-index: 1;
+  }
+  @include e(img){
+    position: absolute;
+    right: 16px;
+    top: 32px;
+    z-index: 0;
+  }
+}
+
+.progress-card{
+  @include e(image){
+    max-width: 72px;
+    flex-shrink: 0;
+  }
+}
+
+.Language-card{
+  max-width: 160px;
+  height: 200px;
+  @include e(cover){
+    padding: getSpacing("6x") getSpacing("4x");
+  }
+  @include e(button){
+    height: 100%;
+    &:hover{
+      box-shadow: 0 0 0 2px getColor("primary.base");
+    }
+  }
+  @include e(icon){
+    flex-shrink:0;
+    @include m(all-card){
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.course-card-main{
+  @include e(button){
+    &:hover{
+      box-shadow: 0 0 0 2px getColor("primary.base");
+    }
+  }
+}
+
+.course-tile {
+  padding: getSpacing("6x");
+  min-height: 236px;
+}
+
+.saved-card{
+  background-size: initial;
+  background-position: right top;
+  background-repeat: no-repeat;
+  min-height: 132px;
+  @include e(button){
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    &:hover{
+      box-shadow: 0 0 0 2px getColor("primary.base");
+    }
+  }
+}

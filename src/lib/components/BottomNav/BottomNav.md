@@ -1,5 +1,0 @@
-BottomNav
-
-```js
-<BottomNav />
-```

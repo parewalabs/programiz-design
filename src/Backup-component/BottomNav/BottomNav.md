@@ -1,0 +1,5 @@
+BottomNav
+
+```js
+<BottomNav />
+```;

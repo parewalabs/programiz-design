@@ -15,6 +15,12 @@ const webpackConfig =
 module.exports = {
   webpackConfig,
   components: "src/lib/components/**/*.js",
-  require: [path.join(__dirname, "./src/index.css")],
+  getComponentPathLine(componentPath) {
+    const name = path.basename(componentPath, ".js");
+    return `import { ${name} } from 'programiz-design';`;
+  },
+  require: [path.join(__dirname, "./src/assets/sass/style.scss"), path.join(__dirname, "./src/index.css")],
   styleguideDir: "./docs",
+  exampleMode: "collapse",
+  usageMode: "expand"
 };
