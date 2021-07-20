@@ -1,6 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { python, c, cpp, java, js, das, csharp, kotlin, swift } from "lib/icons/icon";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { python, c, cpp, java, js, das, csharp, kotlin, swift } from '../../icons/icon';
 
 const Icons = props => {
   const {
@@ -11,35 +11,35 @@ const Icons = props => {
 
   const selectIcon = iconName => {
     switch (iconName) {
-      case "python":
+      case 'python':
         return python;
 
-      case "c":
+      case 'c':
         return c;
 
-      case "cpp":
+      case 'cpp':
         return cpp;
 
-      case "java":
+      case 'java':
         return java;
 
-      case "js":
+      case 'js':
         return js;
 
-      case "dsa":
+      case 'dsa':
         return das;
 
-      case "csharp":
+      case 'csharp':
         return csharp;
 
-      case "kotlin":
+      case 'kotlin':
         return kotlin;
 
-      case "swift":
+      case 'swift':
         return swift;
 
       default:
-        return "";
+        return '';
     }
   };
 
@@ -62,7 +62,7 @@ Icons.propTypes = {
   customClickEvent: PropTypes.func
 };
 Icons.defaultProps = {
-  iconName: "",
-  classNames: ""
+  iconName: '',
+  classNames: ''
 };
 export default Icons;

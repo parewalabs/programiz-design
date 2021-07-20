@@ -1,8 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
-import classNames from "classnames";
-import CircleProgress from "./CircleProgress";
-import { Accordion } from "lib";
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import CircleProgress from './CircleProgress';
+import { Accordion } from '../../';
 
 const CourseIndex = props => {
   const {
@@ -24,7 +24,7 @@ const CourseIndex = props => {
     className: "list list--progress py-6x px-10x"
   }, lessons && lessons.map(lesson => {
     return /*#__PURE__*/React.createElement("li", {
-      className: classNames("list__row"),
+      className: classNames('list__row'),
       key: lesson.id
     }, /*#__PURE__*/React.createElement("div", {
       className: "list__progress-container"
@@ -32,13 +32,13 @@ const CourseIndex = props => {
       percentage: lesson.progressPercentage
     })), /*#__PURE__*/React.createElement("a", {
       href: `/lesson/${lesson.id}/details`,
-      className: classNames("list__label truncate", {
-        "text-bold": lesson.progress
+      className: classNames('list__label truncate', {
+        'text-bold': lesson.progress
       }),
       title: lesson.title
     }, lesson.title));
   }), props.course.quiz && /*#__PURE__*/React.createElement("li", {
-    className: classNames("list__row"),
+    className: classNames('list__row'),
     key: quiz.id
   }, /*#__PURE__*/React.createElement("div", {
     className: "list__progress-container"
@@ -46,8 +46,8 @@ const CourseIndex = props => {
     percentage: quiz.progressPercentage
   })), /*#__PURE__*/React.createElement("a", {
     href: `/quiz/${quiz.id}`,
-    className: classNames("list__label truncate", {
-      "text-bold": quiz.progress
+    className: classNames('list__label truncate', {
+      'text-bold': quiz.progress
     }),
     title: quiz.title
   }, quiz.title))));
@@ -62,6 +62,6 @@ CourseIndex.propTypes = {
 };
 CourseIndex.defaultProps = {
   course: {},
-  className: ""
+  className: ''
 };
 export default CourseIndex;

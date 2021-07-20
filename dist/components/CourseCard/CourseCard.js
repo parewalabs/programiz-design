@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Card, ProgressBar, Button } from "lib";
-import { FiBook, FiArrowRight } from "react-icons/fi";
-import { courseVector1, courseVector2 } from "lib/images/image";
-import { START_LEARNING } from "lib/language/CourseCard.language";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Card, ProgressBar, Button } from '../../';
+import { FiBook, FiArrowRight } from 'react-icons/fi';
+import { courseVector1, courseVector2 } from '../../images/image';
+import { START_LEARNING } from '../../language/CourseCard.language';
 
 const CourseCard = props => {
   const {
@@ -18,14 +18,14 @@ const CourseCard = props => {
   if (vector === 1) {
     vectorType = {
       backgroundImage: `url(${courseVector1})`,
-      backgroundRepeat: "no-repeat",
-      backgroundPosition: "right bottom"
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'right bottom'
     };
   } else {
     vectorType = {
       backgroundImage: `url(${courseVector2})`,
-      backgroundRepeat: "no-repeat",
-      backgroundPosition: "right bottom"
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'right bottom'
     };
   }
 
@@ -81,10 +81,10 @@ CourseCard.propTypes = {
   customClickEvent: PropTypes.func
 };
 CourseCard.defaultProps = {
-  courseName: "",
-  completion: "",
-  customClickEvent: "",
-  vector: "1",
-  tags: ""
+  courseName: '',
+  completion: '',
+  customClickEvent: '',
+  vector: '1',
+  tags: ''
 };
 export default CourseCard;

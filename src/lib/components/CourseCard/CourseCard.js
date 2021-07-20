@@ -1,64 +1,60 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import { Card, ProgressBar, Button} from "lib"; 
-import { FiBook, FiArrowRight } from "react-icons/fi";
-import { courseVector1, courseVector2 } from "lib/images/image";
-import { START_LEARNING} from "lib/language/CourseCard.language";
+import { Card, ProgressBar, Button } from '../../';
+import { FiBook, FiArrowRight } from 'react-icons/fi';
+import { courseVector1, courseVector2 } from '../../images/image';
+import { START_LEARNING } from '../../language/CourseCard.language';
 
 const CourseCard = (props) => {
-
-  const { courseName, completion, customClickEvent, vector, tags} = props;
+  const { courseName, completion, customClickEvent, vector, tags } = props;
 
   let vectorType = {};
   if (vector === 1) {
     vectorType = {
       backgroundImage: `url(${courseVector1})`,
-      backgroundRepeat: "no-repeat",
-      backgroundPosition: "right bottom",
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'right bottom',
     };
   } else {
     vectorType = {
       backgroundImage: `url(${courseVector2})`,
-      backgroundRepeat: "no-repeat",
-      backgroundPosition: "right bottom",
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'right bottom',
     };
   }
   return (
     <Card style={vectorType} className="course-card-main">
-      <Button type="clear" onClick={customClickEvent} className="course-card-main__button">
+      <Button
+        type="clear"
+        onClick={customClickEvent}
+        className="course-card-main__button"
+      >
         <div className="course-tile">
-          <h3 className="fs-h3 color-text-main mb-2x">
-            {courseName}
-          </h3>
-          { tags && (
+          <h3 className="fs-h3 color-text-main mb-2x">{courseName}</h3>
+          {tags && (
             <div className="bookmarks mb-4x">
               <div className="bookmarks__node">
-                <FiBook className="bookmarks__icon"/> { tags.chapters }
+                <FiBook className="bookmarks__icon" /> {tags.chapters}
               </div>
               <div className="bookmarks__dot" />
-              <div className="bookmarks__node">
-                { tags.courseTitle }
-              </div>
+              <div className="bookmarks__node">{tags.courseTitle}</div>
               <div className="bookmarks__dot" />
-              <div className="bookmarks__node">
-                { tags.courseDifficulty }
-              </div>
+              <div className="bookmarks__node">{tags.courseDifficulty}</div>
             </div>
           )}
           {completion && (
             <ProgressBar completion={completion} className="mb-4x" />
           )}
           <span className="d-flex align-items-center fs-body14 color-primary-base">
-            { START_LEARNING }
-            <FiArrowRight className="ml-1x"/>
+            {START_LEARNING}
+            <FiArrowRight className="ml-1x" />
           </span>
         </div>
       </Button>
     </Card>
   );
 };
-
 
 CourseCard.propTypes = {
   /** Name of the Course*/
@@ -74,12 +70,11 @@ CourseCard.propTypes = {
 };
 
 CourseCard.defaultProps = {
-  courseName: "",
-  completion: "",
-  customClickEvent: "",
-  vector: "1",
-  tags: ""
+  courseName: '',
+  completion: '',
+  customClickEvent: '',
+  vector: '1',
+  tags: '',
 };
-
 
 export default CourseCard;

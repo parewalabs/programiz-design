@@ -1,10 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
-import classNames from "classnames";
-import SidebarCourseIndex from "./SidebarCourseIndex";
-import { useState, useEffect, useRef } from "react";
-import { ProgressBar } from "lib";
-import { FiMenu } from "react-icons/fi";
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import SidebarCourseIndex from './SidebarCourseIndex';
+import { useState, useEffect, useRef } from 'react';
+import { ProgressBar } from '../../';
+import { FiMenu } from 'react-icons/fi';
 
 const SidebarToc = props => {
   const sideBarRef = useRef(null);
@@ -16,7 +16,7 @@ const SidebarToc = props => {
   const [hasShadow, setShadow] = useState(false);
   const [isCollapsed, setCollapse] = useState(false);
   useEffect(() => {
-    sideBarRef.current.addEventListener("scroll", event => {
+    sideBarRef.current.addEventListener('scroll', event => {
       if (event.target.scrollTop > 0) {
         setShadow(true);
       } else {
@@ -30,8 +30,8 @@ const SidebarToc = props => {
   };
 
   return /*#__PURE__*/React.createElement("div", {
-    className: classNames("sidebar-wrapper", {
-      "sidebar-wrapper--collapsed": isCollapsed
+    className: classNames('sidebar-wrapper', {
+      'sidebar-wrapper--collapsed': isCollapsed
     })
   }, /*#__PURE__*/React.createElement("button", {
     onClick: collapseSidebar,
@@ -39,11 +39,11 @@ const SidebarToc = props => {
   }, /*#__PURE__*/React.createElement(FiMenu, {
     className: "course-sidebar-icon"
   })), /*#__PURE__*/React.createElement("div", {
-    className: classNames("course-sidebar"),
+    className: classNames('course-sidebar'),
     ref: sideBarRef
   }, /*#__PURE__*/React.createElement("div", {
-    className: classNames("course-sidebar__head", {
-      "course-sidebar__head--shadow": hasShadow
+    className: classNames('course-sidebar__head', {
+      'course-sidebar__head--shadow': hasShadow
     })
   }, /*#__PURE__*/React.createElement("h3", {
     className: "fs-h3 color-text-main mb-2x"
@@ -70,7 +70,7 @@ SidebarToc.propTypes = {
   toc: PropTypes.array
 };
 SidebarToc.defaultProps = {
-  courseTitle: "",
+  courseTitle: '',
   completion: 0,
   toc: []
 };

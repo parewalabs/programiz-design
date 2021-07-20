@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import classNames from "classnames";
-import { COMPLETE } from "lib/language/CourseCard.language";
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import { COMPLETE } from '../../language/CourseCard.language';
 
 const ProgressBar = props => {
   const {
@@ -9,7 +9,7 @@ const ProgressBar = props => {
     className
   } = props;
   return /*#__PURE__*/React.createElement("div", {
-    className: classNames("progress-bar", className)
+    className: classNames('progress-bar', className)
   }, /*#__PURE__*/React.createElement("p", {
     className: "progress-bar__count"
   }, completion, "% ", COMPLETE), /*#__PURE__*/React.createElement("div", {
@@ -17,7 +17,7 @@ const ProgressBar = props => {
   }, /*#__PURE__*/React.createElement("div", {
     className: "progress-bar__bar",
     style: {
-      width: completion + "%"
+      width: completion + '%'
     }
   })));
 };
@@ -31,6 +31,6 @@ ProgressBar.propTypes = {
 };
 ProgressBar.defaultProps = {
   completion: 0,
-  className: ""
+  className: ''
 };
 export default ProgressBar;

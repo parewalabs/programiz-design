@@ -1,16 +1,19 @@
-import React from "react";
-import { Card, Button } from "lib";
-import PropTypes from "prop-types";
+import React from 'react';
+import { Card, Button } from '../../';
+import PropTypes from 'prop-types';
 
-import {vector} from "lib/images/image";
+import { vector } from '../../images/image';
 
 const SavedItemsCard = (props) => {
-
-  const { customClickEvent, type, name} = props;
+  const { customClickEvent, type, name } = props;
 
   return (
-    <Card className="saved-card" style={{backgroundImage: `url(${vector})`}}>
-      <Button onClick={customClickEvent} type="clear" className="saved-card__button p-6x">
+    <Card className="saved-card" style={{ backgroundImage: `url(${vector})` }}>
+      <Button
+        onClick={customClickEvent}
+        type="clear"
+        className="saved-card__button p-6x"
+      >
         <p className="fs-body14 text-capitalized color-text-main">{type}</p>
         <h4 className="fs-h4 color-text-main">{name}</h4>
       </Button>
@@ -28,9 +31,9 @@ SavedItemsCard.propTypes = {
 };
 
 SavedItemsCard.defaultProps = {
-  type: "",
-  name: "",
-  customClickEvent: "",
+  type: '',
+  name: '',
+  customClickEvent: '',
 };
 
 export default SavedItemsCard;

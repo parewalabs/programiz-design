@@ -1,10 +1,15 @@
-import React from "react";
-import PropTypes from "prop-types";
-import {Button, Card} from "lib";
-import {VIEW_INVOICE, DESCRIPTION, AMOUNT, DATE} from "lib/language/Profile.language";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Button, Card } from '../../';
+import {
+  VIEW_INVOICE,
+  DESCRIPTION,
+  AMOUNT,
+  DATE,
+} from '../../language/Profile.language';
 
 const InvoicesTable = (props) => {
-  const {invoices} = props;
+  const { invoices } = props;
 
   return (
     <Card shadowed className="table-responsive">
@@ -26,7 +31,7 @@ const InvoicesTable = (props) => {
                 <td className="table__body__col">{invoice.date}</td>
                 <td className="table__body__col table__body__col--fw">
                   <Button type="primary-outline" size="small" fullWidth>
-                    { VIEW_INVOICE }
+                    {VIEW_INVOICE}
                   </Button>
                 </td>
               </tr>

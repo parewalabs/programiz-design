@@ -1,10 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
-import classNames from "classnames";
-import { Card, Icons, Button } from "lib";
-import { FiArrowRight } from "react-icons/fi";
-import { VIEW, PROGRAMMING } from "lib/language/Card.language";
-import { LCCvector1, LCCvector2, LCCvector3, LCCvector4, LCCvector5, LCCvector6 } from "lib/images/image";
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import { Card, Icons, Button } from '../../';
+import { FiArrowRight } from 'react-icons/fi';
+import { VIEW, PROGRAMMING } from '../../language/Card.language';
+import { LCCvector1, LCCvector2, LCCvector3, LCCvector4, LCCvector5, LCCvector6 } from '../../images/image';
 
 const LanguageCategoryCard = props => {
   const {
@@ -30,7 +30,7 @@ const LanguageCategoryCard = props => {
   }
 
   const LanguageCard = () => /*#__PURE__*/React.createElement(Card, {
-    className: classNames("Language-card", className)
+    className: classNames('Language-card', className)
   }, /*#__PURE__*/React.createElement(Button, {
     onClick: customClickEvent,
     type: "clear",
@@ -39,8 +39,8 @@ const LanguageCategoryCard = props => {
     className: "Language-card__cover",
     style: {
       backgroundImage: `url(${vector1}), url(${vector2})`,
-      backgroundRepeat: "no-repeat",
-      backgroundPosition: "top left, top right"
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'top left, top right'
     }
   }, /*#__PURE__*/React.createElement(Icons, {
     iconName: languageCode,
@@ -55,7 +55,7 @@ const LanguageCategoryCard = props => {
   })))));
 
   const AllLanguageCard = () => /*#__PURE__*/React.createElement(Card, {
-    className: classNames("Language-card", className)
+    className: classNames('Language-card', className)
   }, /*#__PURE__*/React.createElement(Button, {
     onClick: customClickEvent,
     type: "clear",
@@ -70,7 +70,7 @@ const LanguageCategoryCard = props => {
     className: "Language-card__icon Language-card__icon--all-card color-primary-base"
   })))));
 
-  return type === "All" ? AllLanguageCard() : LanguageCard();
+  return type === 'All' ? AllLanguageCard() : LanguageCard();
 };
 
 LanguageCategoryCard.propTypes = {
@@ -93,11 +93,11 @@ LanguageCategoryCard.propTypes = {
   customClickEvent: PropTypes.func
 };
 LanguageCategoryCard.defaultProps = {
-  languageCode: "",
-  language: "",
-  vector: "1",
-  customClickEvent: "",
-  type: "",
-  classNames: ""
+  languageCode: '',
+  language: '',
+  vector: '1',
+  customClickEvent: '',
+  type: '',
+  classNames: ''
 };
 export default LanguageCategoryCard;

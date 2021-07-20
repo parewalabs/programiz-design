@@ -1,10 +1,14 @@
-import React from "react";
-import PropTypes from "prop-types";
-import {Button, Card} from "lib";
-import {VIEW_INVOICE, PAYMENT_METHOD, EXPIRATION_DATE} from "lib/language/Profile.language";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Button, Card } from '../../';
+import {
+  VIEW_INVOICE,
+  PAYMENT_METHOD,
+  EXPIRATION_DATE,
+} from '../../language/Profile.language';
 
 const PaymentMethodsTable = (props) => {
-  const {methods} = props;
+  const { methods } = props;
 
   return (
     <Card shadowed className="table-responsive">
@@ -24,7 +28,7 @@ const PaymentMethodsTable = (props) => {
                 <td className="table__body__col">{method.expirationDate}</td>
                 <td className="table__body__col table__body__col--fw">
                   <Button type="primary-outline" size="small" fullWidth>
-                    { VIEW_INVOICE }
+                    {VIEW_INVOICE}
                   </Button>
                 </td>
               </tr>

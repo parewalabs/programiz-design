@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Button, Card } from "lib";
-import { VIEW_INVOICE, PAYMENT_METHOD, EXPIRATION_DATE } from "lib/language/Profile.language";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Button, Card } from '../../';
+import { VIEW_INVOICE, PAYMENT_METHOD, EXPIRATION_DATE } from '../../language/Profile.language';
 
 const PaymentMethodsTable = props => {
   const {
