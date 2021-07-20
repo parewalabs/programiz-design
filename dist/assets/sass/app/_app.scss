@@ -1,0 +1,121 @@
+.size-20{
+  width: 20px;
+}
+
+#root{
+  height: 100%;
+}
+
+body{
+  background-color: getColor("grey.mainBg");
+}
+
+.main-content{
+  padding-bottom: getSpacing("30x");
+  @include mqmax(md){
+    padding-bottom: getSpacing("15x");
+    &.has-offset{
+      padding-bottom: getSpacing("20x");
+    }
+  }
+}
+
+.container{
+  &.container-small{
+    max-width: 730px + 32px;
+  }
+}
+
+.bookmarks{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  @include e(node){
+    display: flex;
+    align-items: center;
+    color: getColor("text.caption");
+    @include getFontSize("body14");
+    text-transform: capitalize;
+    flex-shrink: 0;
+  }
+  @include e(icon){
+    width: 16px;
+    margin-right: getSpacing("1x");
+  }
+  @include e(dot){
+    width: 3px;
+    height: 3px;
+    border-radius: 100%;
+    background-color: getColor("text.caption");
+    margin: 0 getSpacing("2x");
+    flex-shrink: 0;
+  }
+}
+
+.course-content {
+  display: flex;
+  @include e(sidebar){
+    height: 100vh;
+    overflow-y: auto;
+    flex-shrink: 0;
+    background-color: getColor("grey.mainBg");
+    border-right: 1px solid getColor("grey.borderGray");
+  }
+  @include e(main){
+    display: flex;
+    flex-direction: column;
+    flex:1;
+  }
+  @include e(detail){
+    position: relative;
+    height: calc(100vh - 80px);
+    background-color: $white;
+    flex-basis: 50%;
+    flex-shrink: 0;
+  }
+  @include e(footer) {
+    border-top: 1px solid getColor("grey.borderGray");
+    display: flex;
+    justify-content: flex-end;
+    padding: getSpacing("4x") getSpacing("6x");
+    background-color: $white;
+  }
+}
+
+.lesson-detail{
+  height: calc(100% - 41px);
+  overflow-y: auto;
+  padding: getSpacing("10x");
+}
+
+.course-group-title{
+  display: flex;
+  align-items: center;
+  @include getFontSize("body14");
+}
+
+.badge {
+  @include getFontSize("tiny");
+  padding: 1px getSpacing("2x");
+  @include m(grey){
+    background-color: getColor("grey.borderGray");
+  }
+}
+
+.compiler{
+  //need to remove
+  background-color: getColor("text.main");
+  color: $white;
+  flex-basis: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-area{
+  display: flex;
+  align-items: center;
+  @include e(details){
+  }
+}

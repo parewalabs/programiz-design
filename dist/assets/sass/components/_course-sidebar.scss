@@ -1,0 +1,52 @@
+.sidebar-wrapper{
+  position: relative;
+  width: 300px;
+  background-color: getColor("grey.mainBg");
+  margin-left: 0;
+  @include transition;
+  @include m(collapsed) {
+    margin-left: -300px;
+  }
+}
+.course-sidebar {
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  @include e(head) {
+    position: sticky;
+    padding: getSpacing("6x");
+    padding-top: getSpacing("20x");
+    padding-bottom: 0;
+    background-color: getColor("grey.mainBg");
+    top: 0;
+    z-index: 1;
+    @include m(shadow){
+      box-shadow: 1px 0px 15px 0px rgba($black, 0.2);
+    }
+  }
+}
+.course-sidebar-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+.course-sidebar-button{
+  outline: none;
+  border: none;
+  position: absolute;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  right: getSpacing("2x");
+  top: getSpacing("2x");
+  border-radius: 4px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  .sidebar-wrapper--collapsed &{
+    background-color: getColor("grey.mainBg");
+    transform: translate(100%);
+  }
+}

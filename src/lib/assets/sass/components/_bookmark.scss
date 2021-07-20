@@ -1,0 +1,19 @@
+.bookmark{
+    width: 100%;
+    padding: getSpacing("2x") getSpacing("4x");
+    border-bottom: 1px solid getColor("grey.borderGray");
+    display: flex;
+    justify-content: flex-end;
+    @include e(btn){
+      display: inline-flex;
+      align-items: center;
+      cursor: pointer;
+      margin-left: auto;
+      &:hover{
+        color: getColor("primary.base");
+      }
+    }
+    @include e(icon){
+      width: 18px;
+    }
+  }

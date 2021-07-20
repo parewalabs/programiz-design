@@ -1,0 +1,30 @@
+.circle-progress{
+  width: 22px;
+  height: 22px;
+  border-radius: 100%;
+  border: 2px solid getColor("grey.borderGray");
+  position: relative;
+  background-color: white;
+  @include e(icon){
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 14px;
+    color: getColor("grey.borderGray");
+    transform: translate(-52%, -46%);
+    polyline{
+      stroke-width:4px;
+    }
+    @include m(complete){
+      color: getColor("primary.base");
+    }
+  }
+  @include e(circle){
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    transform: rotate(-90deg);
+    stroke: getColor("primary.base");
+    stroke-width: 2px;
+  }
+}

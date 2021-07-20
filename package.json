@@ -12,13 +12,13 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "classnames": "^2.3.1",
+    "framer-motion": "^4.1.17",
     "postcss": "^7",
     "react-icons": "^4.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "rimraf": "^3.0.2",
-    "web-vitals": "^1.0.1",
-    "framer-motion": "^4.1.17"
+    "web-vitals": "^1.0.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.3",
@@ -36,12 +36,13 @@
     "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   },
   "scripts": {
-    "start": "craco start",
+    "start": "npm run build:scss && craco start",
     "test": "craco test",
-    "styler": "npx styleguidist server",
+    "styler": "npm run build:scss && npx styleguidist server",
     "build-stylist": "npx styleguidist build",
-    "build": "rm -rf ./dist && SET NODE_ENV=production && babel src/lib --out-dir ./dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__ && ./node_modules/.bin/postcss ./src/index.css --output ./dist/index.css "
-},
+    "build:scss": "node-sass ./src/lib/assets/sass/ --output ./src/lib/assets/css/ ",
+    "build": "npm run build:scss && rm -rf ./dist && SET NODE_ENV=production && babel src/lib --out-dir ./dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__,src/lib/assets/sass"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",

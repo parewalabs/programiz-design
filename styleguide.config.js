@@ -19,10 +19,7 @@ module.exports = {
     const name = path.basename(componentPath, '.js');
     return `import { ${name} } from 'programiz-design';`;
   },
-  require: [
-    path.join(__dirname, './src/lib/sass/style.scss'),
-    path.join(__dirname, './src/index.css'),
-  ],
+  require: [path.join(__dirname, './src/lib/assets/css/style.css')],
   styleguideDir: './docs',
   exampleMode: 'collapse',
   usageMode: 'expand',
