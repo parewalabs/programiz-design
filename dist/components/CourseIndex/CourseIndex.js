@@ -8,49 +8,52 @@ const CourseIndex = props => {
   const {
     course: {
       title,
-      lessons,
-      quiz
+      sectionContent
     },
     className
   } = props;
   const HeaderComponent = /*#__PURE__*/React.createElement("h4", {
     title: title,
     className: "color-text-main"
-  }, title);
+  }, title); // get link section's detail page
+
+  const sectionDetailPageLink = (sectionContentType, sectionId, sectionTitile) => {
+    for (const contentType of Object.values(sectionContentType)) {
+      const contentTypeName = contentType.toLowerCase();
+      let href = '';
+
+      if (contentType === 'Challenge') {
+        href = `/${contentTypeName}/details/${sectionId}`;
+      } else {
+        href = `/${contentTypeName}/${sectionId}/details`;
+      }
+
+      const link = /*#__PURE__*/React.createElement("a", {
+        href: href,
+        className: classNames('list__label truncate', {
+          'text-bold': 0
+        }),
+        title: sectionTitile
+      }, sectionTitile);
+      return link;
+    }
+  };
+
   return /*#__PURE__*/React.createElement(Accordion, {
     headerComponent: HeaderComponent,
     className: className
   }, /*#__PURE__*/React.createElement("ul", {
     className: "list list--progress py-6x px-10x"
-  }, lessons && lessons.map(lesson => {
+  }, sectionContent && sectionContent.map(section => {
     return /*#__PURE__*/React.createElement("li", {
       className: classNames('list__row'),
-      key: lesson.id
+      key: section.id
     }, /*#__PURE__*/React.createElement("div", {
       className: "list__progress-container"
     }, /*#__PURE__*/React.createElement(CircleProgress, {
-      percentage: lesson.progressPercentage
-    })), /*#__PURE__*/React.createElement("a", {
-      href: `/lesson/${lesson.id}/details`,
-      className: classNames('list__label truncate', {
-        'text-bold': lesson.progress
-      }),
-      title: lesson.title
-    }, lesson.title));
-  }), props.course.quiz && /*#__PURE__*/React.createElement("li", {
-    className: classNames('list__row'),
-    key: quiz.id
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "list__progress-container"
-  }, /*#__PURE__*/React.createElement(CircleProgress, {
-    percentage: quiz.progressPercentage
-  })), /*#__PURE__*/React.createElement("a", {
-    href: `/quiz/${quiz.id}`,
-    className: classNames('list__label truncate', {
-      'text-bold': quiz.progress
-    }),
-    title: quiz.title
-  }, quiz.title))));
+      percentage: 0
+    })), sectionDetailPageLink(section.sectionContentType, section.id, section.title));
+  })));
 };
 
 CourseIndex.propTypes = {
