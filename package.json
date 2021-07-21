@@ -32,8 +32,7 @@
     "postcss-preset-env": "^6.7.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-styleguidist": "^11.1.6",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+    "react-styleguidist": "^11.1.6"
   },
   "scripts": {
     "start": "npm run build:scss && craco start",
