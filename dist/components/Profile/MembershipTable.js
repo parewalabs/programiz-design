@@ -1,7 +1,7 @@
-import React from "react";
-import { Card } from "lib";
-import PropTypes from "prop-types";
-import { TYPE, PLAN, LAST_PAYMENT_DATE, NEXT_PAYMENT_DATE } from "lib/language/Profile.language";
+import React from 'react';
+import { Card } from '../../';
+import PropTypes from 'prop-types';
+import { TYPE, PLAN, LAST_PAYMENT_DATE, NEXT_PAYMENT_DATE } from '../../language/Profile.language';
 
 const MembershipTable = props => {
   const {
@@ -62,9 +62,9 @@ MembershipTable.propTypes = {
   nextPaymentDate: PropTypes.string
 };
 MembershipTable.defaultProps = {
-  type: "",
-  plan: "",
-  lastPaymentDate: "",
-  nextPaymentDate: ""
+  type: '',
+  plan: '',
+  lastPaymentDate: '',
+  nextPaymentDate: ''
 };
 export default MembershipTable;

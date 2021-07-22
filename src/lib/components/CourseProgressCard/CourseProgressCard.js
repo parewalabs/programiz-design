@@ -1,36 +1,47 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { progressCardArtWork, SmallCertificate } from "lib/images/image";
-import { Button, Card, ProgressBar } from "lib";
-import { FIRST_STEP, SEE_YOU_BACK, LEARNING, START, CONTINUE } from "lib/language/Card.language";
-
+import React from 'react';
+import PropTypes from 'prop-types';
+import { progressCardArtWork, SmallCertificate } from '../../images/image';
+import { Button, Card, ProgressBar } from '../../';
+import {
+  FIRST_STEP,
+  SEE_YOU_BACK,
+  LEARNING,
+  START,
+  CONTINUE,
+} from '../../language/Card.language';
 
 const CourseProgressCard = (props) => {
-  const { completion, message, customClickEvent} = props;
+  const { completion, message, customClickEvent } = props;
   return (
     <Card shadowed>
       <div
         className="p-10x progress-card"
         style={{
           backgroundImage: `url(${progressCardArtWork})`,
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "90% 0px",
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: '90% 0px',
         }}
       >
         <h2 className="fs-h2 color-text-main mb-4x">
-          {completion === 0 ? FIRST_STEP : SEE_YOU_BACK }
+          {completion === 0 ? FIRST_STEP : SEE_YOU_BACK}
         </h2>
         <div className="d-flex align-items-start">
           <div className="flex-1 mr-6x">
             <ProgressBar className="mb-2x" completion={completion} />
-            <p className="fs-body14 text-primary-blue mb-6x">
-              {message}
-            </p>
+            <p className="fs-body14 text-primary-blue mb-6x">{message}</p>
           </div>
-          <img src={SmallCertificate} alt="cerificate" className="progress-card__image"/>
+          <img
+            src={SmallCertificate}
+            alt="cerificate"
+            className="progress-card__image"
+          />
         </div>
-        <Button type="primary" onClick={customClickEvent} className="btn--block-sm">
-          {completion === 0 ? START : CONTINUE } {LEARNING}
+        <Button
+          type="primary"
+          onClick={customClickEvent}
+          className="btn--block-sm"
+        >
+          {completion === 0 ? START : CONTINUE} {LEARNING}
         </Button>
       </div>
     </Card>
@@ -48,9 +59,8 @@ CourseProgressCard.propTypes = {
 
 CourseProgressCard.defaultProps = {
   completion: 0,
-  message: "",
-  customClickEvent: "",
+  message: '',
+  customClickEvent: '',
 };
-
 
 export default CourseProgressCard;

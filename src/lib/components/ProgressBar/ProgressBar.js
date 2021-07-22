@@ -1,17 +1,20 @@
-import React from "react";
-import PropTypes from "prop-types";
-import classNames from "classnames";
-import { COMPLETE } from "lib/language/CourseCard.language";
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import { COMPLETE } from '../../language/CourseCard.language';
 
 const ProgressBar = (props) => {
-  const {completion, className} = props;
-  return(
-    <div className={classNames("progress-bar", className)}>
+  const { completion, className } = props;
+  return (
+    <div className={classNames('progress-bar', className)}>
       <p className="progress-bar__count">
         {completion}% {COMPLETE}
       </p>
       <div className="progress-bar__track">
-        <div className="progress-bar__bar" style={{ width: completion + "%"}}/>
+        <div
+          className="progress-bar__bar"
+          style={{ width: completion + '%' }}
+        />
       </div>
     </div>
   );
@@ -26,7 +29,7 @@ ProgressBar.propTypes = {
 
 ProgressBar.defaultProps = {
   completion: 0,
-  className: "",
+  className: '',
 };
 
 export default ProgressBar;

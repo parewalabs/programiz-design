@@ -1,7 +1,7 @@
-import React from "react";
-import { Card, Button } from "lib";
-import PropTypes from "prop-types";
-import { vector } from "lib/images/image";
+import React from 'react';
+import { Card, Button } from '../../';
+import PropTypes from 'prop-types';
+import { vector } from '../../images/image';
 
 const SavedItemsCard = props => {
   const {
@@ -36,8 +36,8 @@ SavedItemsCard.propTypes = {
   customClickEvent: PropTypes.func
 };
 SavedItemsCard.defaultProps = {
-  type: "",
-  name: "",
-  customClickEvent: ""
+  type: '',
+  name: '',
+  customClickEvent: ''
 };
 export default SavedItemsCard;

@@ -1,8 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { progressCardArtWork, SmallCertificate } from "lib/images/image";
-import { Button, Card, ProgressBar } from "lib";
-import { FIRST_STEP, SEE_YOU_BACK, LEARNING, START, CONTINUE } from "lib/language/Card.language";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { progressCardArtWork, SmallCertificate } from '../../images/image';
+import { Button, Card, ProgressBar } from '../../';
+import { FIRST_STEP, SEE_YOU_BACK, LEARNING, START, CONTINUE } from '../../language/Card.language';
 
 const CourseProgressCard = props => {
   const {
@@ -16,8 +16,8 @@ const CourseProgressCard = props => {
     className: "p-10x progress-card",
     style: {
       backgroundImage: `url(${progressCardArtWork})`,
-      backgroundRepeat: "no-repeat",
-      backgroundPosition: "90% 0px"
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: '90% 0px'
     }
   }, /*#__PURE__*/React.createElement("h2", {
     className: "fs-h2 color-text-main mb-4x"
@@ -53,7 +53,7 @@ CourseProgressCard.propTypes = {
 };
 CourseProgressCard.defaultProps = {
   completion: 0,
-  message: "",
-  customClickEvent: ""
+  message: '',
+  customClickEvent: ''
 };
 export default CourseProgressCard;

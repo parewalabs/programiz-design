@@ -1,11 +1,15 @@
-import React from "react";
-import {Card} from "lib";
-import PropTypes from "prop-types";
+import React from 'react';
+import { Card } from '../../';
+import PropTypes from 'prop-types';
 
-import {TYPE, PLAN, LAST_PAYMENT_DATE, NEXT_PAYMENT_DATE} from "lib/language/Profile.language";
+import {
+  TYPE,
+  PLAN,
+  LAST_PAYMENT_DATE,
+  NEXT_PAYMENT_DATE,
+} from '../../language/Profile.language';
 
 const MembershipTable = (props) => {
-
   const { type, plan, lastPaymentDate, nextPaymentDate } = props;
 
   return (
@@ -25,15 +29,11 @@ const MembershipTable = (props) => {
           <tr className="table__body__row">
             <td className="table__body__col pt-3x pb-6x">
               <p className="fs-tiny color-text-main">{LAST_PAYMENT_DATE}</p>
-              <h4 className="fs-h3main color-text-main">
-                {lastPaymentDate}
-              </h4>
+              <h4 className="fs-h3main color-text-main">{lastPaymentDate}</h4>
             </td>
             <td className="table__body__col pt-3x pb-6x">
               <p className="fs-tiny color-text-main">{NEXT_PAYMENT_DATE}</p>
-              <h4 className="fs-h3main color-text-main">
-                {nextPaymentDate}
-              </h4>
+              <h4 className="fs-h3main color-text-main">{nextPaymentDate}</h4>
             </td>
           </tr>
         </tbody>
@@ -54,10 +54,10 @@ MembershipTable.propTypes = {
 };
 
 MembershipTable.defaultProps = {
-  type: "",
-  plan: "",
-  lastPaymentDate: "",
-  nextPaymentDate: ""
+  type: '',
+  plan: '',
+  lastPaymentDate: '',
+  nextPaymentDate: '',
 };
 
 export default MembershipTable;
