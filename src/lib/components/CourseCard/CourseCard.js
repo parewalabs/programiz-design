@@ -72,7 +72,7 @@ CourseCard.propTypes = {
 CourseCard.defaultProps = {
   courseName: '',
   completion: 0,
-  customClickEvent: null,
+  customClickEvent: () => {},
   vector: 1,
   tags: '',
 };

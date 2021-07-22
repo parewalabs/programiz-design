@@ -94,7 +94,7 @@ Button.defaultProps = {
   disabled: false,
   children: '',
   isLeftAligned: false,
-  customClickEvent: null,
+  customClickEvent: () => {},
 };
 
 export default Button;

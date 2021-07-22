@@ -60,7 +60,7 @@ CourseProgressCard.propTypes = {
 CourseProgressCard.defaultProps = {
   completion: 0,
   message: '',
-  customClickEvent: null,
+  customClickEvent: () => {},
 };
 
 export default CourseProgressCard;

@@ -33,7 +33,7 @@ SavedItemsCard.propTypes = {
 SavedItemsCard.defaultProps = {
   type: '',
   name: '',
-  customClickEvent: null,
+  customClickEvent: () => {},
 };
 
 export default SavedItemsCard;

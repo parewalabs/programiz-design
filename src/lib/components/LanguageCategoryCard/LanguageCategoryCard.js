@@ -100,7 +100,7 @@ LanguageCategoryCard.defaultProps = {
   languageCode: '',
   language: '',
   vector: 1,
-  customClickEvent: null,
+  customClickEvent: () => {},
   type: '',
   classNames: '',
 };
