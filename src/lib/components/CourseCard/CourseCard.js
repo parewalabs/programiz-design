@@ -43,8 +43,10 @@ const CourseCard = (props) => {
               <div className="bookmarks__node">{tags.courseDifficulty}</div>
             </div>
           )}
-          {completion && (
+          {completion && completion > 0 ? (
             <ProgressBar completion={completion} className="mb-4x" />
+          ) : (
+            ''
           )}
           <span className="d-flex align-items-center fs-body14 color-primary-base">
             {START_LEARNING}

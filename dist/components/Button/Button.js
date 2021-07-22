@@ -9,7 +9,7 @@ const Button = props => {
     fullWidth,
     isLeftAligned,
     disabled,
-    customClickEvent,
+    onClick,
     className,
     children
   } = props;
@@ -53,11 +53,11 @@ const Button = props => {
     }, {
       'btn--left-aligned': isLeftAligned
     }),
-    onClick: customClickEvent,
+    onClick: onClick,
     disabled: disabled
   }, children) : /*#__PURE__*/React.createElement("button", {
     className: classNames('btn-clear', className),
-    onClick: customClickEvent,
+    onClick: onClick,
     disabled: disabled
   }, children);
 };
@@ -73,7 +73,7 @@ Button.propTypes = {
   className: PropTypes.string,
 
   /** Click handler functions */
-  customClickEvent: PropTypes.func,
+  onClick: PropTypes.func,
 
   /** To trigger Full width button */
   fullWidth: PropTypes.bool,
@@ -95,6 +95,6 @@ Button.defaultProps = {
   disabled: false,
   children: '',
   isLeftAligned: false,
-  customClickEvent: () => {}
+  onClick: () => {}
 };
 export default Button;

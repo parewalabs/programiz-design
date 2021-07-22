@@ -9,7 +9,7 @@ const Button = (props) => {
     fullWidth,
     isLeftAligned,
     disabled,
-    customClickEvent,
+    onClick,
     className,
     children,
   } = props;
@@ -51,7 +51,7 @@ const Button = (props) => {
         { 'btn--block': fullWidth },
         { 'btn--left-aligned': isLeftAligned }
       )}
-      onClick={customClickEvent}
+      onClick={onClick}
       disabled={disabled}
     >
       {children}
@@ -59,7 +59,7 @@ const Button = (props) => {
   ) : (
     <button
       className={classNames('btn-clear', className)}
-      onClick={customClickEvent}
+      onClick={onClick}
       disabled={disabled}
     >
       {children}
@@ -75,7 +75,7 @@ Button.propTypes = {
   /** Custom classes. */
   className: PropTypes.string,
   /** Click handler functions */
-  customClickEvent: PropTypes.func,
+  onClick: PropTypes.func,
   /** To trigger Full width button */
   fullWidth: PropTypes.bool,
   /** To disable button */
@@ -94,7 +94,7 @@ Button.defaultProps = {
   disabled: false,
   children: '',
   isLeftAligned: false,
-  customClickEvent: () => {},
+  onClick: () => {},
 };
 
 export default Button;

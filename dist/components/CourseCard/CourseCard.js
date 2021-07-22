@@ -54,10 +54,10 @@ const CourseCard = props => {
     className: "bookmarks__dot"
   }), /*#__PURE__*/React.createElement("div", {
     className: "bookmarks__node"
-  }, tags.courseDifficulty)), completion && /*#__PURE__*/React.createElement(ProgressBar, {
+  }, tags.courseDifficulty)), completion && completion > 0 ? /*#__PURE__*/React.createElement(ProgressBar, {
     completion: completion,
     className: "mb-4x"
-  }), /*#__PURE__*/React.createElement("span", {
+  }) : '', /*#__PURE__*/React.createElement("span", {
     className: "d-flex align-items-center fs-body14 color-primary-base"
   }, START_LEARNING, /*#__PURE__*/React.createElement(FiArrowRight, {
     className: "ml-1x"
