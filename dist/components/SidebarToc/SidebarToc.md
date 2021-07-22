@@ -6,312 +6,174 @@ SidebarToc
   completion="13"
   toc={[
     {
-      id: 122,
-      title: "Chapter",
-      lessons: [
+      id: 1,
+      step: 1,
+      title: 'Introduction',
+      sectionContent: [
+        {
+          id: 8,
+          sectionContentType: {
+            0: 'Lesson',
+          },
+          step: 1,
+          title: 'Getting Started',
+          sectionId: 1,
+        },
+        {
+          id: 9,
+          sectionContentType: {
+            2: 'Challenge',
+          },
+          step: 2,
+          title: 'Introduction Challenge',
+          sectionId: 1,
+        },
         {
           id: 1,
-          title: "Lesson 1",
-          progress: false,
+          sectionContentType: {
+            1: 'Quiz',
+          },
+          step: 3,
+          title: 'Introduction Quiz',
+          sectionId: 1,
         },
         {
-          id: 2,
-          title: "Lesson 2",
-          progress: false,
-        },
-        {
-          id: 3,
-          title: "Lesson 3",
-          progress: false,
-        },
-        {
-          id: 4,
-          title: "Lesson 4",
-          progress: true,
+          id: 10,
+          sectionContentType: {
+            3: 'Example',
+          },
+          step: 4,
+          title: 'Input and Output Example',
+          sectionId: 1,
         },
       ],
     },
     {
       id: 124,
-      title: "Chapter2",
-      lessons: [
+      title: 'Chapter1',
+      sectionContent: [
+        {
+          id: 8,
+          sectionContentType: {
+            0: 'Lesson',
+          },
+          step: 1,
+          title: 'Getting Started',
+          sectionId: 1,
+        },
+        {
+          id: 9,
+          sectionContentType: {
+            2: 'Challenge',
+          },
+          step: 2,
+          title: 'Introduction Challenge',
+          sectionId: 1,
+        },
         {
           id: 1,
-          title: "Lesson 1",
-          progress: false,
+          sectionContentType: {
+            1: 'Quiz',
+          },
+          step: 3,
+          title: 'Introduction Quiz',
+          sectionId: 1,
         },
         {
-          id: 2,
-          title: "Lesson 2",
-          progress: false,
-        },
-        {
-          id: 3,
-          title: "Lesson 3",
-          progress: false,
-        },
-        {
-          id: 4,
-          title: "Lesson 4",
-          progress: true,
+          id: 10,
+          sectionContentType: {
+            3: 'Example',
+          },
+          step: 4,
+          title: 'Input and Output Example',
+          sectionId: 1,
         },
       ],
-    },{
+    },
+    {
       id: 125,
-      title: "Chapter",
-      lessons: [
+      title: 'Chapter2',
+      sectionContent: [
+        {
+          id: 8,
+          sectionContentType: {
+            0: 'Lesson',
+          },
+          step: 1,
+          title: 'Getting Started',
+          sectionId: 1,
+        },
+        {
+          id: 9,
+          sectionContentType: {
+            2: 'Challenge',
+          },
+          step: 2,
+          title: 'Introduction Challenge',
+          sectionId: 1,
+        },
         {
           id: 1,
-          title: "Lesson 1",
-          progress: false,
+          sectionContentType: {
+            1: 'Quiz',
+          },
+          step: 3,
+          title: 'Introduction Quiz',
+          sectionId: 1,
         },
         {
-          id: 2,
-          title: "Lesson 2",
-          progress: false,
-        },
-        {
-          id: 3,
-          title: "Lesson 3",
-          progress: false,
-        },
-        {
-          id: 4,
-          title: "Lesson 4",
-          progress: true,
+          id: 10,
+          sectionContentType: {
+            3: 'Example',
+          },
+          step: 4,
+          title: 'Input and Output Example',
+          sectionId: 1,
         },
       ],
     },
     {
       id: 126,
-      title: "Chapter2",
-      lessons: [
+      title: 'Chapter3',
+      sectionContent: [
+        {
+          id: 8,
+          sectionContentType: {
+            0: 'Lesson',
+          },
+          step: 1,
+          title: 'Getting Started',
+          sectionId: 1,
+        },
+        {
+          id: 9,
+          sectionContentType: {
+            2: 'Challenge',
+          },
+          step: 2,
+          title: 'Introduction Challenge',
+          sectionId: 1,
+        },
         {
           id: 1,
-          title: "Lesson 1",
-          progress: false,
+          sectionContentType: {
+            1: 'Quiz',
+          },
+          step: 3,
+          title: 'Introduction Quiz',
+          sectionId: 1,
         },
         {
-          id: 2,
-          title: "Lesson 2",
-          progress: false,
-        },
-        {
-          id: 3,
-          title: "Lesson 3",
-          progress: false,
-        },
-        {
-          id: 4,
-          title: "Lesson 4",
-          progress: true,
-        },
-      ],
-    },{
-      id: 127,
-      title: "Chapter",
-      lessons: [
-        {
-          id: 1,
-          title: "Lesson 1",
-          progress: false,
-        },
-        {
-          id: 2,
-          title: "Lesson 2",
-          progress: false,
-        },
-        {
-          id: 3,
-          title: "Lesson 3",
-          progress: false,
-        },
-        {
-          id: 4,
-          title: "Lesson 4",
-          progress: true,
+          id: 10,
+          sectionContentType: {
+            3: 'Example',
+          },
+          step: 4,
+          title: 'Input and Output Example',
+          sectionId: 1,
         },
       ],
     },
-    {
-      id: 128,
-      title: "Chapter2",
-      lessons: [
-        {
-          id: 1,
-          title: "Lesson 1",
-          progress: false,
-        },
-        {
-          id: 2,
-          title: "Lesson 2",
-          progress: false,
-        },
-        {
-          id: 3,
-          title: "Lesson 3",
-          progress: false,
-        },
-        {
-          id: 4,
-          title: "Lesson 4",
-          progress: true,
-        },
-      ],
-    },{
-      id: 129,
-      title: "Chapter",
-      lessons: [
-        {
-          id: 1,
-          title: "Lesson 1",
-          progress: false,
-        },
-        {
-          id: 2,
-          title: "Lesson 2",
-          progress: false,
-        },
-        {
-          id: 3,
-          title: "Lesson 3",
-          progress: false,
-        },
-        {
-          id: 4,
-          title: "Lesson 4",
-          progress: true,
-        },
-      ],
-    },
-    {
-      id: 12,
-      title: "Chapter2",
-      lessons: [
-        {
-          id: 1,
-          title: "Lesson 1",
-          progress: false,
-        },
-        {
-          id: 2,
-          title: "Lesson 2",
-          progress: false,
-        },
-        {
-          id: 3,
-          title: "Lesson 3",
-          progress: false,
-        },
-        {
-          id: 4,
-          title: "Lesson 4",
-          progress: true,
-        },
-      ],
-    },{
-      id: 34,
-      title: "Chapter",
-      lessons: [
-        {
-          id: 1,
-          title: "Lesson 1",
-          progress: false,
-        },
-        {
-          id: 2,
-          title: "Lesson 2",
-          progress: false,
-        },
-        {
-          id: 3,
-          title: "Lesson 3",
-          progress: false,
-        },
-        {
-          id: 4,
-          title: "Lesson 4",
-          progress: true,
-        },
-      ],
-    },
-    {
-      id: 55,
-      title: "Chapter2",
-      lessons: [
-        {
-          id: 1,
-          title: "Lesson 1",
-          progress: false,
-        },
-        {
-          id: 2,
-          title: "Lesson 2",
-          progress: false,
-        },
-        {
-          id: 3,
-          title: "Lesson 3",
-          progress: false,
-        },
-        {
-          id: 4,
-          title: "Lesson 4",
-          progress: true,
-        },
-      ],
-    },{
-      id: 225,
-      title: "Chapter",
-      lessons: [
-        {
-          id: 1,
-          title: "Lesson 1",
-          progress: false,
-        },
-        {
-          id: 2,
-          title: "Lesson 2",
-          progress: false,
-        },
-        {
-          id: 3,
-          title: "Lesson 3",
-          progress: false,
-        },
-        {
-          id: 4,
-          title: "Lesson 4",
-          progress: true,
-        },
-      ],
-    },
-    {
-      id: 631,
-      title: "Chapter2",
-      lessons: [
-        {
-          id: 1,
-          title: "Lesson 1",
-          progress: false,
-        },
-        {
-          id: 2,
-          title: "Lesson 2",
-          progress: false,
-        },
-        {
-          id: 3,
-          title: "Lesson 3",
-          progress: false,
-        },
-        {
-          id: 4,
-          title: "Lesson 4",
-          progress: true,
-        },
-      ],
-    }
   ]}
 />
 ```

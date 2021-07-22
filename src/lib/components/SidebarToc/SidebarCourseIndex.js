@@ -7,7 +7,7 @@ import CircleProgress from '../CourseIndex/CircleProgress';
 
 const SidebarCourseIndex = (props) => {
   const {
-    course: { title, lessons, quiz },
+    course: { title, sectionContent },
     className,
   } = props;
 
@@ -17,47 +17,51 @@ const SidebarCourseIndex = (props) => {
     </h4>
   );
 
+  // get link section's detail page
+  const sectionDetailPageLink = (
+    sectionContentType,
+    sectionId,
+    sectionTitile
+  ) => {
+    for (const contentType of Object.values(sectionContentType)) {
+      const contentTypeName = contentType.toLowerCase();
+      const href = `/${contentTypeName}/${sectionId}/details`;
+      const link = (
+        <a
+          href={href}
+          className={classNames('list__label truncate', {
+            'text-bold': 0,
+          })}
+          title={sectionTitile}
+        >
+          {sectionTitile}
+        </a>
+      );
+      return link;
+    }
+  };
+
   return (
     <Accordion
       headerComponent={HeaderComponent}
       className={classNames('accordion--sidebar', className)}
     >
       <ul className="list list--progress list--progress--sidebar py-4x px-6x">
-        {lessons &&
-          lessons.map((lesson) => {
+        {sectionContent &&
+          sectionContent.map((section) => {
             return (
-              <li className={classNames('list__row')} key={lesson.id}>
+              <li className={classNames('list__row')} key={section.id}>
                 <div className="list__progress-container">
-                  <CircleProgress percentage={lesson.progressPercentage} />
+                  <CircleProgress percentage={0} />
                 </div>
-                <a
-                  href={`/lesson/${lesson.id}/details`}
-                  className={classNames('list__label truncate', {
-                    'text-bold': lesson.progress,
-                  })}
-                  title={lesson.title}
-                >
-                  {lesson.title}
-                </a>
+                {sectionDetailPageLink(
+                  section.sectionContentType,
+                  section.id,
+                  section.title
+                )}
               </li>
             );
           })}
-        {props.course.quiz && (
-          <li className={classNames('list__row')} key={quiz.id}>
-            <div className="list__progress-container">
-              <CircleProgress percentage={quiz.progressPercentage} />
-            </div>
-            <a
-              href={`/quiz/${quiz.id}`}
-              className={classNames('list__label truncate', {
-                'text-bold': quiz.progress,
-              })}
-              title={quiz.title}
-            >
-              {quiz.title}
-            </a>
-          </li>
-        )}
       </ul>
     </Accordion>
   );

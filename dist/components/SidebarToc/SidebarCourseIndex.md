@@ -4,28 +4,45 @@ Course Index:
 // add customClickEvent for event hadling
 <SidebarCourseIndex
   course={{
-    id: 123,
-    title: "Chapter",
-    lessons: [
+    id: 1,
+    step: 1,
+    title: 'Introduction',
+    sectionContent: [
+      {
+        id: 8,
+        sectionContentType: {
+          0: 'Lesson',
+        },
+        step: 1,
+        title: 'Getting Started',
+        sectionId: 1,
+      },
+      {
+        id: 9,
+        sectionContentType: {
+          2: 'Challenge',
+        },
+        step: 2,
+        title: 'Introduction Challenge',
+        sectionId: 1,
+      },
       {
         id: 1,
-        title: "Lesson 1",
-        progress: false,
+        sectionContentType: {
+          1: 'Quiz',
+        },
+        step: 3,
+        title: 'Introduction Quiz',
+        sectionId: 1,
       },
       {
-        id: 2,
-        title: "Lesson 2",
-        progress: false,
-      },
-      {
-        id: 3,
-        title: "Lesson 3",
-        progress: false,
-      },
-      {
-        id: 4,
-        title: "Lesson 4",
-        progress: true,
+        id: 10,
+        sectionContentType: {
+          3: 'Example',
+        },
+        step: 4,
+        title: 'Input and Output Example',
+        sectionId: 1,
       },
     ],
   }}

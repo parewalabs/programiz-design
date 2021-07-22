@@ -20,14 +20,7 @@ const CourseIndex = props => {
   const sectionDetailPageLink = (sectionContentType, sectionId, sectionTitile) => {
     for (const contentType of Object.values(sectionContentType)) {
       const contentTypeName = contentType.toLowerCase();
-      let href = '';
-
-      if (contentType === 'Challenge') {
-        href = `/${contentTypeName}/details/${sectionId}`;
-      } else {
-        href = `/${contentTypeName}/${sectionId}/details`;
-      }
-
+      const href = `/${contentTypeName}/${sectionId}/details`;
       const link = /*#__PURE__*/React.createElement("a", {
         href: href,
         className: classNames('list__label truncate', {
