@@ -25,12 +25,7 @@ const SidebarCourseIndex = (props) => {
   ) => {
     for (const contentType of Object.values(sectionContentType)) {
       const contentTypeName = contentType.toLowerCase();
-      let href = '';
-      if (contentType === 'Challenge') {
-        href = `/${contentTypeName}/details/${sectionId}`;
-      } else {
-        href = `/${contentTypeName}/${sectionId}/details`;
-      }
+      const href = `/${contentTypeName}/${sectionId}/details`;
       const link = (
         <a
           href={href}
