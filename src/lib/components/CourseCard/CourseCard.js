@@ -43,8 +43,10 @@ const CourseCard = (props) => {
               <div className="bookmarks__node">{tags.courseDifficulty}</div>
             </div>
           )}
-          {completion && (
+          {completion && completion > 0 ? (
             <ProgressBar completion={completion} className="mb-4x" />
+          ) : (
+            ''
           )}
           <span className="d-flex align-items-center fs-body14 color-primary-base">
             {START_LEARNING}
@@ -60,7 +62,7 @@ CourseCard.propTypes = {
   /** Name of the Course*/
   courseName: PropTypes.string,
   /** Completion progress of the course */
-  completion: PropTypes.string,
+  completion: PropTypes.number,
   /** Shape Vector. Available Option 1 or "" */
   vector: PropTypes.number,
   /** Tags for the course, <br> { "chapters": "", "courseTitle": "", "courseDifficulty": "" } */
@@ -71,9 +73,9 @@ CourseCard.propTypes = {
 
 CourseCard.defaultProps = {
   courseName: '',
-  completion: '',
-  customClickEvent: '',
-  vector: '1',
+  completion: 0,
+  customClickEvent: () => {},
+  vector: 1,
   tags: '',
 };
 

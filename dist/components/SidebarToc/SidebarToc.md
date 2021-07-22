@@ -3,7 +3,7 @@ SidebarToc
 ```js
 <SidebarToc
   courseTitle="Python Basics Course"
-  completion="13"
+  completion={13}
   toc={[
     {
       id: 1,

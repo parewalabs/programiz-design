@@ -7,9 +7,9 @@ Course Card:
     <CourseCard
       courseName="Python for data science & Machine Learning"
       tags={{
-        "chapters": "7 Chapters",
-        "courseTitle": "Python",
-        "courseDifficulty": "Beginner"
+        chapters: '7 Chapters',
+        courseTitle: 'Python',
+        courseDifficulty: 'Beginner',
       }}
       courseUrl="https://google.com"
       vector={1}
@@ -18,11 +18,11 @@ Course Card:
   <div className="col-12 col-6-md col-5-lg">
     <CourseCard
       courseName="Python for data science & Machine Learning"
-      completion="30"
+      completion={30}
       tags={{
-        "chapters": "7 Chapters",
-        "courseTitle": "Python",
-        "courseDifficulty": "Beginner"
+        chapters: '7 Chapters',
+        courseTitle: 'Python',
+        courseDifficulty: 'Beginner',
       }}
       courseUrl="https://google.com"
       vector={0}

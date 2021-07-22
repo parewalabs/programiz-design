@@ -84,7 +84,7 @@ LanguageCategoryCard.propTypes = {
   type: PropTypes.string,
 
   /** Shape Vector. Available Option 1 or "" */
-  vector: PropTypes.string,
+  vector: PropTypes.number,
 
   /** Extra Classname */
   classNames: PropTypes.string,
@@ -95,8 +95,8 @@ LanguageCategoryCard.propTypes = {
 LanguageCategoryCard.defaultProps = {
   languageCode: '',
   language: '',
-  vector: '1',
-  customClickEvent: '',
+  vector: 1,
+  customClickEvent: () => {},
   type: '',
   classNames: ''
 };

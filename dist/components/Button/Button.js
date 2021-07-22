@@ -1,6 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
-import classNames from "classnames";
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 const Button = props => {
   const {
@@ -16,47 +16,47 @@ const Button = props => {
   let typeClass;
 
   switch (type) {
-    case "primary":
-      typeClass = "btn--primary";
+    case 'primary':
+      typeClass = 'btn--primary';
       break;
 
-    case "primary-light":
-      typeClass = "btn--primary-20";
+    case 'primary-light':
+      typeClass = 'btn--primary-20';
       break;
 
-    case "primary-outline":
-      typeClass = "btn--primary-outline";
+    case 'primary-outline':
+      typeClass = 'btn--primary-outline';
       break;
 
     default:
-      typeClass = "";
+      typeClass = '';
   }
 
   let sizeClass;
 
   switch (size) {
-    case "small":
-      sizeClass = "btn--sm";
+    case 'small':
+      sizeClass = 'btn--sm';
       break;
 
-    case "large":
-      sizeClass = "btn--lg";
+    case 'large':
+      sizeClass = 'btn--lg';
       break;
 
     default:
-      sizeClass = "";
+      sizeClass = '';
   }
 
-  return type !== "clear" ? /*#__PURE__*/React.createElement("button", {
-    className: classNames("btn", typeClass, className, sizeClass, {
-      "btn--block": fullWidth
+  return type !== 'clear' ? /*#__PURE__*/React.createElement("button", {
+    className: classNames('btn', typeClass, className, sizeClass, {
+      'btn--block': fullWidth
     }, {
-      "btn--left-aligned": isLeftAligned
+      'btn--left-aligned': isLeftAligned
     }),
     onClick: onClick,
     disabled: disabled
   }, children) : /*#__PURE__*/React.createElement("button", {
-    className: classNames("btn-clear", className),
+    className: classNames('btn-clear', className),
     onClick: onClick,
     disabled: disabled
   }, children);
@@ -88,12 +88,13 @@ Button.propTypes = {
   isLeftAligned: PropTypes.bool
 };
 Button.defaultProps = {
-  size: "",
-  type: "",
-  className: "",
+  size: '',
+  type: '',
+  className: '',
   fullWidth: false,
   disabled: false,
-  children: "",
-  isLeftAligned: false
+  children: '',
+  isLeftAligned: false,
+  onClick: () => {}
 };
 export default Button;
