@@ -1,5 +1,5 @@
 ProgressBar example:
 
 ```js
-<ProgressBar completion="90" />
+<ProgressBar completion={90} />
 ```

@@ -59,7 +59,7 @@ SidebarToc.propTypes = {
   /** Course Title */
   courseTitle: PropTypes.string,
   /** Course Completion */
-  completion: PropTypes.string,
+  completion: PropTypes.number,
   /** Content Array for lessons */
   toc: PropTypes.array,
 };

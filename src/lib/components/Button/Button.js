@@ -1,54 +1,69 @@
-import React from "react";
-import PropTypes from "prop-types";
-import classNames from "classnames";
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 const Button = (props) => {
-  const { type, size, fullWidth, isLeftAligned, disabled, onClick, className, children } = props;
+  const {
+    type,
+    size,
+    fullWidth,
+    isLeftAligned,
+    disabled,
+    customClickEvent,
+    className,
+    children,
+  } = props;
 
   let typeClass;
-  switch(type) {
-    case "primary":
-      typeClass = "btn--primary";
+  switch (type) {
+    case 'primary':
+      typeClass = 'btn--primary';
       break;
-    case "primary-light":
-      typeClass = "btn--primary-20";
+    case 'primary-light':
+      typeClass = 'btn--primary-20';
       break;
-    case "primary-outline":
-      typeClass = "btn--primary-outline";
+    case 'primary-outline':
+      typeClass = 'btn--primary-outline';
       break;
     default:
-    typeClass = "";
+      typeClass = '';
   }
 
   let sizeClass;
-  switch(size) {
-    case "small":
-      sizeClass = "btn--sm";
+  switch (size) {
+    case 'small':
+      sizeClass = 'btn--sm';
       break;
-    case "large":
-      sizeClass = "btn--lg";
+    case 'large':
+      sizeClass = 'btn--lg';
       break;
     default:
-    sizeClass = "";
+      sizeClass = '';
   }
 
-  return (
-    type !== "clear" ?
-      <button
-        className={classNames("btn", typeClass, className, sizeClass, {"btn--block": fullWidth}, {"btn--left-aligned" : isLeftAligned})}
-        onClick={onClick}
-        disabled={disabled}
-      >
-        { children }
-      </button>
-      :
-      <button
-        className={classNames("btn-clear", className)}
-        onClick={onClick}
-        disabled={disabled}
-      >
-        { children }
-      </button>
+  return type !== 'clear' ? (
+    <button
+      className={classNames(
+        'btn',
+        typeClass,
+        className,
+        sizeClass,
+        { 'btn--block': fullWidth },
+        { 'btn--left-aligned': isLeftAligned }
+      )}
+      onClick={customClickEvent}
+      disabled={disabled}
+    >
+      {children}
+    </button>
+  ) : (
+    <button
+      className={classNames('btn-clear', className)}
+      onClick={customClickEvent}
+      disabled={disabled}
+    >
+      {children}
+    </button>
   );
 };
 
@@ -60,7 +75,7 @@ Button.propTypes = {
   /** Custom classes. */
   className: PropTypes.string,
   /** Click handler functions */
-  onClick: PropTypes.func,
+  customClickEvent: PropTypes.func,
   /** To trigger Full width button */
   fullWidth: PropTypes.bool,
   /** To disable button */
@@ -72,13 +87,14 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  size: "",
-  type: "",
-  className: "",
+  size: '',
+  type: '',
+  className: '',
   fullWidth: false,
   disabled: false,
-  children: "",
-  isLeftAligned: false
+  children: '',
+  isLeftAligned: false,
+  customClickEvent: null,
 };
 
 export default Button;

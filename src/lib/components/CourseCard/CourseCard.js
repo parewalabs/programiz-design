@@ -60,7 +60,7 @@ CourseCard.propTypes = {
   /** Name of the Course*/
   courseName: PropTypes.string,
   /** Completion progress of the course */
-  completion: PropTypes.string,
+  completion: PropTypes.number,
   /** Shape Vector. Available Option 1 or "" */
   vector: PropTypes.number,
   /** Tags for the course, <br> { "chapters": "", "courseTitle": "", "courseDifficulty": "" } */
@@ -71,9 +71,9 @@ CourseCard.propTypes = {
 
 CourseCard.defaultProps = {
   courseName: '',
-  completion: '',
-  customClickEvent: '',
-  vector: '1',
+  completion: 0,
+  customClickEvent: null,
+  vector: 1,
   tags: '',
 };
 
