@@ -1,3 +1,4 @@
+import React from 'react';
 import classNames from 'classnames';
 
 // get link section's detail page
