@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/static/css/main.9601ab7b.chunk.css",
-    "main.js": "/build/main.a8393b72.js",
+    "main.js": "/build/main.613bf877.js",
     "runtime-main.js": "/build/bundle.b50e26a4.js",
-    "build/2.edede095.js": "/build/2.edede095.js",
-    "build/2.edede095.js.LICENSE.txt": "/build/2.edede095.js.LICENSE.txt",
+    "build/2.6da85353.js": "/build/2.6da85353.js",
+    "build/2.6da85353.js.LICENSE.txt": "/build/2.6da85353.js.LICENSE.txt",
     "index.html": "/index.html",
     "static/css/main.9601ab7b.chunk.css.map": "/static/css/main.9601ab7b.chunk.css.map",
     "static/media/LCCvector1.06878858.svg": "/static/media/LCCvector1.06878858.svg",
@@ -32,8 +32,8 @@
   },
   "entrypoints": [
     "build/bundle.b50e26a4.js",
-    "build/2.edede095.js",
+    "build/2.6da85353.js",
     "static/css/main.9601ab7b.chunk.css",
-    "build/main.a8393b72.js"
+    "build/main.613bf877.js"
   ]
 }
