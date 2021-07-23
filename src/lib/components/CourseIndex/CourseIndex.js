@@ -4,6 +4,8 @@ import classNames from 'classnames';
 import CircleProgress from './CircleProgress';
 import { Accordion } from '../../';
 
+import { sectionDetailPageLink } from '../../utils/helper';
+
 const CourseIndex = (props) => {
   const {
     course: { title, sectionContent },
@@ -15,30 +17,6 @@ const CourseIndex = (props) => {
       {title}
     </h4>
   );
-
-  // get link section's detail page
-  const sectionDetailPageLink = (
-    sectionContentType,
-    sectionId,
-    sectionTitile
-  ) => {
-    for (const contentType of Object.values(sectionContentType)) {
-      const contentTypeName = contentType.toLowerCase();
-      const href = `/${contentTypeName}/${sectionId}/details`;
-      const link = (
-        <a
-          href={href}
-          className={classNames('list__label truncate', {
-            'text-bold': 0,
-          })}
-          title={sectionTitile}
-        >
-          {sectionTitile}
-        </a>
-      );
-      return link;
-    }
-  };
 
   return (
     <Accordion headerComponent={HeaderComponent} className={className}>
@@ -53,7 +31,8 @@ const CourseIndex = (props) => {
                 {sectionDetailPageLink(
                   section.sectionContentType,
                   section.id,
-                  section.title
+                  section.title,
+                  section.sectionId
                 )}
               </li>
             );
