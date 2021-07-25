@@ -777,6 +777,14 @@ select {
       background-color: #0556f3;
       color: #fff;
       box-shadow: 0px 8px 4px rgba(104, 176, 247, 0.349185); }
+    .btn--quiz--correct {
+      background-color: #56bd5b;
+      color: #fff;
+      box-shadow: 0px 8px 4px rgba(104, 176, 247, 0.349185); }
+    .btn--quiz--incorrect {
+      background-color: #e34c4c;
+      color: #fff;
+      box-shadow: 0px 8px 4px rgba(104, 176, 247, 0.349185); }
   .btn--left-aligned {
     justify-content: flex-start; }
   @media (max-width: 768px) {
@@ -788,7 +796,9 @@ select {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  text-align: left; }
+  text-align: left;
+  height: 100%;
+  border-radius: 6px; }
 
 .skeleton-bg {
   background-color: #e8e8e8;
