@@ -97,5 +97,14 @@
   cursor: pointer;
   text-align: left;
   height: 100%;
+  width: 100%;
   border-radius: 6px;
+}
+
+.btn-placeholder{
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
 }

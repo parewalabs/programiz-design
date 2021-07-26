@@ -55,7 +55,7 @@ const LanguageCategoryCard = props => {
   })))));
 
   const AllLanguageCard = () => /*#__PURE__*/React.createElement(Card, {
-    className: classNames('Language-card', className)
+    className: classNames('Language-card Language-card--all-card', className)
   }, /*#__PURE__*/React.createElement(Button, {
     onClick: customClickEvent,
     type: "clear",
@@ -63,7 +63,7 @@ const LanguageCategoryCard = props => {
   }, /*#__PURE__*/React.createElement("div", {
     className: "Language-card__cover"
   }, /*#__PURE__*/React.createElement("div", {
-    className: "d-flex align-items-end"
+    className: "d-flex align-items-center align-items-end-sm justify-content-center justify-content-start-sm"
   }, /*#__PURE__*/React.createElement("span", {
     className: "fs-article text-bold color-primary-base"
   }, "View all Languages"), /*#__PURE__*/React.createElement(FiArrowRight, {

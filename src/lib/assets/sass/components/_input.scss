@@ -1,0 +1,27 @@
+.input {
+  @include e(label) {
+    @include getFontSize("body14");
+    color: getColor("text.main");
+    text-transform: capitalize;
+    margin-bottom: getSpacing("2x");
+  }
+  @include e(control) {
+    border-radius: 4px;
+    border: 1px solid getColor("grey.borderGray");
+    height: 48px;
+    padding: getSpacing("3x") getSpacing("4x");
+    width: 100%;
+    color: getColor("text.main");
+    .input--error & {
+      border: 1px solid getColor("danger.base");
+    }
+    &::placeholder{
+      color: getColor("text.light");
+    }
+  }
+  @include e(error){
+    color: getColor("danger.base");
+    @include getFontSize("caption");
+    margin-top: getSpacing("2x");
+  }
+}

@@ -41,24 +41,28 @@ const Button = (props) => {
       sizeClass = '';
   }
 
-  return type !== 'clear' ? (
-    <button
-      className={classNames(
+  let buttonType;
+  switch (type) {
+    case 'clear':
+      buttonType = classNames('btn-clear', className);
+      break;
+    case 'placeholder':
+      buttonType = classNames('btn-placeholder', className);
+      break;
+    default:
+      buttonType = classNames(
         'btn',
         typeClass,
         className,
         sizeClass,
         { 'btn--block': fullWidth },
         { 'btn--left-aligned': isLeftAligned }
-      )}
-      onClick={onClick}
-      disabled={disabled}
-    >
-      {children}
-    </button>
-  ) : (
+      );
+  }
+
+  return(
     <button
-      className={classNames('btn-clear', className)}
+      className={buttonType}
       onClick={onClick}
       disabled={disabled}
     >

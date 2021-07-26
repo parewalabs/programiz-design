@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import { FiChevronDown } from "react-icons/fi";
@@ -9,9 +8,19 @@ const Accordion = props => {
   const {
     headerComponent,
     children,
-    className
+    className,
+    isOpen
   } = props;
   const [isActive, setActive] = useState(false);
+  useEffect(() => {
+    if (isOpen) {
+      setActive(true);
+    } else {
+      setActive(false);
+    }
+
+    ;
+  }, [isOpen]);
   return /*#__PURE__*/React.createElement("div", {
     className: classNames("accordion", className)
   }, /*#__PURE__*/React.createElement("div", {
@@ -51,10 +60,14 @@ const Accordion = props => {
 Accordion.propTypes = {
   /** Title or html elements */
   headerComponent: PropTypes.node,
+
+  /** To open accordion in default */
+  isOpen: PropTypes.bool,
   children: PropTypes.node
 };
 Accordion.defaultProps = {
   headerComponent: "",
-  children: ""
+  children: "",
+  isOpen: false
 };
 export default Accordion;
