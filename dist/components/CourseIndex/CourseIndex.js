@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import CircleProgress from './CircleProgress';
@@ -8,7 +8,6 @@ import { sectionDetailPageLink } from '../../utils/helper';
 
 const CourseIndex = props => {
   const [isExpanded, expandCollapsible] = useState(false);
-  const accordionRef = useRef();
   const {
     courseToc,
     className
@@ -35,7 +34,7 @@ const CourseIndex = props => {
     className: "mb-1x",
     onClick: expandCollapsibleFunc
   }, !isExpanded ? EXPAND_ALL : COLLAPSE_ALL)), courseToc && courseToc.sections && courseToc.sections.map(sections => /*#__PURE__*/React.createElement(Accordion, {
-    ref: accordionRef,
+    key: sections.id,
     headerComponent: HeaderComponent(sections.title),
     className: classNames("mb-2x", {
       className
