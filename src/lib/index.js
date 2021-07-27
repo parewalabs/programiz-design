@@ -1,5 +1,7 @@
 import Card from './components/Card/Card';
 import Icons from './components/Icons/Icons';
+import Popup from './components/Popup/Popup';
+import Input from './components/Input/Input';
 import Avatar from './components/Avatar/Avatar';
 import Button from './components/Button/Button';
 import Accordion from './components/Accordion/Accordion';
@@ -17,6 +19,8 @@ import LanguageCategoryCard from './components/LanguageCategoryCard/LanguageCate
 
 export {
   Card,
+  Popup,
+  Input,
   Icons,
   Avatar,
   Button,
