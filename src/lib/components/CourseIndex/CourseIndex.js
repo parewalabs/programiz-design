@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import CircleProgress from './CircleProgress';
@@ -9,8 +9,6 @@ import { sectionDetailPageLink } from '../../utils/helper';
 
 const CourseIndex = (props) => {
   const [isExpanded, expandCollapsible] = useState(false);
-
-  const accordionRef = useRef();
 
   const {
     courseToc,
@@ -44,7 +42,7 @@ const CourseIndex = (props) => {
       {courseToc &&
         courseToc.sections &&
         courseToc.sections.map((sections) => (
-          <Accordion ref={accordionRef} headerComponent={HeaderComponent(sections.title)} className={classNames("mb-2x", {className})} isOpen={isExpanded}>
+          <Accordion key={sections.id} headerComponent={HeaderComponent(sections.title)} className={classNames("mb-2x", {className})} isOpen={isExpanded}>
             <ul className="list list--progress py-6x px-10x">
               {sections &&
                 sections.sectionContent.map((section) => {
