@@ -63,7 +63,7 @@ CourseIndex.propTypes = {
   className: PropTypes.string
 };
 CourseIndex.defaultProps = {
-  course: {},
+  courseToc: {},
   className: ''
 };
 export default CourseIndex;
