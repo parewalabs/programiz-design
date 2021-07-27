@@ -71,7 +71,7 @@ const CourseIndex = (props) => {
 
 CourseIndex.propTypes = {
   /** Course Data */
-  course: PropTypes.object,
+  courseToc: PropTypes.object,
   /** Extra classes */
   className: PropTypes.string,
 };
