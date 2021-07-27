@@ -389,11 +389,13 @@ body {
 a {
   color: #0556f3;
   transition: all 0.2s cubic-bezier(0.365, 0.005, 0.355, 1) ;
-  outline: none; }
+  outline: none;
+  text-decoration: none; }
   a:hover {
-    color: #03338f; }
+    color: #03338f;
+    text-decoration: underline; }
   a:focus {
-    box-shadow: 0px 0px 0px 2px #0556f3; }
+    text-decoration: underline; }
 
 ul,
 ol {
