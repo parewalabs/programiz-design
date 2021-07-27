@@ -66,11 +66,14 @@ a {
   color: getColor('primary.base');
   @include transition();
   outline: none;
+  text-decoration: none;
   &:hover {
     color: getColor('primary.dark');
+    text-decoration: underline;
   }
   &:focus {
-    box-shadow: 0px 0px 0px 2px getColor('primary.base');
+    text-decoration: underline;
+    // box-shadow: 0px 0px 0px 2px getColor('primary.base');
   }
 }
 
