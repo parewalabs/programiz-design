@@ -40,7 +40,7 @@
     "styler": "npm run build:scss && npx styleguidist server",
     "build-stylist": "npx styleguidist build",
     "build:scss": "node-sass ./src/lib/assets/sass/ --output ./src/lib/assets/css/ ",
-    "build": "npm run build:scss && rm -rf ./dist && SET NODE_ENV=production && babel src/lib --out-dir ./dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__"
+    "build": "npm run build:scss && rm -rf ./dist && set NODE_ENV=production && babel src/lib --out-dir ./dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__"
   },
   "eslintConfig": {
     "extends": [

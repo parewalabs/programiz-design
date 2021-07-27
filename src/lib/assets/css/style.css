@@ -777,6 +777,14 @@ select {
       background-color: #0556f3;
       color: #fff;
       box-shadow: 0px 8px 4px rgba(104, 176, 247, 0.349185); }
+    .btn--quiz--correct {
+      background-color: #56bd5b;
+      color: #fff;
+      box-shadow: 0px 8px 4px rgba(104, 176, 247, 0.349185); }
+    .btn--quiz--incorrect {
+      background-color: #e34c4c;
+      color: #fff;
+      box-shadow: 0px 8px 4px rgba(104, 176, 247, 0.349185); }
   .btn--left-aligned {
     justify-content: flex-start; }
   @media (max-width: 768px) {
@@ -784,6 +792,16 @@ select {
       width: 100%; } }
 
 .btn-clear {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  height: 100%;
+  width: 100%;
+  border-radius: 6px; }
+
+.btn-placeholder {
   padding: 0;
   background-color: transparent;
   border: none;
@@ -876,6 +894,18 @@ select {
     .Language-card__icon--all-card {
       width: 24px;
       height: 24px; }
+  @media (max-width: 576px) {
+    .Language-card--all-card {
+      height: auto;
+      max-width: initial;
+      width: 100%; }
+      .Language-card--all-card .Language-card__cover {
+        padding: 1rem; }
+      .Language-card--all-card .Language-card__icon {
+        margin-left: 0.75rem; }
+      .Language-card--all-card .fs-article {
+        font-size: 16px;
+        font-weight: 400; } }
 
 .course-card-main__button:hover {
   box-shadow: 0 0 0 2px #0556f3; }
@@ -888,7 +918,8 @@ select {
   background-size: initial;
   background-position: right top;
   background-repeat: no-repeat;
-  min-height: 132px; }
+  min-height: 132px;
+  position: relative; }
   .saved-card__button {
     width: 100%;
     height: 100%;
@@ -896,6 +927,25 @@ select {
     flex-direction: column; }
     .saved-card__button:hover {
       box-shadow: 0 0 0 2px #0556f3; }
+  .saved-card:hover .saved-card__remove {
+    opacity: 1;
+    pointer-events: all; }
+  .saved-card__remove {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    color: #e34c4c;
+    opacity: 0;
+    pointer-events: none; }
+    @media (max-width: 768px) {
+      .saved-card__remove {
+        opacity: 1;
+        pointer-events: all; } }
+    .saved-card__remove:hover {
+      color: #ae1b1b; }
+  .saved-card__icon {
+    width: 20px;
+    height: 20px; }
 
 .progress-bar__count {
   font-size: 12px;
@@ -1087,6 +1137,31 @@ select {
     height: 48px; }
     .popup__icon line {
       stroke-width: 1px; }
+
+.input__label {
+  font-size: 14px;
+  line-height: 20px;
+  color: #25265e;
+  text-transform: capitalize;
+  margin-bottom: 0.5rem; }
+
+.input__control {
+  border-radius: 4px;
+  border: 1px solid #d3dce6;
+  height: 48px;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  color: #25265e; }
+  .input--error .input__control {
+    border: 1px solid #e34c4c; }
+  .input__control::placeholder {
+    color: #a8a8bf; }
+
+.input__error {
+  color: #e34c4c;
+  font-size: 14px;
+  line-height: 16px;
+  margin-top: 0.5rem; }
 
 .sidebar-wrapper {
   position: relative;
@@ -8690,17 +8765,6 @@ select {
 body {
   background-color: #f5f5f5; }
 
-.main-content {
-  padding-bottom: 7.5rem; }
-  @media (max-width: 768px) {
-    .main-content {
-      padding-bottom: 3.75rem; }
-      .main-content.has-offset {
-        padding-bottom: 5rem; } }
-
-.container.container-small {
-  max-width: 762px; }
-
 .bookmarks {
   display: flex;
   align-items: center;
@@ -8724,58 +8788,9 @@ body {
     margin: 0 0.5rem;
     flex-shrink: 0; }
 
-.course-content {
-  display: flex; }
-  .course-content__sidebar {
-    height: 100vh;
-    overflow-y: auto;
-    flex-shrink: 0;
-    background-color: #f5f5f5;
-    border-right: 1px solid #d3dce6; }
-  .course-content__main {
-    display: flex;
-    flex-direction: column;
-    flex: 1; }
-  .course-content__detail {
-    position: relative;
-    height: calc(100vh - 80px);
-    background-color: #fff;
-    flex-basis: 50%;
-    flex-shrink: 0; }
-  .course-content__footer {
-    border-top: 1px solid #d3dce6;
-    display: flex;
-    justify-content: flex-end;
-    padding: 1rem 1.5rem;
-    background-color: #fff; }
-
-.lesson-detail {
-  height: calc(100% - 41px);
-  overflow-y: auto;
-  padding: 2.5rem; }
-
-.course-group-title {
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-  line-height: 20px; }
-
 .badge {
   font-size: 12px;
   line-height: 16px;
   padding: 1px 0.5rem; }
   .badge--grey {
     background-color: #d3dce6; }
-
-.compiler {
-  background-color: #25265e;
-  color: #fff;
-  flex-basis: 50%;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-
-.profile-area {
-  display: flex;
-  align-items: center; }

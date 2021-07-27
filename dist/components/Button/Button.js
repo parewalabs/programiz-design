@@ -47,16 +47,27 @@ const Button = props => {
       sizeClass = '';
   }
 
-  return type !== 'clear' ? /*#__PURE__*/React.createElement("button", {
-    className: classNames('btn', typeClass, className, sizeClass, {
-      'btn--block': fullWidth
-    }, {
-      'btn--left-aligned': isLeftAligned
-    }),
-    onClick: onClick,
-    disabled: disabled
-  }, children) : /*#__PURE__*/React.createElement("button", {
-    className: classNames('btn-clear', className),
+  let buttonType;
+
+  switch (type) {
+    case 'clear':
+      buttonType = classNames('btn-clear', className);
+      break;
+
+    case 'placeholder':
+      buttonType = classNames('btn-placeholder', className);
+      break;
+
+    default:
+      buttonType = classNames('btn', typeClass, className, sizeClass, {
+        'btn--block': fullWidth
+      }, {
+        'btn--left-aligned': isLeftAligned
+      });
+  }
+
+  return /*#__PURE__*/React.createElement("button", {
+    className: buttonType,
     onClick: onClick,
     disabled: disabled
   }, children);

@@ -68,6 +68,16 @@
       color: $white;
       box-shadow: 0px 8px 4px rgba(104, 176, 247, 0.349185);
     }
+    @include m(correct) {
+      background-color: getColor('success.base');
+      color: $white;
+      box-shadow: 0px 8px 4px rgba(104, 176, 247, 0.349185);
+    }
+    @include m(incorrect) {
+      background-color: getColor('danger.base');
+      color: $white;
+      box-shadow: 0px 8px 4px rgba(104, 176, 247, 0.349185);
+    }
   }
   @include m(left-aligned){
     justify-content: flex-start;
@@ -81,6 +91,17 @@
 }
 
 .btn-clear{
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  height: 100%;
+  width: 100%;
+  border-radius: 6px;
+}
+
+.btn-placeholder{
   padding: 0;
   background-color: transparent;
   border: none;

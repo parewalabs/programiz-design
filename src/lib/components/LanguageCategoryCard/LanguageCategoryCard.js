@@ -60,14 +60,14 @@ const LanguageCategoryCard = (props) => {
   );
 
   const AllLanguageCard = () => (
-    <Card className={classNames('Language-card', className)}>
+    <Card className={classNames('Language-card Language-card--all-card', className)}>
       <Button
         onClick={customClickEvent}
         type="clear"
         className="Language-card__button"
       >
         <div className="Language-card__cover">
-          <div className="d-flex align-items-end">
+          <div className="d-flex align-items-center align-items-end-sm justify-content-center justify-content-start-sm">
             <span className="fs-article text-bold color-primary-base">
               View all Languages
             </span>

@@ -1,13 +1,15 @@
 import React from 'react';
-import { Card, Button } from '../../';
 import PropTypes from 'prop-types';
+import { Card, Button } from '../../';
 import { vector } from '../../images/image';
+import { FiTrash } from "react-icons/fi";
 
 const SavedItemsCard = props => {
   const {
     customClickEvent,
     type,
-    name
+    name,
+    removeFunction
   } = props;
   return /*#__PURE__*/React.createElement(Card, {
     className: "saved-card",
@@ -15,6 +17,12 @@ const SavedItemsCard = props => {
       backgroundImage: `url(${vector})`
     }
   }, /*#__PURE__*/React.createElement(Button, {
+    type: "placeholder",
+    className: "saved-card__remove",
+    onClick: removeFunction
+  }, /*#__PURE__*/React.createElement(FiTrash, {
+    className: "saved-card__icon"
+  })), /*#__PURE__*/React.createElement(Button, {
     onClick: customClickEvent,
     type: "clear",
     className: "saved-card__button p-6x"
@@ -33,11 +41,15 @@ SavedItemsCard.propTypes = {
   name: PropTypes.string,
 
   /** Custom Click Event Listener*/
-  customClickEvent: PropTypes.func
+  customClickEvent: PropTypes.func,
+
+  /** Function to remove item from saved list*/
+  removeFunction: PropTypes.func
 };
 SavedItemsCard.defaultProps = {
   type: '',
   name: '',
-  customClickEvent: () => {}
+  customClickEvent: () => {},
+  removeFunction: () => {}
 };
 export default SavedItemsCard;

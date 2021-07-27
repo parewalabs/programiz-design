@@ -15,12 +15,14 @@ const CourseCard = (props) => {
       backgroundImage: `url(${courseVector1})`,
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'right bottom',
+      backgroundSize: '100%'
     };
   } else {
     vectorType = {
       backgroundImage: `url(${courseVector2})`,
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'right bottom',
+      backgroundSize: '100%'
     };
   }
   return (
