@@ -1,5 +1,7 @@
 import Card from './components/Card/Card';
 import Icons from './components/Icons/Icons';
+import Popup from './components/Popup/Popup';
+import Input from './components/Input/Input';
 import Avatar from './components/Avatar/Avatar';
 import Button from './components/Button/Button';
 import Accordion from './components/Accordion/Accordion';
@@ -14,4 +16,4 @@ import SavedItemsCard from './components/SavedItemsCard/SavedItemsCard';
 import PaymentMethodsTable from './components/Profile/PaymentMethodsTable';
 import CourseProgressCard from './components/CourseProgressCard/CourseProgressCard';
 import LanguageCategoryCard from './components/LanguageCategoryCard/LanguageCategoryCard';
-export { Card, Icons, Avatar, Button, Accordion, CourseCard, SidebarToc, ProgressBar, CourseIndex, InvoicesTable, CircleProgress, SavedItemsCard, MembershipTable, CourseProgressCard, PaymentMethodsTable, LanguageCategoryCard };
+export { Card, Popup, Input, Icons, Avatar, Button, Accordion, CourseCard, SidebarToc, ProgressBar, CourseIndex, InvoicesTable, CircleProgress, SavedItemsCard, MembershipTable, CourseProgressCard, PaymentMethodsTable, LanguageCategoryCard };
