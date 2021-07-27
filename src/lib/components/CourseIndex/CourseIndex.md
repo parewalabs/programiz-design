@@ -2,8 +2,11 @@ Course Index:
 
 ```js
 // add customClickEvent for event hadling
-<CourseIndex
-  course={{
+
+const courseToc = {
+  id:2,
+  sections: [
+    {
     id: 1,
     step: 1,
     title: 'Introduction',
@@ -17,34 +20,24 @@ Course Index:
         title: 'Getting Started',
         sectionId: 1,
       },
+    ],
+  },
+  {
+    id: 1,
+    step: 1,
+    title: 'Introduction2',
+    sectionContent: [
       {
-        id: 9,
+        id: 8,
         sectionContentType: {
-          2: 'Challenge',
+          0: 'Lesson',
         },
-        step: 2,
-        title: 'Introduction Challenge',
-        sectionId: 1,
-      },
-      {
-        id: 1,
-        sectionContentType: {
-          1: 'Quiz',
-        },
-        step: 3,
-        title: 'Introduction Quiz',
-        sectionId: 1,
-      },
-      {
-        id: 10,
-        sectionContentType: {
-          3: 'Example',
-        },
-        step: 4,
-        title: 'Input and Output Example',
+        step: 1,
+        title: 'Getting Started',
         sectionId: 1,
       },
     ],
-  }}
-/>
+  }
+]};
+<CourseIndex courseToc={courseToc} />
 ```
