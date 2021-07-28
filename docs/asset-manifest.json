@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/static/css/main.514aadf0.chunk.css",
+    "main.js": "/build/main.94d16f97.js",
+    "runtime-main.js": "/build/bundle.b50e26a4.js",
+    "build/2.6130829e.js": "/build/2.6130829e.js",
+    "build/2.6130829e.js.LICENSE.txt": "/build/2.6130829e.js.LICENSE.txt",
+    "index.html": "/index.html",
+    "static/css/main.514aadf0.chunk.css.map": "/static/css/main.514aadf0.chunk.css.map",
+    "static/media/LCCvector1.06878858.svg": "/static/media/LCCvector1.06878858.svg",
+    "static/media/LCCvector2.657b6e26.svg": "/static/media/LCCvector2.657b6e26.svg",
+    "static/media/LCCvector3.56b8f6f3.svg": "/static/media/LCCvector3.56b8f6f3.svg",
+    "static/media/LCCvector4.16f9c516.svg": "/static/media/LCCvector4.16f9c516.svg",
+    "static/media/LCCvector5.b795d2c1.svg": "/static/media/LCCvector5.b795d2c1.svg",
+    "static/media/LCCvector6.c3ca2eb9.svg": "/static/media/LCCvector6.c3ca2eb9.svg",
+    "static/media/Vector.4425cee0.svg": "/static/media/Vector.4425cee0.svg",
+    "static/media/artwork.b34f30c0.svg": "/static/media/artwork.b34f30c0.svg",
+    "static/media/c.618ce8ed.svg": "/static/media/c.618ce8ed.svg",
+    "static/media/certificate-small.5e79647c.png": "/static/media/certificate-small.5e79647c.png",
+    "static/media/courseVector1.98ed8abf.svg": "/static/media/courseVector1.98ed8abf.svg",
+    "static/media/courseVector2.2c80acd2.svg": "/static/media/courseVector2.2c80acd2.svg",
+    "static/media/cpp.353a6258.svg": "/static/media/cpp.353a6258.svg",
+    "static/media/csharp.b9ceed84.svg": "/static/media/csharp.b9ceed84.svg",
+    "static/media/dsa.b4229d10.svg": "/static/media/dsa.b4229d10.svg",
+    "static/media/style.scss": "/static/media/euclidcirculara-semibolditalic.58873e39.woff2",
+    "static/media/java.5d7fc4b3.svg": "/static/media/java.5d7fc4b3.svg",
+    "static/media/js.076e2961.svg": "/static/media/js.076e2961.svg",
+    "static/media/kotlin.8f34eca8.svg": "/static/media/kotlin.8f34eca8.svg",
+    "static/media/neural.3ca1981b.svg": "/static/media/neural.3ca1981b.svg",
+    "static/media/python.bb89001c.svg": "/static/media/python.bb89001c.svg",
+    "static/media/swift.841d17c3.svg": "/static/media/swift.841d17c3.svg"
+  },
+  "entrypoints": [
+    "build/bundle.b50e26a4.js",
+    "build/2.6130829e.js",
+    "static/css/main.514aadf0.chunk.css",
+    "build/main.94d16f97.js"
+  ]
+}
