@@ -28,24 +28,23 @@ const SidebarCourseIndex = (props) => {
         {sectionContent &&
           sectionContent.map((section) => {
             return (
-              <Button
-                type="clear"
-                key={section.id}
-                onClick={() =>
-                  goToSectionContent(
-                    section.sectionContentType,
-                    section.id,
-                    section.sectionId
-                  )
-                }
-              >
-                <li className={classNames('list__row')}>
-                  <div className="list__progress-container">
-                    <CircleProgress percentage={0} />
-                  </div>
+              <li className={classNames('list__row')}>
+                <div className="list__progress-container">
+                  <CircleProgress percentage={0} />
+                </div>
+                <Button
+                  type="clear"
+                  key={section.id}
+                  onClick={() =>
+                    goToSectionContent(section.sectionContentType, section.id)
+                  }
+                  className={classNames('list__label truncate', {
+                    'text-bold': 0,
+                  })}
+                >
                   {section.title}
-                </li>
-              </Button>
+                </Button>
+              </li>
             );
           })}
       </ul>

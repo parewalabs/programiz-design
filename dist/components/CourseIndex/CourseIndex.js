@@ -44,17 +44,20 @@ const CourseIndex = props => {
   }, /*#__PURE__*/React.createElement("ul", {
     className: "list list--progress py-6x px-10x"
   }, sections && sections.sectionContent.map(section => {
-    return /*#__PURE__*/React.createElement(Button, {
-      type: "clear",
-      key: section.id,
-      onClick: () => goToSectionContent(section.sectionContentType, section.id, section.sectionId)
-    }, /*#__PURE__*/React.createElement("li", {
-      className: classNames('list__row')
+    return /*#__PURE__*/React.createElement("li", {
+      className: classNames('list__row'),
+      key: section.id
     }, /*#__PURE__*/React.createElement("div", {
       className: "list__progress-container"
     }, /*#__PURE__*/React.createElement(CircleProgress, {
       percentage: 0
-    })), section.title));
+    })), /*#__PURE__*/React.createElement(Button, {
+      type: "clear",
+      onClick: () => goToSectionContent(section.sectionContentType, section.id),
+      className: classNames('list__label truncate', {
+        'text-bold': 0
+      })
+    }, section.title));
   })))));
 };
 
