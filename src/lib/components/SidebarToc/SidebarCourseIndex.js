@@ -4,12 +4,13 @@ import classNames from 'classnames';
 
 import { Accordion } from '../../';
 import CircleProgress from '../CourseIndex/CircleProgress';
+import Button from '../Button/Button';
 
 const SidebarCourseIndex = (props) => {
   const {
     course: { title, sectionContent },
     className,
-    goToSection,
+    goToSectionContent,
   } = props;
 
   const HeaderComponent = (
@@ -27,22 +28,24 @@ const SidebarCourseIndex = (props) => {
         {sectionContent &&
           sectionContent.map((section) => {
             return (
-              <li
-                className={classNames('list__row')}
+              <Button
+                type="clear"
                 key={section.id}
                 onClick={() =>
-                  goToSection(
-                    section.sectionContentType, // lesson or quiz or example
-                    section.id, // section content id
+                  goToSectionContent(
+                    section.sectionContentType,
+                    section.id,
                     section.sectionId
                   )
                 }
               >
-                <div className="list__progress-container">
-                  <CircleProgress percentage={0} />
-                </div>
-                {section.title}
-              </li>
+                <li className={classNames('list__row')}>
+                  <div className="list__progress-container">
+                    <CircleProgress percentage={0} />
+                  </div>
+                  {section.title}
+                </li>
+              </Button>
             );
           })}
       </ul>
@@ -56,7 +59,7 @@ SidebarCourseIndex.propTypes = {
   /** Extra classes*/
   className: PropTypes.string,
   /** Go to the section function*/
-  goToSection: PropTypes.func,
+  goToSectionContent: PropTypes.func,
 };
 
 SidebarCourseIndex.defaultProps = {

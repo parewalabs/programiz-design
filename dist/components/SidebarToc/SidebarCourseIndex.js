@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Accordion } from '../../';
 import CircleProgress from '../CourseIndex/CircleProgress';
+import Button from '../Button/Button';
 
 const SidebarCourseIndex = props => {
   const {
@@ -11,7 +12,7 @@ const SidebarCourseIndex = props => {
       sectionContent
     },
     className,
-    goToSection
+    goToSectionContent
   } = props;
   const HeaderComponent = /*#__PURE__*/React.createElement("h4", {
     title: title,
@@ -23,17 +24,17 @@ const SidebarCourseIndex = props => {
   }, /*#__PURE__*/React.createElement("ul", {
     className: "list list--progress list--progress--sidebar py-4x px-6x"
   }, sectionContent && sectionContent.map(section => {
-    return /*#__PURE__*/React.createElement("li", {
-      className: classNames('list__row'),
+    return /*#__PURE__*/React.createElement(Button, {
+      type: "clear",
       key: section.id,
-      onClick: () => goToSection(section.sectionContentType, // lesson or quiz or example
-      section.id, // section content id
-      section.sectionId)
+      onClick: () => goToSectionContent(section.sectionContentType, section.id, section.sectionId)
+    }, /*#__PURE__*/React.createElement("li", {
+      className: classNames('list__row')
     }, /*#__PURE__*/React.createElement("div", {
       className: "list__progress-container"
     }, /*#__PURE__*/React.createElement(CircleProgress, {
       percentage: 0
-    })), section.title);
+    })), section.title));
   })));
 };
 
@@ -45,7 +46,7 @@ SidebarCourseIndex.propTypes = {
   className: PropTypes.string,
 
   /** Go to the section function*/
-  goToSection: PropTypes.func
+  goToSectionContent: PropTypes.func
 };
 SidebarCourseIndex.defaultProps = {
   course: [],

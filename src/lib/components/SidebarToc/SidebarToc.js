@@ -9,7 +9,7 @@ import { FiMenu } from 'react-icons/fi';
 const SidebarToc = (props) => {
   const sideBarRef = useRef(null);
 
-  const { courseTitle, completion, toc, goToSection } = props;
+  const { courseTitle, completion, toc, goToSectionContent } = props;
   const [hasShadow, setShadow] = useState(false);
   const [isCollapsed, setCollapse] = useState(false);
 
@@ -52,7 +52,7 @@ const SidebarToc = (props) => {
               <SidebarCourseIndex
                 course={toc}
                 key={toc.id}
-                goToSection={goToSection}
+                goToSectionContent={goToSectionContent}
               />
             );
           })}
@@ -69,14 +69,14 @@ SidebarToc.propTypes = {
   /** Content Array for lessons */
   toc: PropTypes.array,
   /** Go to the section function*/
-  goToSection: PropTypes.func,
+  goToSectionContent: PropTypes.func,
 };
 
 SidebarToc.defaultProps = {
   courseTitle: '',
   completion: 0,
   toc: [],
-  goToSection: () => {},
+  goToSectionContent: () => {},
 };
 
 export default SidebarToc;

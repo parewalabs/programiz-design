@@ -4,13 +4,14 @@ import classNames from 'classnames';
 import CircleProgress from './CircleProgress';
 import { Accordion } from '../../';
 import { EXPAND_ALL, COURSE_INDEX, COLLAPSE_ALL } from '../../language/CourseCard.language';
-import { sectionDetailPageLink } from '../../utils/helper';
+import Button from '../Button/Button';
 
 const CourseIndex = props => {
   const [isExpanded, expandCollapsible] = useState(false);
   const {
     courseToc,
-    className
+    className,
+    goToSectionContent
   } = props;
 
   const expandCollapsibleFunc = event => {
@@ -36,21 +37,24 @@ const CourseIndex = props => {
   }, !isExpanded ? EXPAND_ALL : COLLAPSE_ALL)), courseToc && courseToc.sections && courseToc.sections.map(sections => /*#__PURE__*/React.createElement(Accordion, {
     key: sections.id,
     headerComponent: HeaderComponent(sections.title),
-    className: classNames("mb-2x", {
+    className: classNames('mb-2x', {
       className
     }),
     isOpen: isExpanded
   }, /*#__PURE__*/React.createElement("ul", {
     className: "list list--progress py-6x px-10x"
   }, sections && sections.sectionContent.map(section => {
-    return /*#__PURE__*/React.createElement("li", {
-      className: classNames('list__row'),
-      key: section.id
+    return /*#__PURE__*/React.createElement(Button, {
+      type: "clear",
+      key: section.id,
+      onClick: () => goToSectionContent(section.sectionContentType, section.id, section.sectionId)
+    }, /*#__PURE__*/React.createElement("li", {
+      className: classNames('list__row')
     }, /*#__PURE__*/React.createElement("div", {
       className: "list__progress-container"
     }, /*#__PURE__*/React.createElement(CircleProgress, {
       percentage: 0
-    })), sectionDetailPageLink(section.sectionContentType, section.id, section.title, section.sectionId));
+    })), section.title));
   })))));
 };
 
@@ -59,10 +63,14 @@ CourseIndex.propTypes = {
   courseToc: PropTypes.object,
 
   /** Extra classes */
-  className: PropTypes.string
+  className: PropTypes.string,
+
+  /** Go to the section function*/
+  goToSectionContent: PropTypes.func
 };
 CourseIndex.defaultProps = {
   courseToc: {},
-  className: ''
+  className: '',
+  goToSectionContent: () => {}
 };
 export default CourseIndex;
