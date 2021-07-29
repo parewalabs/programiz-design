@@ -36,6 +36,8 @@
   height: 200px;
   @include e(cover){
     padding: getSpacing("6x") getSpacing("4x");
+    border-radius: 5px;
+    overflow: hidden;
   }
   @include e(button){
     height: 100%;
