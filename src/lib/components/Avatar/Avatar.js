@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
+import Avatar  from 'react-avatar';
 
-const Avatar = (props) => {
+const AvatarContainer = (props) => {
   const {size, shape, className, imageUrl, userName} = props;
 
   let sizeClass;
@@ -40,11 +41,12 @@ const Avatar = (props) => {
           alt={userName}
         />
       )}
+      <Avatar name={userName} size="100%" textSizeRatio={2} textMarginRatio={0.25}/>
     </div>
   );
 };
 
-Avatar.propTypes = {
+AvatarContainer.propTypes = {
   /** Size modifier of Avatar. <br/> Available Options: <code>large</code>, <code>small</code> */
   size: PropTypes.string,
   /** Shape modifier of Avatar. <br/> Available Options: <code>rectangle</code>, <code>rounded</code> */
@@ -57,7 +59,7 @@ Avatar.propTypes = {
   userName: PropTypes.string,
 };
 
-Avatar.defaultProps = {
+AvatarContainer.defaultProps = {
   size: "",
   shape: "round",
   className: "",
@@ -66,4 +68,4 @@ Avatar.defaultProps = {
 };
 
 
-export default Avatar;
+export default AvatarContainer;
