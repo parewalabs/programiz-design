@@ -26,7 +26,7 @@ const SidebarCourseIndex = props => {
     return /*#__PURE__*/React.createElement("li", {
       className: classNames('list__row'),
       key: section.id,
-      onClick: goToSection(section.sectionContentType, // lesson or quiz or example
+      onClick: () => goToSection(section.sectionContentType, // lesson or quiz or example
       section.id, // section content id
       section.sectionId)
     }, /*#__PURE__*/React.createElement("div", {

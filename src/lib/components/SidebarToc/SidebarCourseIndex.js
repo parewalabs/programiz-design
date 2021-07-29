@@ -30,11 +30,13 @@ const SidebarCourseIndex = (props) => {
               <li
                 className={classNames('list__row')}
                 key={section.id}
-                onClick={goToSection(
-                  section.sectionContentType, // lesson or quiz or example
-                  section.id, // section content id
-                  section.sectionId
-                )}
+                onClick={() =>
+                  goToSection(
+                    section.sectionContentType, // lesson or quiz or example
+                    section.id, // section content id
+                    section.sectionId
+                  )
+                }
               >
                 <div className="list__progress-container">
                   <CircleProgress percentage={0} />
