@@ -11,7 +11,8 @@ const SidebarToc = props => {
   const {
     courseTitle,
     completion,
-    toc
+    toc,
+    goToSectionContent
   } = props;
   const [hasShadow, setShadow] = useState(false);
   const [isCollapsed, setCollapse] = useState(false);
@@ -54,7 +55,8 @@ const SidebarToc = props => {
   }, "Course Index")), toc && toc.map(toc => {
     return /*#__PURE__*/React.createElement(SidebarCourseIndex, {
       course: toc,
-      key: toc.id
+      key: toc.id,
+      goToSectionContent: goToSectionContent
     });
   })));
 };
@@ -67,11 +69,15 @@ SidebarToc.propTypes = {
   completion: PropTypes.number,
 
   /** Content Array for lessons */
-  toc: PropTypes.array
+  toc: PropTypes.array,
+
+  /** Go to the section function*/
+  goToSectionContent: PropTypes.func
 };
 SidebarToc.defaultProps = {
   courseTitle: '',
   completion: 0,
-  toc: []
+  toc: [],
+  goToSectionContent: () => {}
 };
 export default SidebarToc;

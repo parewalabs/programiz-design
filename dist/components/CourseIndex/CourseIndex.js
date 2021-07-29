@@ -4,13 +4,14 @@ import classNames from 'classnames';
 import CircleProgress from './CircleProgress';
 import { Accordion } from '../../';
 import { EXPAND_ALL, COURSE_INDEX, COLLAPSE_ALL } from '../../language/CourseCard.language';
-import { sectionDetailPageLink } from '../../utils/helper';
+import Button from '../Button/Button';
 
 const CourseIndex = props => {
   const [isExpanded, expandCollapsible] = useState(false);
   const {
     courseToc,
-    className
+    className,
+    goToSectionContent
   } = props;
 
   const expandCollapsibleFunc = event => {
@@ -36,7 +37,7 @@ const CourseIndex = props => {
   }, !isExpanded ? EXPAND_ALL : COLLAPSE_ALL)), courseToc && courseToc.sections && courseToc.sections.map(sections => /*#__PURE__*/React.createElement(Accordion, {
     key: sections.id,
     headerComponent: HeaderComponent(sections.title),
-    className: classNames("mb-2x", {
+    className: classNames('mb-2x', {
       className
     }),
     isOpen: isExpanded
@@ -50,7 +51,13 @@ const CourseIndex = props => {
       className: "list__progress-container"
     }, /*#__PURE__*/React.createElement(CircleProgress, {
       percentage: 0
-    })), sectionDetailPageLink(section.sectionContentType, section.id, section.title, section.sectionId));
+    })), /*#__PURE__*/React.createElement(Button, {
+      type: "clear",
+      onClick: () => goToSectionContent(section.sectionContentType, section.id),
+      className: classNames('list__label truncate', {
+        'text-bold': 0
+      })
+    }, section.title));
   })))));
 };
 
@@ -59,10 +66,14 @@ CourseIndex.propTypes = {
   courseToc: PropTypes.object,
 
   /** Extra classes */
-  className: PropTypes.string
+  className: PropTypes.string,
+
+  /** Go to the section function*/
+  goToSectionContent: PropTypes.func
 };
 CourseIndex.defaultProps = {
   courseToc: {},
-  className: ''
+  className: '',
+  goToSectionContent: () => {}
 };
 export default CourseIndex;

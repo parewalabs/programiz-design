@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Accordion } from '../../';
 import CircleProgress from '../CourseIndex/CircleProgress';
-import { sectionDetailPageLink } from '../../utils/helper';
+import Button from '../Button/Button';
 
 const SidebarCourseIndex = props => {
   const {
@@ -11,7 +11,8 @@ const SidebarCourseIndex = props => {
       title,
       sectionContent
     },
-    className
+    className,
+    goToSectionContent
   } = props;
   const HeaderComponent = /*#__PURE__*/React.createElement("h4", {
     title: title,
@@ -24,13 +25,19 @@ const SidebarCourseIndex = props => {
     className: "list list--progress list--progress--sidebar py-4x px-6x"
   }, sectionContent && sectionContent.map(section => {
     return /*#__PURE__*/React.createElement("li", {
-      className: classNames('list__row'),
-      key: section.id
+      className: classNames('list__row')
     }, /*#__PURE__*/React.createElement("div", {
       className: "list__progress-container"
     }, /*#__PURE__*/React.createElement(CircleProgress, {
       percentage: 0
-    })), sectionDetailPageLink(section.sectionContentType, section.id, section.title, section.sectionId));
+    })), /*#__PURE__*/React.createElement(Button, {
+      type: "clear",
+      key: section.id,
+      onClick: () => goToSectionContent(section.sectionContentType, section.id),
+      className: classNames('list__label truncate', {
+        'text-bold': 0
+      })
+    }, section.title));
   })));
 };
 
@@ -39,10 +46,14 @@ SidebarCourseIndex.propTypes = {
   course: PropTypes.object,
 
   /** Extra classes*/
-  className: PropTypes.string
+  className: PropTypes.string,
+
+  /** Go to the section function*/
+  goToSectionContent: PropTypes.func
 };
 SidebarCourseIndex.defaultProps = {
   course: [],
-  className: ''
+  className: '',
+  goToSection: () => {}
 };
 export default SidebarCourseIndex;

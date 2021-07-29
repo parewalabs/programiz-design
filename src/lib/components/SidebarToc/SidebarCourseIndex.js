@@ -4,12 +4,13 @@ import classNames from 'classnames';
 
 import { Accordion } from '../../';
 import CircleProgress from '../CourseIndex/CircleProgress';
-import { sectionDetailPageLink } from '../../utils/helper';
+import Button from '../Button/Button';
 
 const SidebarCourseIndex = (props) => {
   const {
     course: { title, sectionContent },
     className,
+    goToSectionContent,
   } = props;
 
   const HeaderComponent = (
@@ -27,16 +28,22 @@ const SidebarCourseIndex = (props) => {
         {sectionContent &&
           sectionContent.map((section) => {
             return (
-              <li className={classNames('list__row')} key={section.id}>
+              <li className={classNames('list__row')}>
                 <div className="list__progress-container">
                   <CircleProgress percentage={0} />
                 </div>
-                {sectionDetailPageLink(
-                  section.sectionContentType,
-                  section.id,
-                  section.title,
-                  section.sectionId
-                )}
+                <Button
+                  type="clear"
+                  key={section.id}
+                  onClick={() =>
+                    goToSectionContent(section.sectionContentType, section.id)
+                  }
+                  className={classNames('list__label truncate', {
+                    'text-bold': 0,
+                  })}
+                >
+                  {section.title}
+                </Button>
               </li>
             );
           })}
@@ -50,11 +57,14 @@ SidebarCourseIndex.propTypes = {
   course: PropTypes.object,
   /** Extra classes*/
   className: PropTypes.string,
+  /** Go to the section function*/
+  goToSectionContent: PropTypes.func,
 };
 
 SidebarCourseIndex.defaultProps = {
   course: [],
   className: '',
+  goToSection: () => {},
 };
 
 export default SidebarCourseIndex;
