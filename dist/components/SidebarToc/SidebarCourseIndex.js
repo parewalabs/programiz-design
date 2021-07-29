@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Accordion } from '../../';
 import CircleProgress from '../CourseIndex/CircleProgress';
-import { sectionDetailPageLink } from '../../utils/helper';
 
 const SidebarCourseIndex = props => {
   const {
@@ -11,7 +10,8 @@ const SidebarCourseIndex = props => {
       title,
       sectionContent
     },
-    className
+    className,
+    goToSection
   } = props;
   const HeaderComponent = /*#__PURE__*/React.createElement("h4", {
     title: title,
@@ -25,12 +25,15 @@ const SidebarCourseIndex = props => {
   }, sectionContent && sectionContent.map(section => {
     return /*#__PURE__*/React.createElement("li", {
       className: classNames('list__row'),
-      key: section.id
+      key: section.id,
+      onClick: () => goToSection(section.sectionContentType, // lesson or quiz or example
+      section.id, // section content id
+      section.sectionId)
     }, /*#__PURE__*/React.createElement("div", {
       className: "list__progress-container"
     }, /*#__PURE__*/React.createElement(CircleProgress, {
       percentage: 0
-    })), sectionDetailPageLink(section.sectionContentType, section.id, section.title, section.sectionId));
+    })), section.title);
   })));
 };
 
@@ -39,10 +42,14 @@ SidebarCourseIndex.propTypes = {
   course: PropTypes.object,
 
   /** Extra classes*/
-  className: PropTypes.string
+  className: PropTypes.string,
+
+  /** Go to the section function*/
+  goToSection: PropTypes.func
 };
 SidebarCourseIndex.defaultProps = {
   course: [],
-  className: ''
+  className: '',
+  goToSection: null
 };
 export default SidebarCourseIndex;
