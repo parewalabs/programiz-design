@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.514aadf0.chunk.css",
-    "main.js": "/build/main.186ecdd8.js",
+    "main.js": "/build/main.f8f1c802.js",
     "runtime-main.js": "/build/bundle.b50e26a4.js",
     "build/2.3c56c7ec.js": "/build/2.3c56c7ec.js",
     "build/2.3c56c7ec.js.LICENSE.txt": "/build/2.3c56c7ec.js.LICENSE.txt",
@@ -34,6 +34,6 @@
     "build/bundle.b50e26a4.js",
     "build/2.3c56c7ec.js",
     "static/css/main.514aadf0.chunk.css",
-    "build/main.186ecdd8.js"
+    "build/main.f8f1c802.js"
   ]
 }
