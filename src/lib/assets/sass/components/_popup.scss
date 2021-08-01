@@ -5,7 +5,7 @@
   width: 100%;
   height: 100%;
   background-color: rgba($black, 0.5);
-  z-index: 999;
+  z-index: 99999;
 }
 
 .popup {
@@ -14,8 +14,6 @@
   left: 50%;
   transform: translate(-50%);
   @include e(container){
-    min-width: 500px;
-    min-height: 300px;
     background-color: $white;
     border-radius: 6px 6px 0 0;
     position: relative;
@@ -28,6 +26,9 @@
     top: 0px;
     transform: translate(100%, -100%);
     cursor: pointer;
+    @include mqmax(md){
+      transform: translate(0%, -100%);
+    }
   }
   @include e(icon) {
     color: $white;
