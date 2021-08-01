@@ -1091,22 +1091,6 @@ select {
       max-width: 170px;
       box-sizing: content-box; }
 
-.bookmark {
-  width: 100%;
-  padding: 0.5rem 1rem;
-  border-bottom: 1px solid #d3dce6;
-  display: flex;
-  justify-content: flex-end; }
-  .bookmark__btn {
-    display: inline-flex;
-    align-items: center;
-    cursor: pointer;
-    margin-left: auto; }
-    .bookmark__btn:hover {
-      color: #0556f3; }
-  .bookmark__icon {
-    width: 18px; }
-
 .popup-container {
   position: fixed;
   left: 0;
@@ -1114,7 +1098,7 @@ select {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999; }
+  z-index: 99999; }
 
 .popup {
   position: absolute;
@@ -1122,8 +1106,6 @@ select {
   left: 50%;
   transform: translate(-50%); }
   .popup__container {
-    min-width: 500px;
-    min-height: 300px;
     background-color: #fff;
     border-radius: 6px 6px 0 0;
     position: relative; }
@@ -1135,6 +1117,9 @@ select {
     top: 0px;
     transform: translate(100%, -100%);
     cursor: pointer; }
+    @media (max-width: 768px) {
+      .popup__button {
+        transform: translate(0%, -100%); } }
   .popup__icon {
     color: #fff;
     width: 48px;
