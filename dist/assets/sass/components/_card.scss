@@ -36,6 +36,8 @@
   height: 200px;
   @include e(cover){
     padding: getSpacing("6x") getSpacing("4x");
+    border-radius: 5px;
+    overflow: hidden;
   }
   @include e(button){
     height: 100%;
@@ -57,8 +59,6 @@
       width: 100%;
       .Language-card__cover{
         padding: getSpacing("4x");
-        overflow: hidden;
-        border-radius: 4px;
       }
       .Language-card__icon{
         margin-left: getSpacing("3x");

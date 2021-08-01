@@ -886,7 +886,9 @@ select {
   max-width: 160px;
   height: 200px; }
   .Language-card__cover {
-    padding: 1.5rem 1rem; }
+    padding: 1.5rem 1rem;
+    border-radius: 5px;
+    overflow: hidden; }
   .Language-card__button {
     height: 100%; }
     .Language-card__button:hover {
