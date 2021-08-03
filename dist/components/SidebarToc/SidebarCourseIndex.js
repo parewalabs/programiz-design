@@ -26,14 +26,14 @@ const SidebarCourseIndex = props => {
   }, sectionContent && sectionContent.map(section => {
     return /*#__PURE__*/React.createElement("li", {
       className: classNames('list__row'),
-      key: section.id
+      key: `${section.id}${Object.keys(section.sectionContentType)[0]}`
     }, /*#__PURE__*/React.createElement("div", {
       className: "list__progress-container"
     }, /*#__PURE__*/React.createElement(CircleProgress, {
       percentage: 0
     })), /*#__PURE__*/React.createElement(Button, {
       type: "clear",
-      onClick: () => goToSectionContent(section.sectionContentType, section.id),
+      onClick: () => goToSectionContent(section.sectionContentType, section.id, section.sectionId),
       className: classNames('list__label truncate', {
         'text-bold': 0
       })
