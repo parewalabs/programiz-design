@@ -52,7 +52,12 @@ const CourseIndex = (props) => {
               {sections &&
                 sections.sectionContent.map((section) => {
                   return (
-                    <li className={classNames('list__row')} key={section.id}>
+                    <li
+                      className={classNames('list__row')}
+                      key={`${section.id}${
+                        Object.keys(section.sectionContentType)[0]
+                      }`}
+                    >
                       <div className="list__progress-container">
                         <CircleProgress percentage={0} />
                       </div>

@@ -46,7 +46,7 @@ const CourseIndex = props => {
   }, sections && sections.sectionContent.map(section => {
     return /*#__PURE__*/React.createElement("li", {
       className: classNames('list__row'),
-      key: section.id
+      key: `${section.id}${Object.keys(section.sectionContentType)[0]}`
     }, /*#__PURE__*/React.createElement("div", {
       className: "list__progress-container"
     }, /*#__PURE__*/React.createElement(CircleProgress, {
