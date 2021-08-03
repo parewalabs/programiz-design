@@ -773,7 +773,6 @@ select {
     box-shadow: 0px 6px 0px rgba(217, 217, 217, 0.25);
     list-style-type: lower-alpha; }
     .btn--quiz:not(:disabled):hover {
-      background-color: transparent;
       border: 1px solid #25265e; }
     .btn--quiz--selected {
       background-color: #0556f3;
