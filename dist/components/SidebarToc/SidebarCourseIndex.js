@@ -33,7 +33,7 @@ const SidebarCourseIndex = props => {
       percentage: 0
     })), /*#__PURE__*/React.createElement(Button, {
       type: "clear",
-      onClick: () => goToSectionContent(section.sectionContentType, section.id),
+      onClick: () => goToSectionContent(section.sectionContentType, section.id, section.sectionId),
       className: classNames('list__label truncate', {
         'text-bold': 0
       })

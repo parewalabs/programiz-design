@@ -35,7 +35,11 @@ const SidebarCourseIndex = (props) => {
                 <Button
                   type="clear"
                   onClick={() =>
-                    goToSectionContent(section.sectionContentType, section.id)
+                    goToSectionContent(
+                      section.sectionContentType,
+                      section.id,
+                      section.sectionId
+                    )
                   }
                   className={classNames('list__label truncate', {
                     'text-bold': 0,

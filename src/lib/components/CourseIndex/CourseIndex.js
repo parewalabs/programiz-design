@@ -61,7 +61,8 @@ const CourseIndex = (props) => {
                         onClick={() =>
                           goToSectionContent(
                             section.sectionContentType,
-                            section.id
+                            section.id,
+                            section.sectionId
                           )
                         }
                         className={classNames('list__label truncate', {
