@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/static/css/main.43044546.chunk.css",
-    "main.js": "/build/main.f3b32b27.js",
+    "main.js": "/build/main.d471a947.js",
     "runtime-main.js": "/build/bundle.b50e26a4.js",
-    "build/2.e63bd888.js": "/build/2.e63bd888.js",
-    "build/2.e63bd888.js.LICENSE.txt": "/build/2.e63bd888.js.LICENSE.txt",
+    "build/2.33a485aa.js": "/build/2.33a485aa.js",
+    "build/2.33a485aa.js.LICENSE.txt": "/build/2.33a485aa.js.LICENSE.txt",
     "index.html": "/index.html",
     "static/css/main.43044546.chunk.css.map": "/static/css/main.43044546.chunk.css.map",
     "static/media/LCCvector1.06878858.svg": "/static/media/LCCvector1.06878858.svg",
@@ -13,6 +13,10 @@
     "static/media/LCCvector4.16f9c516.svg": "/static/media/LCCvector4.16f9c516.svg",
     "static/media/LCCvector5.b795d2c1.svg": "/static/media/LCCvector5.b795d2c1.svg",
     "static/media/LCCvector6.c3ca2eb9.svg": "/static/media/LCCvector6.c3ca2eb9.svg",
+    "static/media/SaveItemVector1.79463d39.svg": "/static/media/SaveItemVector1.79463d39.svg",
+    "static/media/SaveItemVector2.0e923a70.svg": "/static/media/SaveItemVector2.0e923a70.svg",
+    "static/media/SaveItemVector3.32a00d2e.svg": "/static/media/SaveItemVector3.32a00d2e.svg",
+    "static/media/SaveItemVector4.4ba61226.svg": "/static/media/SaveItemVector4.4ba61226.svg",
     "static/media/Vector.4425cee0.svg": "/static/media/Vector.4425cee0.svg",
     "static/media/artwork.b34f30c0.svg": "/static/media/artwork.b34f30c0.svg",
     "static/media/c.618ce8ed.svg": "/static/media/c.618ce8ed.svg",
@@ -32,8 +36,8 @@
   },
   "entrypoints": [
     "build/bundle.b50e26a4.js",
-    "build/2.e63bd888.js",
+    "build/2.33a485aa.js",
     "static/css/main.43044546.chunk.css",
-    "build/main.f3b32b27.js"
+    "build/main.d471a947.js"
   ]
 }
