@@ -1,20 +1,46 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Card, Button } from '../../';
-import { vector } from '../../images/image';
-import { FiTrash } from "react-icons/fi";
+import { SaveItemVector1, SaveItemVector2, SaveItemVector3, SaveItemVector4 } from '../../images/image';
+import { FiTrash } from 'react-icons/fi';
 
 const SavedItemsCard = props => {
   const {
     customClickEvent,
     type,
     name,
-    removeFunction
+    removeFunction,
+    vector
   } = props;
+  let vectorImage = null;
+
+  switch (vector) {
+    case 1:
+      vectorImage = SaveItemVector1;
+      break;
+
+    case 2:
+      vectorImage = SaveItemVector2;
+      break;
+
+    case 3:
+      vectorImage = SaveItemVector3;
+      break;
+
+    case 4:
+      vectorImage = SaveItemVector4;
+      break;
+
+    default:
+      vectorImage = SaveItemVector1;
+      break;
+  }
+
   return /*#__PURE__*/React.createElement(Card, {
     className: "saved-card",
     style: {
-      backgroundImage: `url(${vector})`
+      backgroundImage: `url(${vectorImage})`,
+      backgroundPosition: 'bottom right'
     }
   }, /*#__PURE__*/React.createElement(Button, {
     type: "placeholder",
@@ -44,12 +70,16 @@ SavedItemsCard.propTypes = {
   customClickEvent: PropTypes.func,
 
   /** Function to remove item from saved list*/
-  removeFunction: PropTypes.func
+  removeFunction: PropTypes.func,
+
+  /** Shape Vector. Available Option 1 or "" */
+  vector: PropTypes.number
 };
 SavedItemsCard.defaultProps = {
   type: '',
   name: '',
   customClickEvent: () => {},
-  removeFunction: () => {}
+  removeFunction: () => {},
+  vector: 1
 };
 export default SavedItemsCard;

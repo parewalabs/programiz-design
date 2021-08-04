@@ -10,6 +10,10 @@ import LCCvector4 from './LCCvector4.svg';
 import LCCvector5 from './LCCvector5.svg';
 import LCCvector6 from './LCCvector6.svg';
 import vector from './Vector.svg';
+import SaveItemVector1 from './SaveItemVector1.svg';
+import SaveItemVector2 from './SaveItemVector2.svg';
+import SaveItemVector3 from './SaveItemVector3.svg';
+import SaveItemVector4 from './SaveItemVector4.svg';
 
 export {
   neural,
@@ -24,4 +28,8 @@ export {
   LCCvector5,
   LCCvector6,
   vector,
+  SaveItemVector1,
+  SaveItemVector2,
+  SaveItemVector3,
+  SaveItemVector4,
 };
