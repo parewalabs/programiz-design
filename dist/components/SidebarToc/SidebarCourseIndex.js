@@ -30,7 +30,7 @@ const SidebarCourseIndex = props => {
     }, /*#__PURE__*/React.createElement("div", {
       className: "list__progress-container"
     }, /*#__PURE__*/React.createElement(CircleProgress, {
-      percentage: 0
+      percentage: section.completion
     })), /*#__PURE__*/React.createElement(Button, {
       type: "clear",
       onClick: () => goToSectionContent(section.sectionContentType, section.id, section.sectionId),
