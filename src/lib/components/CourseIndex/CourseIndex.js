@@ -59,7 +59,7 @@ const CourseIndex = (props) => {
                       }`}
                     >
                       <div className="list__progress-container">
-                        <CircleProgress percentage={0} />
+                        <CircleProgress percentage={section.completion} />
                       </div>
                       <Button
                         type="clear"
