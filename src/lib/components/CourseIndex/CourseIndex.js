@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import CircleProgress from './CircleProgress';
 import { Accordion } from '../../';
+import CircleProgress from './CircleProgress';
 import {
   EXPAND_ALL,
   COURSE_INDEX,
   COLLAPSE_ALL,
+  CONTENT_LOCKED,
 } from '../../language/CourseCard.language';
 import Button from '../Button/Button';
+import { FaLock } from 'react-icons/fa';
 
 const CourseIndex = (props) => {
   const [isExpanded, expandCollapsible] = useState(false);
@@ -49,8 +51,7 @@ const CourseIndex = (props) => {
             isOpen={isExpanded}
           >
             <ul className="list list--progress py-6x px-10x">
-              {sections &&
-                sections.sectionContent != null &&
+              {sections.sectionContent != null ? (
                 sections.sectionContent.map((section) => {
                   return (
                     <li
@@ -79,7 +80,12 @@ const CourseIndex = (props) => {
                       </Button>
                     </li>
                   );
-                })}
+                })
+              ) : (
+                <div className="lock-content">
+                  <FaLock className="mr-2x" /> {CONTENT_LOCKED}
+                </div>
+              )}
             </ul>
           </Accordion>
         ))}
