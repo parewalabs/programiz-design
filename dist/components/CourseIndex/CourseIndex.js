@@ -43,7 +43,7 @@ const CourseIndex = props => {
     isOpen: isExpanded
   }, /*#__PURE__*/React.createElement("ul", {
     className: "list list--progress py-6x px-10x"
-  }, sections && sections.sectionContent.map(section => {
+  }, sections && sections.sectionContent != null && sections.sectionContent.map(section => {
     return /*#__PURE__*/React.createElement("li", {
       className: classNames('list__row'),
       key: `${section.id}${Object.keys(section.sectionContentType)[0]}`

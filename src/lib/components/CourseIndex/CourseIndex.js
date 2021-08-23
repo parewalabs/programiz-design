@@ -50,6 +50,7 @@ const CourseIndex = (props) => {
           >
             <ul className="list list--progress py-6x px-10x">
               {sections &&
+                sections.sectionContent != null &&
                 sections.sectionContent.map((section) => {
                   return (
                     <li

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card } from '../../';
 import PropTypes from 'prop-types';
+import { formatDateMDY } from '../../utils/helper';
 import { TYPE, PLAN, LAST_PAYMENT_DATE, NEXT_PAYMENT_DATE } from '../../language/Profile.language';
 
 const MembershipTable = props => {
@@ -39,13 +40,13 @@ const MembershipTable = props => {
     className: "fs-tiny color-text-main"
   }, LAST_PAYMENT_DATE), /*#__PURE__*/React.createElement("h4", {
     className: "fs-h3main color-text-main"
-  }, lastPaymentDate)), /*#__PURE__*/React.createElement("td", {
+  }, formatDateMDY(lastPaymentDate))), /*#__PURE__*/React.createElement("td", {
     className: "table__body__col pt-3x pb-6x"
   }, /*#__PURE__*/React.createElement("p", {
     className: "fs-tiny color-text-main"
   }, NEXT_PAYMENT_DATE), /*#__PURE__*/React.createElement("h4", {
     className: "fs-h3main color-text-main"
-  }, nextPaymentDate))))));
+  }, formatDateMDY(nextPaymentDate)))))));
 };
 
 MembershipTable.propTypes = {

@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button, Card } from '../../';
-import { formatDateDMY } from '../../utils/helper';
-import { PAYMENT_METHOD, EXPIRATION_DATE, UPDATE_PAYMENT_METHOD } from '../../language/Profile.language';
+import { Button, Card } from '../..';
+import { SUBSCRIBE, PLAN, PRICE } from '../../language/Profile.language';
 
-const PaymentMethodsTable = props => {
+const SubscriptionPlans = props => {
   const {
-    methods
+    plans,
+    customClickEvent
   } = props;
   return /*#__PURE__*/React.createElement(Card, {
     shadowed: true,
@@ -17,35 +17,40 @@ const PaymentMethodsTable = props => {
     className: "table__head"
   }, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", {
     className: "table__head__col"
-  }, " ", PAYMENT_METHOD, " "), /*#__PURE__*/React.createElement("th", {
+  }, " ", PLAN, " "), /*#__PURE__*/React.createElement("th", {
     className: "table__head__col"
-  }, EXPIRATION_DATE), /*#__PURE__*/React.createElement("th", {
+  }, PRICE), /*#__PURE__*/React.createElement("th", {
     className: "table__head__col"
   }))), /*#__PURE__*/React.createElement("tbody", {
     className: "table__body"
-  }, methods.map(method => {
+  }, plans.map(plan => {
     return /*#__PURE__*/React.createElement("tr", {
       className: "table__body__row",
-      key: method.id
+      key: plan.id
     }, /*#__PURE__*/React.createElement("td", {
       className: "table__body__col"
-    }, method.paymentMethod), /*#__PURE__*/React.createElement("td", {
+    }, plan.name), /*#__PURE__*/React.createElement("td", {
       className: "table__body__col"
-    }, formatDateDMY(method.expirationDate)), /*#__PURE__*/React.createElement("td", {
+    }, "USD ", plan.recurring_price['USD']), /*#__PURE__*/React.createElement("td", {
       className: "table__body__col table__body__col--fw"
     }, /*#__PURE__*/React.createElement(Button, {
       type: "primary-outline",
       size: "small",
-      fullWidth: true
-    }, UPDATE_PAYMENT_METHOD)));
+      fullWidth: true,
+      onClick: customClickEvent
+    }, SUBSCRIBE)));
   }))));
 };
 
-PaymentMethodsTable.propTypes = {
+SubscriptionPlans.propTypes = {
   /** Data Array for the table*/
-  methods: PropTypes.array
+  plans: PropTypes.array,
+
+  /** Custom Click Event Listener*/
+  customClickEvent: PropTypes.func
 };
-PaymentMethodsTable.defaultProps = {
-  methods: []
+SubscriptionPlans.defaultProps = {
+  plans: [],
+  customClickEvent: () => {}
 };
-export default PaymentMethodsTable;
+export default SubscriptionPlans;

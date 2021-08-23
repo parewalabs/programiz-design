@@ -2,11 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Button, Card } from '../../';
 import { VIEW_INVOICE, DESCRIPTION, AMOUNT, DATE } from '../../language/Profile.language';
+import { formatDateDMY } from '../../utils/helper';
 
 const InvoicesTable = props => {
   const {
     invoices
   } = props;
+
+  const goToInvoice = url => {
+    window.open(url);
+  };
+
   return /*#__PURE__*/React.createElement(Card, {
     shadowed: true,
     className: "table-responsive"
@@ -27,19 +33,20 @@ const InvoicesTable = props => {
   }, invoices.map(invoice => {
     return /*#__PURE__*/React.createElement("tr", {
       className: "table__body",
-      key: invoice.id
+      key: invoice.subscription_id
     }, /*#__PURE__*/React.createElement("td", {
       className: "table__body__col"
-    }, invoice.description), /*#__PURE__*/React.createElement("td", {
+    }, invoice.plan), /*#__PURE__*/React.createElement("td", {
       className: "table__body__col"
-    }, invoice.amount), /*#__PURE__*/React.createElement("td", {
+    }, invoice.amount, " ", invoice.currency), /*#__PURE__*/React.createElement("td", {
       className: "table__body__col"
-    }, invoice.date), /*#__PURE__*/React.createElement("td", {
+    }, formatDateDMY(invoice.payout_date)), /*#__PURE__*/React.createElement("td", {
       className: "table__body__col table__body__col--fw"
     }, /*#__PURE__*/React.createElement(Button, {
       type: "primary-outline",
       size: "small",
-      fullWidth: true
+      fullWidth: true,
+      onClick: () => goToInvoice(invoice.receipt_url)
     }, VIEW_INVOICE)));
   }))));
 };

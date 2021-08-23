@@ -4,14 +4,14 @@ PaymentMethods Table:
 <PaymentMethodsTable
   methods={[
     {
-      id: "1",
-      paymentMethod: "•••• •••• •••• 7398 MasterCard (default)",
-      expirationDate: "31/12/2022",
+      id: '1',
+      paymentMethod: '•••• •••• •••• 7398 MasterCard (default)',
+      expirationDate: '2022-12-31',
     },
     {
-      id: "2",
-      paymentMethod: "•••• •••• •••• 7398 MasterCard",
-      expirationDate: "31/12/2023",
+      id: '2',
+      paymentMethod: '•••• •••• •••• 7398 MasterCard',
+      expirationDate: '2022-12-31',
     },
   ]}
 />
