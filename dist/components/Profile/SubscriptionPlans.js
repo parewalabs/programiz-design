@@ -37,7 +37,7 @@ const SubscriptionPlans = props => {
       type: "primary-outline",
       size: "small",
       fullWidth: true,
-      onClick: customClickEvent
+      onClick: () => customClickEvent(plan.id)
     }, SUBSCRIBE)));
   }))));
 };

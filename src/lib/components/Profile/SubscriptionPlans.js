@@ -30,7 +30,7 @@ const SubscriptionPlans = (props) => {
                     type="primary-outline"
                     size="small"
                     fullWidth
-                    onClick={customClickEvent}
+                    onClick={() => customClickEvent(plan.id)}
                   >
                     {SUBSCRIBE}
                   </Button>
