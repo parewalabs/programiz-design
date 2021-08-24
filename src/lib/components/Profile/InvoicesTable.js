@@ -7,9 +7,14 @@ import {
   AMOUNT,
   DATE,
 } from '../../language/Profile.language';
+import { formatDateDMY } from '../../utils/helper';
 
 const InvoicesTable = (props) => {
   const { invoices } = props;
+
+  const goToInvoice = (url) => {
+    window.open(url);
+  };
 
   return (
     <Card shadowed className="table-responsive">
@@ -25,12 +30,21 @@ const InvoicesTable = (props) => {
         <tbody className="table__body">
           {invoices.map((invoice) => {
             return (
-              <tr className="table__body" key={invoice.id}>
-                <td className="table__body__col">{invoice.description}</td>
-                <td className="table__body__col">{invoice.amount}</td>
-                <td className="table__body__col">{invoice.date}</td>
+              <tr className="table__body" key={invoice.subscription_id}>
+                <td className="table__body__col">{invoice.plan}</td>
+                <td className="table__body__col">
+                  {invoice.amount} {invoice.currency}
+                </td>
+                <td className="table__body__col">
+                  {formatDateDMY(invoice.payout_date)}
+                </td>
                 <td className="table__body__col table__body__col--fw">
-                  <Button type="primary-outline" size="small" fullWidth>
+                  <Button
+                    type="primary-outline"
+                    size="small"
+                    fullWidth
+                    onClick={() => goToInvoice(invoice.receipt_url)}
+                  >
                     {VIEW_INVOICE}
                   </Button>
                 </td>

@@ -2,6 +2,8 @@ import React from 'react';
 import { Card } from '../../';
 import PropTypes from 'prop-types';
 
+import { formatDateMDY } from '../../utils/helper';
+
 import {
   TYPE,
   PLAN,
@@ -29,11 +31,15 @@ const MembershipTable = (props) => {
           <tr className="table__body__row">
             <td className="table__body__col pt-3x pb-6x">
               <p className="fs-tiny color-text-main">{LAST_PAYMENT_DATE}</p>
-              <h4 className="fs-h3main color-text-main">{lastPaymentDate}</h4>
+              <h4 className="fs-h3main color-text-main">
+                {formatDateMDY(lastPaymentDate)}
+              </h4>
             </td>
             <td className="table__body__col pt-3x pb-6x">
               <p className="fs-tiny color-text-main">{NEXT_PAYMENT_DATE}</p>
-              <h4 className="fs-h3main color-text-main">{nextPaymentDate}</h4>
+              <h4 className="fs-h3main color-text-main">
+                {formatDateMDY(nextPaymentDate)}
+              </h4>
             </td>
           </tr>
         </tbody>

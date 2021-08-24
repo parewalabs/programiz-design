@@ -4,7 +4,7 @@ Membership Table:
 <MembershipTable
   type="Programiz Pro"
   plan="Monthly"
-  lastPaymentDate="June 11, 2021"
-  nextPaymentDate="July 12, 2021"
+  lastPaymentDate="2021-08-19"
+  nextPaymentDate="2021-09-19"
 />
 ```

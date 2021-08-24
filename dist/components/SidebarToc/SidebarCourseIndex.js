@@ -2,8 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Accordion } from '../../';
-import CircleProgress from '../CourseIndex/CircleProgress';
 import Button from '../Button/Button';
+import { FaLock } from 'react-icons/fa';
+import CircleProgress from '../CourseIndex/CircleProgress';
+import { CONTENT_LOCKED } from '../../language/CourseCard.language';
 
 const SidebarCourseIndex = props => {
   const {
@@ -23,7 +25,7 @@ const SidebarCourseIndex = props => {
     className: classNames('accordion--sidebar', className)
   }, /*#__PURE__*/React.createElement("ul", {
     className: "list list--progress list--progress--sidebar py-4x px-6x"
-  }, sectionContent && sectionContent.map(section => {
+  }, sectionContent && sectionContent != null ? sectionContent.map(section => {
     return /*#__PURE__*/React.createElement("li", {
       className: classNames('list__row'),
       key: `${section.id}${Object.keys(section.sectionContentType)[0]}`
@@ -38,7 +40,11 @@ const SidebarCourseIndex = props => {
         'text-bold': 0
       })
     }, section.title));
-  })));
+  }) : /*#__PURE__*/React.createElement("div", {
+    className: "lock-content"
+  }, /*#__PURE__*/React.createElement(FaLock, {
+    className: "mr-2x"
+  }), " ", CONTENT_LOCKED)));
 };
 
 SidebarCourseIndex.propTypes = {

@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Button, Card } from '../../';
+import { formatDateDMY } from '../../utils/helper';
 import {
-  VIEW_INVOICE,
   PAYMENT_METHOD,
   EXPIRATION_DATE,
+  UPDATE_PAYMENT_METHOD,
 } from '../../language/Profile.language';
 
 const PaymentMethodsTable = (props) => {
@@ -25,10 +26,12 @@ const PaymentMethodsTable = (props) => {
             return (
               <tr className="table__body__row" key={method.id}>
                 <td className="table__body__col">{method.paymentMethod}</td>
-                <td className="table__body__col">{method.expirationDate}</td>
+                <td className="table__body__col">
+                  {formatDateDMY(method.expirationDate)}
+                </td>
                 <td className="table__body__col table__body__col--fw">
                   <Button type="primary-outline" size="small" fullWidth>
-                    {VIEW_INVOICE}
+                    {UPDATE_PAYMENT_METHOD}
                   </Button>
                 </td>
               </tr>

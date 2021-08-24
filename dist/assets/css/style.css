@@ -1027,6 +1027,9 @@ select {
         transform: rotate(180deg); }
   .accordion__content {
     overflow: hidden; }
+  .accordion__lock-content {
+    display: 'inline-flex';
+    align-items: 'center'; }
 
 .list--progress--sidebar .list__progress-container::after {
   display: none; }
