@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Button, Card } from '../../';
-import { formatDateDMY } from '../../utils/helper';
 import {
   PAYMENT_METHOD,
   EXPIRATION_DATE,
@@ -10,6 +9,10 @@ import {
 
 const PaymentMethodsTable = (props) => {
   const { methods } = props;
+
+  const updatePaymentMethod = (url) => {
+    window.open(url);
+  };
 
   return (
     <Card shadowed className="table-responsive">
@@ -22,15 +25,25 @@ const PaymentMethodsTable = (props) => {
           </tr>
         </thead>
         <tbody className="table__body">
-          {methods.map((method) => {
+          {methods.reverse().map((method, index) => {
             return (
-              <tr className="table__body__row" key={method.id}>
-                <td className="table__body__col">{method.paymentMethod}</td>
+              <tr className="table__body__row" key={method.subscription_id}>
                 <td className="table__body__col">
-                  {formatDateDMY(method.expirationDate)}
+                  *** *** *** {method.payment_information.last_four_digits}{' '}
+                  {method.payment_information.card_type}{' '}
+                  {method.payment_information.payment_method}{' '}
+                  {index === 0 ? '(default)' : ''}
+                </td>
+                <td className="table__body__col">
+                  {method.payment_information.expiry_date}
                 </td>
                 <td className="table__body__col table__body__col--fw">
-                  <Button type="primary-outline" size="small" fullWidth>
+                  <Button
+                    type="primary-outline"
+                    size="small"
+                    fullWidth
+                    onClick={() => updatePaymentMethod(method.update_url)}
+                  >
                     {UPDATE_PAYMENT_METHOD}
                   </Button>
                 </td>
