@@ -702,11 +702,21 @@ select {
 
 .avatar-container {
   position: relative;
-  transform: translate3d(0, 0, 0); }
-  .avatar-container__positioned-badge {
+  transform: translate3d(0, 0, 0);
+  width: fit-content;
+  text-align: center; }
+  .avatar-container__pro-status {
     position: absolute;
-    transform: translateY(-50%);
-    width: 100%; }
+    width: 100%;
+    bottom: 0px;
+    text-align: center;
+    border-radius: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 10px;
+    font-weight: 500;
+    color: white;
+    background: orange; }
 
 .avatar {
   width: 38px;

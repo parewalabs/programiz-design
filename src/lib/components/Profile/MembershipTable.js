@@ -32,13 +32,13 @@ const MembershipTable = (props) => {
             <td className="table__body__col pt-3x pb-6x">
               <p className="fs-tiny color-text-main">{LAST_PAYMENT_DATE}</p>
               <h4 className="fs-h3main color-text-main">
-                {formatDateMDY(lastPaymentDate)}
+                {lastPaymentDate !== '' ? formatDateMDY(lastPaymentDate) : '--'}
               </h4>
             </td>
             <td className="table__body__col pt-3x pb-6x">
               <p className="fs-tiny color-text-main">{NEXT_PAYMENT_DATE}</p>
               <h4 className="fs-h3main color-text-main">
-                {formatDateMDY(nextPaymentDate)}
+                {nextPaymentDate !== '' ? formatDateMDY(nextPaymentDate) : '--'}
               </h4>
             </td>
           </tr>
