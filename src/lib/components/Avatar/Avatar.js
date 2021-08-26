@@ -1,47 +1,66 @@
-import React from "react";
-import PropTypes from "prop-types";
-import classNames from "classnames";
-import Avatar  from 'react-avatar';
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import Avatar from 'react-avatar';
 
 const AvatarContainer = (props) => {
-  const {size, shape, className, imageUrl, userName} = props;
+  const { size, shape, className, imageUrl, userName, paymentStatus } = props;
 
   let sizeClass;
-  switch(size) {
-    case "large":
-      sizeClass = "avatar--lg";
+  switch (size) {
+    case 'large':
+      sizeClass = 'avatar--lg';
       break;
-    case "small":
-      sizeClass = "avatar--sm";
+    case 'small':
+      sizeClass = 'avatar--sm';
       break;
     default:
-      sizeClass = "";
+      sizeClass = '';
   }
-  
+
   let shapeClass;
-  switch(shape) {
-    case "square":
-      shapeClass = "avatar--square";
+  switch (shape) {
+    case 'square':
+      shapeClass = 'avatar--square';
       break;
-    case "rounded":
-      shapeClass = "avatar--rounded";
+    case 'rounded':
+      shapeClass = 'avatar--rounded';
       break;
-    case "round":
-      shapeClass = "avatar--round";
+    case 'round':
+      shapeClass = 'avatar--round';
       break;
     default:
-      shapeClass = "avatar--round";
+      shapeClass = 'avatar--round';
   }
 
   return (
-    <div className={classNames("avatar", sizeClass, shapeClass, className, imageUrl, userName)}>
-      {imageUrl && (
-        <img
-          src={imageUrl}
-          alt={userName}
-        />
+    <div className="avatar-container">
+      <div
+        className={classNames(
+          'avatar',
+          sizeClass,
+          shapeClass,
+          className,
+          imageUrl,
+          userName
+        )}
+      >
+        {imageUrl ? (
+          <img src={imageUrl} alt={userName} />
+        ) : (
+          <Avatar
+            name={userName}
+            size="100%"
+            textSizeRatio={2}
+            textMarginRatio={0.25}
+          />
+        )}
+      </div>
+      {paymentStatus === 'Active' && size !== 'large' ? (
+        <div className="avatar-container__pro-status">PRO</div>
+      ) : (
+        ''
       )}
-      <Avatar name={userName} size="100%" textSizeRatio={2} textMarginRatio={0.25}/>
     </div>
   );
 };
@@ -57,15 +76,17 @@ AvatarContainer.propTypes = {
   imageUrl: PropTypes.string,
   /** User name of Avatar */
   userName: PropTypes.string,
+  /** User payment status */
+  paymentStatus: PropTypes.string,
 };
 
 AvatarContainer.defaultProps = {
-  size: "",
-  shape: "round",
-  className: "",
-  imageUrl: "",
-  userName: ""
+  size: '',
+  shape: 'round',
+  className: '',
+  imageUrl: '',
+  userName: '',
+  paymentStatus: '',
 };
-
 
 export default AvatarContainer;

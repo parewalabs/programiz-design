@@ -40,13 +40,13 @@ const MembershipTable = props => {
     className: "fs-tiny color-text-main"
   }, LAST_PAYMENT_DATE), /*#__PURE__*/React.createElement("h4", {
     className: "fs-h3main color-text-main"
-  }, formatDateMDY(lastPaymentDate))), /*#__PURE__*/React.createElement("td", {
+  }, lastPaymentDate !== '' ? formatDateMDY(lastPaymentDate) : '--')), /*#__PURE__*/React.createElement("td", {
     className: "table__body__col pt-3x pb-6x"
   }, /*#__PURE__*/React.createElement("p", {
     className: "fs-tiny color-text-main"
   }, NEXT_PAYMENT_DATE), /*#__PURE__*/React.createElement("h4", {
     className: "fs-h3main color-text-main"
-  }, formatDateMDY(nextPaymentDate)))))));
+  }, nextPaymentDate !== '' ? formatDateMDY(nextPaymentDate) : '--'))))));
 };
 
 MembershipTable.propTypes = {

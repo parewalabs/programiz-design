@@ -1,13 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Button, Card } from '../../';
-import { formatDateDMY } from '../../utils/helper';
 import { PAYMENT_METHOD, EXPIRATION_DATE, UPDATE_PAYMENT_METHOD } from '../../language/Profile.language';
 
 const PaymentMethodsTable = props => {
   const {
     methods
   } = props;
+
+  const updatePaymentMethod = url => {
+    window.open(url);
+  };
+
   return /*#__PURE__*/React.createElement(Card, {
     shadowed: true,
     className: "table-responsive"
@@ -23,20 +27,21 @@ const PaymentMethodsTable = props => {
     className: "table__head__col"
   }))), /*#__PURE__*/React.createElement("tbody", {
     className: "table__body"
-  }, methods.map(method => {
+  }, methods.reverse().map((method, index) => {
     return /*#__PURE__*/React.createElement("tr", {
       className: "table__body__row",
-      key: method.id
+      key: method.subscription_id
     }, /*#__PURE__*/React.createElement("td", {
       className: "table__body__col"
-    }, method.paymentMethod), /*#__PURE__*/React.createElement("td", {
+    }, "*** *** *** ", method.payment_information.last_four_digits, ' ', method.payment_information.card_type, ' ', method.payment_information.payment_method, ' ', index === 0 ? '(default)' : ''), /*#__PURE__*/React.createElement("td", {
       className: "table__body__col"
-    }, formatDateDMY(method.expirationDate)), /*#__PURE__*/React.createElement("td", {
+    }, method.payment_information.expiry_date), /*#__PURE__*/React.createElement("td", {
       className: "table__body__col table__body__col--fw"
     }, /*#__PURE__*/React.createElement(Button, {
       type: "primary-outline",
       size: "small",
-      fullWidth: true
+      fullWidth: true,
+      onClick: () => updatePaymentMethod(method.update_url)
     }, UPDATE_PAYMENT_METHOD)));
   }))));
 };
