@@ -5,7 +5,7 @@ import { Button, Card } from '../..';
 import { SUBSCRIBE, PLAN, PRICE } from '../../language/Profile.language';
 
 const SubscriptionPlans = (props) => {
-  const { plans, customClickEvent } = props;
+  const { plans, subscribedPlan, customClickEvent } = props;
 
   return (
     <Card shadowed className="table-responsive">
@@ -26,14 +26,18 @@ const SubscriptionPlans = (props) => {
                   USD {plan.recurring_price['USD']}
                 </td>
                 <td className="table__body__col table__body__col--fw">
-                  <Button
-                    type="primary-outline"
-                    size="small"
-                    fullWidth
-                    onClick={() => customClickEvent(plan.id)}
-                  >
-                    {SUBSCRIBE}
-                  </Button>
+                  {subscribedPlan !== plan.name ? (
+                    <Button
+                      type="primary-outline"
+                      size="small"
+                      fullWidth
+                      onClick={() => customClickEvent(plan.id)}
+                    >
+                      {SUBSCRIBE}
+                    </Button>
+                  ) : (
+                    ''
+                  )}
                 </td>
               </tr>
             );
@@ -47,12 +51,15 @@ const SubscriptionPlans = (props) => {
 SubscriptionPlans.propTypes = {
   /** Data Array for the table*/
   plans: PropTypes.array,
+  /** Subscribed Plan*/
+  subscribedPlan: PropTypes.string,
   /** Custom Click Event Listener*/
   customClickEvent: PropTypes.func,
 };
 
 SubscriptionPlans.defaultProps = {
   plans: [],
+  subscribedPlan: '',
   customClickEvent: () => {},
 };
 

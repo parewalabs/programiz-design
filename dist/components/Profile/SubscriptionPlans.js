@@ -6,6 +6,7 @@ import { SUBSCRIBE, PLAN, PRICE } from '../../language/Profile.language';
 const SubscriptionPlans = props => {
   const {
     plans,
+    subscribedPlan,
     customClickEvent
   } = props;
   return /*#__PURE__*/React.createElement(Card, {
@@ -33,12 +34,12 @@ const SubscriptionPlans = props => {
       className: "table__body__col"
     }, "USD ", plan.recurring_price['USD']), /*#__PURE__*/React.createElement("td", {
       className: "table__body__col table__body__col--fw"
-    }, /*#__PURE__*/React.createElement(Button, {
+    }, subscribedPlan !== plan.name ? /*#__PURE__*/React.createElement(Button, {
       type: "primary-outline",
       size: "small",
       fullWidth: true,
       onClick: () => customClickEvent(plan.id)
-    }, SUBSCRIBE)));
+    }, SUBSCRIBE) : ''));
   }))));
 };
 
@@ -46,11 +47,15 @@ SubscriptionPlans.propTypes = {
   /** Data Array for the table*/
   plans: PropTypes.array,
 
+  /** Subscribed Plan*/
+  subscribedPlan: PropTypes.string,
+
   /** Custom Click Event Listener*/
   customClickEvent: PropTypes.func
 };
 SubscriptionPlans.defaultProps = {
   plans: [],
+  subscribedPlan: '',
   customClickEvent: () => {}
 };
 export default SubscriptionPlans;

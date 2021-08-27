@@ -37,12 +37,12 @@ const PaymentMethodsTable = props => {
       className: "table__body__col"
     }, method.payment_information.expiry_date), /*#__PURE__*/React.createElement("td", {
       className: "table__body__col table__body__col--fw"
-    }, /*#__PURE__*/React.createElement(Button, {
+    }, index === 0 ? /*#__PURE__*/React.createElement(Button, {
       type: "primary-outline",
       size: "small",
       fullWidth: true,
       onClick: () => updatePaymentMethod(method.update_url)
-    }, UPDATE_PAYMENT_METHOD)));
+    }, UPDATE_PAYMENT_METHOD) : ''));
   }))));
 };
 
