@@ -2,6 +2,7 @@ Subcription Plan Table:
 
 ```js
 <SubscriptionPlans
+  subscribedPlan="PRO MONTHLY"
   plans={[
     {
       id: '13707',

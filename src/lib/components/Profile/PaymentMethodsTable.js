@@ -38,14 +38,18 @@ const PaymentMethodsTable = (props) => {
                   {method.payment_information.expiry_date}
                 </td>
                 <td className="table__body__col table__body__col--fw">
-                  <Button
-                    type="primary-outline"
-                    size="small"
-                    fullWidth
-                    onClick={() => updatePaymentMethod(method.update_url)}
-                  >
-                    {UPDATE_PAYMENT_METHOD}
-                  </Button>
+                  {index === 0 ? (
+                    <Button
+                      type="primary-outline"
+                      size="small"
+                      fullWidth
+                      onClick={() => updatePaymentMethod(method.update_url)}
+                    >
+                      {UPDATE_PAYMENT_METHOD}
+                    </Button>
+                  ) : (
+                    ''
+                  )}
                 </td>
               </tr>
             );
