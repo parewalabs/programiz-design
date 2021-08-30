@@ -15,7 +15,7 @@ const InvoicesTable = props => {
 
   return /*#__PURE__*/React.createElement(Card, {
     shadowed: true,
-    className: "table-responsive"
+    className: "invoice-table"
   }, /*#__PURE__*/React.createElement("table", {
     className: "table"
   }, /*#__PURE__*/React.createElement("thead", {
@@ -30,7 +30,7 @@ const InvoicesTable = props => {
     className: "table__head__col"
   }))), /*#__PURE__*/React.createElement("tbody", {
     className: "table__body"
-  }, invoices.map(invoice => {
+  }, invoices.reverse().map(invoice => {
     return /*#__PURE__*/React.createElement("tr", {
       className: "table__body",
       key: invoice.id
