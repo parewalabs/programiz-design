@@ -17,7 +17,7 @@ const InvoicesTable = (props) => {
   };
 
   return (
-    <Card shadowed className="table-responsive">
+    <Card shadowed className="invoice-table">
       <table className="table">
         <thead className="table__head">
           <tr>
@@ -28,9 +28,9 @@ const InvoicesTable = (props) => {
           </tr>
         </thead>
         <tbody className="table__body">
-          {invoices.map((invoice) => {
+          {invoices.reverse().map((invoice) => {
             return (
-              <tr className="table__body" key={invoice.subscription_id}>
+              <tr className="table__body" key={invoice.id}>
                 <td className="table__body__col">{invoice.plan}</td>
                 <td className="table__body__col">
                   {invoice.amount} {invoice.currency}

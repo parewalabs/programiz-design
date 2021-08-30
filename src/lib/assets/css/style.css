@@ -1077,6 +1077,11 @@ select {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch; }
 
+.invoice-table {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  height: 400px; }
+
 .table {
   border-collapse: collapse;
   width: 100%; }
