@@ -30,7 +30,7 @@ const InvoicesTable = (props) => {
         <tbody className="table__body">
           {invoices.map((invoice) => {
             return (
-              <tr className="table__body" key={invoice.subscription_id}>
+              <tr className="table__body" key={invoice.id}>
                 <td className="table__body__col">{invoice.plan}</td>
                 <td className="table__body__col">
                   {invoice.amount} {invoice.currency}

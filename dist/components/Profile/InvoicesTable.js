@@ -33,7 +33,7 @@ const InvoicesTable = props => {
   }, invoices.map(invoice => {
     return /*#__PURE__*/React.createElement("tr", {
       className: "table__body",
-      key: invoice.subscription_id
+      key: invoice.id
     }, /*#__PURE__*/React.createElement("td", {
       className: "table__body__col"
     }, invoice.plan), /*#__PURE__*/React.createElement("td", {
