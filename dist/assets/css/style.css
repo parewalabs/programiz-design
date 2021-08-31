@@ -1080,7 +1080,7 @@ select {
 .table-invoice {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  height: 400px; }
+  max-height: 400px; }
 
 .table {
   border-collapse: collapse;

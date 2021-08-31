@@ -4,6 +4,7 @@ import classNames from 'classnames';
 
 const Input = props => {
   const {
+    name,
     className,
     inputChangeFunc,
     hasError,
@@ -15,25 +16,29 @@ const Input = props => {
     label
   } = props;
   return /*#__PURE__*/React.createElement("div", {
-    className: classNames("input", {
-      "input--error": hasError
+    className: classNames('input', {
+      'input--error': hasError
     }, className)
   }, label && /*#__PURE__*/React.createElement("label", {
     htmlFor: "",
     className: "input__label"
   }, label), /*#__PURE__*/React.createElement("input", {
+    name: name,
     type: type,
-    className: "input__control",
     value: value,
+    disabled: disabled,
+    className: "input__control",
     onChange: inputChangeFunc,
-    placeholder: placeholder,
-    disabled: disabled
+    placeholder: placeholder
   }), hasError ? /*#__PURE__*/React.createElement("p", {
     className: "input__error"
-  }, errorMsg) : "");
+  }, errorMsg) : '');
 };
 
 Input.propTypes = {
+  /** name of input */
+  name: PropTypes.string,
+
   /** Extra classes*/
   className: PropTypes.string,
 
@@ -59,13 +64,14 @@ Input.propTypes = {
   type: PropTypes.string
 };
 Input.defaultProps = {
-  className: "",
+  name: '',
+  type: '',
+  label: '',
+  errorMsg: '',
+  className: '',
+  placeholder: '',
   hasError: false,
-  label: "",
-  errorMsg: "",
   disabled: false,
-  placeholder: "",
-  inputChangeFunc: () => {},
-  type: ""
+  inputChangeFunc: () => {}
 };
 export default Input;
