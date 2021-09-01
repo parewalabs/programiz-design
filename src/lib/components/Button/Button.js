@@ -12,6 +12,7 @@ const Button = (props) => {
     onClick,
     className,
     children,
+    btnType,
   } = props;
 
   let typeClass;
@@ -60,11 +61,12 @@ const Button = (props) => {
       );
   }
 
-  return(
+  return (
     <button
       className={buttonType}
       onClick={onClick}
       disabled={disabled}
+      type={btnType}
     >
       {children}
     </button>
@@ -88,6 +90,8 @@ Button.propTypes = {
   children: PropTypes.node,
   /** To align content of the button on left*/
   isLeftAligned: PropTypes.bool,
+  /** button type (eg. submit)*/
+  btnType: PropTypes.string,
 };
 
 Button.defaultProps = {
@@ -98,6 +102,7 @@ Button.defaultProps = {
   disabled: false,
   children: '',
   isLeftAligned: false,
+  btnType: '',
   onClick: () => {},
 };
 
