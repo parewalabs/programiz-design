@@ -11,7 +11,8 @@ const Button = props => {
     disabled,
     onClick,
     className,
-    children
+    children,
+    btnType
   } = props;
   let typeClass;
 
@@ -69,7 +70,8 @@ const Button = props => {
   return /*#__PURE__*/React.createElement("button", {
     className: buttonType,
     onClick: onClick,
-    disabled: disabled
+    disabled: disabled,
+    type: btnType
   }, children);
 };
 
@@ -96,7 +98,10 @@ Button.propTypes = {
   children: PropTypes.node,
 
   /** To align content of the button on left*/
-  isLeftAligned: PropTypes.bool
+  isLeftAligned: PropTypes.bool,
+
+  /** button type (eg. submit)*/
+  btnType: PropTypes.string
 };
 Button.defaultProps = {
   size: '',
@@ -106,6 +111,7 @@ Button.defaultProps = {
   disabled: false,
   children: '',
   isLeftAligned: false,
+  btnType: '',
   onClick: () => {}
 };
 export default Button;
