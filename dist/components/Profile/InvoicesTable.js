@@ -15,7 +15,7 @@ const InvoicesTable = props => {
 
   return /*#__PURE__*/React.createElement(Card, {
     shadowed: true,
-    className: "table-invoice"
+    className: "table-responsive"
   }, /*#__PURE__*/React.createElement("table", {
     className: "table"
   }, /*#__PURE__*/React.createElement("thead", {
