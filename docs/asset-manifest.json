@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.580447df.chunk.css",
-    "main.js": "/build/main.2757d1c8.js",
+    "main.css": "/static/css/main.a351adf3.chunk.css",
+    "main.js": "/build/main.1987628f.js",
     "runtime-main.js": "/build/bundle.b50e26a4.js",
     "build/2.6890cc5c.js": "/build/2.6890cc5c.js",
     "build/2.6890cc5c.js.LICENSE.txt": "/build/2.6890cc5c.js.LICENSE.txt",
     "index.html": "/index.html",
-    "static/css/main.580447df.chunk.css.map": "/static/css/main.580447df.chunk.css.map",
+    "static/css/main.a351adf3.chunk.css.map": "/static/css/main.a351adf3.chunk.css.map",
     "static/media/LCCvector1.06878858.svg": "/static/media/LCCvector1.06878858.svg",
     "static/media/LCCvector2.657b6e26.svg": "/static/media/LCCvector2.657b6e26.svg",
     "static/media/LCCvector3.56b8f6f3.svg": "/static/media/LCCvector3.56b8f6f3.svg",
@@ -37,7 +37,7 @@
   "entrypoints": [
     "build/bundle.b50e26a4.js",
     "build/2.6890cc5c.js",
-    "static/css/main.580447df.chunk.css",
-    "build/main.2757d1c8.js"
+    "static/css/main.a351adf3.chunk.css",
+    "build/main.1987628f.js"
   ]
 }
