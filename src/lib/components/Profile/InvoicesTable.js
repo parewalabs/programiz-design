@@ -17,7 +17,7 @@ const InvoicesTable = (props) => {
   };
 
   return (
-    <Card shadowed className="table-invoice">
+    <Card shadowed className="table-responsive">
       <table className="table">
         <thead className="table__head">
           <tr>
