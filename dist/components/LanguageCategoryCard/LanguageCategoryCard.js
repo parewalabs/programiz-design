@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Card, Icons, Button } from '../../';
-import { FiArrowRight } from 'react-icons/fi';
+import { FiArrowRight, FiArrowUp } from 'react-icons/fi';
 import { VIEW, PROGRAMMING } from '../../language/Card.language';
 import { LCCvector1, LCCvector2, LCCvector3, LCCvector4, LCCvector5, LCCvector6 } from '../../images/image';
 
@@ -13,6 +13,7 @@ const LanguageCategoryCard = props => {
     vector,
     customClickEvent,
     type,
+    display,
     className
   } = props;
   let vector1 = 0;
@@ -64,11 +65,15 @@ const LanguageCategoryCard = props => {
     className: "Language-card__cover"
   }, /*#__PURE__*/React.createElement("div", {
     className: "d-flex align-items-center align-items-end-sm justify-content-center justify-content-start-sm"
-  }, /*#__PURE__*/React.createElement("span", {
+  }, display === 'more' ? /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("span", {
     className: "fs-article text-bold color-primary-base"
   }, "View all Languages"), /*#__PURE__*/React.createElement(FiArrowRight, {
     className: "Language-card__icon Language-card__icon--all-card color-primary-base"
-  })))));
+  })) : /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("span", {
+    className: "fs-article text-bold color-primary-base"
+  }, "View Less"), /*#__PURE__*/React.createElement(FiArrowUp, {
+    className: "Language-card__icon Language-card__icon--all-card color-primary-base"
+  }))))));
 
   return type === 'All' ? AllLanguageCard() : LanguageCard();
 };
@@ -82,6 +87,9 @@ LanguageCategoryCard.propTypes = {
 
   /** Type of card. Available Option "All" or ""  */
   type: PropTypes.string,
+
+  /** Display language cards. Available Option "more" or "less"  */
+  display: PropTypes.string,
 
   /** Shape Vector. Available Option 1 or "" */
   vector: PropTypes.number,
@@ -98,6 +106,7 @@ LanguageCategoryCard.defaultProps = {
   vector: 1,
   customClickEvent: () => {},
   type: '',
+  display: '',
   classNames: ''
 };
 export default LanguageCategoryCard;
