@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Card, Icons, Button } from '../../';
-import { FiArrowRight } from 'react-icons/fi';
+import { FiArrowRight, FiArrowUp } from 'react-icons/fi';
 import { VIEW, PROGRAMMING } from '../../language/Card.language';
 import {
   LCCvector1,
@@ -14,8 +14,15 @@ import {
 } from '../../images/image';
 
 const LanguageCategoryCard = (props) => {
-  const { languageCode, language, vector, customClickEvent, type, className } =
-    props;
+  const {
+    languageCode,
+    language,
+    vector,
+    customClickEvent,
+    type,
+    display,
+    className,
+  } = props;
 
   let vector1 = 0;
   let vector2 = 0;
@@ -60,7 +67,9 @@ const LanguageCategoryCard = (props) => {
   );
 
   const AllLanguageCard = () => (
-    <Card className={classNames('Language-card Language-card--all-card', className)}>
+    <Card
+      className={classNames('Language-card Language-card--all-card', className)}
+    >
       <Button
         onClick={customClickEvent}
         type="clear"
@@ -68,10 +77,21 @@ const LanguageCategoryCard = (props) => {
       >
         <div className="Language-card__cover">
           <div className="d-flex align-items-center align-items-end-sm justify-content-center justify-content-start-sm">
-            <span className="fs-article text-bold color-primary-base">
-              View all Languages
-            </span>
-            <FiArrowRight className="Language-card__icon Language-card__icon--all-card color-primary-base" />
+            {display === 'more' ? (
+              <>
+                <span className="fs-article text-bold color-primary-base">
+                  View all Languages
+                </span>
+                <FiArrowRight className="Language-card__icon Language-card__icon--all-card color-primary-base" />
+              </>
+            ) : (
+              <>
+                <span className="fs-article text-bold color-primary-base">
+                  View Less
+                </span>
+                <FiArrowUp className="Language-card__icon Language-card__icon--all-card color-primary-base" />
+              </>
+            )}
           </div>
         </div>
       </Button>
@@ -88,6 +108,8 @@ LanguageCategoryCard.propTypes = {
   language: PropTypes.string,
   /** Type of card. Available Option "All" or ""  */
   type: PropTypes.string,
+  /** Display language cards. Available Option "more" or "less"  */
+  display: PropTypes.string,
   /** Shape Vector. Available Option 1 or "" */
   vector: PropTypes.number,
   /** Extra Classname */
@@ -102,6 +124,7 @@ LanguageCategoryCard.defaultProps = {
   vector: 1,
   customClickEvent: () => {},
   type: '',
+  display: '',
   classNames: '',
 };
 
