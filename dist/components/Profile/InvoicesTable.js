@@ -6,9 +6,13 @@ import { formatDateDMY } from '../../utils/helper';
 
 const InvoicesTable = props => {
   const {
-    invoices,
-    popupDisplay
+    invoices
   } = props;
+
+  const goToInvoice = url => {
+    window.open(url, 'Invoice', 'width=500,height=500');
+  };
+
   return /*#__PURE__*/React.createElement(Card, {
     shadowed: true,
     className: "table-invoice"
@@ -42,20 +46,16 @@ const InvoicesTable = props => {
       type: "primary-outline",
       size: "small",
       fullWidth: true,
-      onClick: () => popupDisplay(invoice.receipt_url)
+      onClick: () => goToInvoice(invoice.receipt_url)
     }, VIEW_INVOICE)));
   }))));
 };
 
 InvoicesTable.propTypes = {
   /** Data Array for the table*/
-  invoices: PropTypes.array,
-
-  /** Display popup for update payment methods */
-  popupDisplay: PropTypes.func
+  invoices: PropTypes.array
 };
 InvoicesTable.defaultProps = {
-  invoices: [],
-  popupDisplay: () => {}
+  invoices: []
 };
 export default InvoicesTable;
