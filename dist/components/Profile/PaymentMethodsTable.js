@@ -5,13 +5,9 @@ import { PAYMENT_METHOD, EXPIRATION_DATE, UPDATE_PAYMENT_METHOD } from '../../la
 
 const PaymentMethodsTable = props => {
   const {
-    methods
+    methods,
+    popupDisplay
   } = props;
-
-  const updatePaymentMethod = url => {
-    window.open(url);
-  };
-
   return /*#__PURE__*/React.createElement(Card, {
     shadowed: true,
     className: "table-responsive"
@@ -41,16 +37,20 @@ const PaymentMethodsTable = props => {
       type: "primary-outline",
       size: "small",
       fullWidth: true,
-      onClick: () => updatePaymentMethod(method.update_url)
+      onClick: () => popupDisplay(method.update_url)
     }, UPDATE_PAYMENT_METHOD) : ''));
   }))));
 };
 
 PaymentMethodsTable.propTypes = {
   /** Data Array for the table*/
-  methods: PropTypes.array
+  methods: PropTypes.array,
+
+  /** Display popup for update payment methods */
+  popupDisplay: PropTypes.func
 };
 PaymentMethodsTable.defaultProps = {
-  methods: []
+  methods: [],
+  popupDisplay: () => {}
 };
 export default PaymentMethodsTable;

@@ -10,11 +10,7 @@ import {
 import { formatDateDMY } from '../../utils/helper';
 
 const InvoicesTable = (props) => {
-  const { invoices } = props;
-
-  const goToInvoice = (url) => {
-    window.open(url);
-  };
+  const { invoices, popupDisplay } = props;
 
   return (
     <Card shadowed className="table-invoice">
@@ -43,7 +39,7 @@ const InvoicesTable = (props) => {
                     type="primary-outline"
                     size="small"
                     fullWidth
-                    onClick={() => goToInvoice(invoice.receipt_url)}
+                    onClick={() => popupDisplay(invoice.receipt_url)}
                   >
                     {VIEW_INVOICE}
                   </Button>
@@ -60,10 +56,13 @@ const InvoicesTable = (props) => {
 InvoicesTable.propTypes = {
   /** Data Array for the table*/
   invoices: PropTypes.array,
+  /** Display popup for update payment methods */
+  popupDisplay: PropTypes.func,
 };
 
 InvoicesTable.defaultProps = {
   invoices: [],
+  popupDisplay: () => {},
 };
 
 export default InvoicesTable;
