@@ -8,11 +8,7 @@ import {
 } from '../../language/Profile.language';
 
 const PaymentMethodsTable = (props) => {
-  const { methods } = props;
-
-  const updatePaymentMethod = (url) => {
-    window.open(url);
-  };
+  const { methods, popupDisplay } = props;
 
   return (
     <Card shadowed className="table-responsive">
@@ -43,7 +39,7 @@ const PaymentMethodsTable = (props) => {
                       type="primary-outline"
                       size="small"
                       fullWidth
-                      onClick={() => updatePaymentMethod(method.update_url)}
+                      onClick={() => popupDisplay(method.update_url)}
                     >
                       {UPDATE_PAYMENT_METHOD}
                     </Button>
@@ -63,10 +59,13 @@ const PaymentMethodsTable = (props) => {
 PaymentMethodsTable.propTypes = {
   /** Data Array for the table*/
   methods: PropTypes.array,
+  /** Display popup for update payment methods */
+  popupDisplay: PropTypes.func,
 };
 
 PaymentMethodsTable.defaultProps = {
   methods: [],
+  popupDisplay: () => {},
 };
 
 export default PaymentMethodsTable;

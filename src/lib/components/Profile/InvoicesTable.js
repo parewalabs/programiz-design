@@ -13,7 +13,7 @@ const InvoicesTable = (props) => {
   const { invoices } = props;
 
   const goToInvoice = (url) => {
-    window.open(url);
+    window.open(url, 'Invoice', 'width=500,height=500');
   };
 
   return (
